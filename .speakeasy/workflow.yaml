@@ -12,6 +12,9 @@ targets:
     open-billing:
         target: typescript
         source: Open Billing
+        publish:
+            npm:
+                token: $npm_token
         codeSamples:
             registry:
                 location: registry.speakeasyapi.dev/jani-payments/billing/open-billing-typescript-code-samples
