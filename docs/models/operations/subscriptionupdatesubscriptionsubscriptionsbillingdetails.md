@@ -1,0 +1,20 @@
+# SubscriptionUpdateSubscriptionSubscriptionsBillingDetails
+
+## Example Usage
+
+```typescript
+import { SubscriptionUpdateSubscriptionSubscriptionsBillingDetails } from "open-billing/models/operations";
+
+let value: SubscriptionUpdateSubscriptionSubscriptionsBillingDetails = {
+  paymentTerms: {},
+};
+```
+
+## Fields
+
+| Field                                                                                                                                                    | Type                                                                                                                                                     | Required                                                                                                                                                 | Description                                                                                                                                              |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `paymentTerms`                                                                                                                                           | [operations.SubscriptionUpdateSubscriptionSubscriptionsPaymentTerms](../../models/operations/subscriptionupdatesubscriptionsubscriptionspaymentterms.md) | :heavy_check_mark:                                                                                                                                       | N/A                                                                                                                                                      |
+| `enableCheckout`                                                                                                                                         | *boolean*                                                                                                                                                | :heavy_minus_sign:                                                                                                                                       | N/A                                                                                                                                                      |
+| `additionalInformation`                                                                                                                                  | *string*                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                       | N/A                                                                                                                                                      |
+| `purchaseOrderNumber`                                                                                                                                    | *string*                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                       | N/A                                                                                                                                                      |

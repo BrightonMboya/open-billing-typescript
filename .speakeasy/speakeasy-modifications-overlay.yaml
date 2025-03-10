@@ -1,0 +1,119 @@
+overlay: 1.0.0
+info:
+  title: Speakeasy Modifications
+  version: 0.0.2
+  x-speakeasy-metadata:
+    after: ""
+    before: ""
+    type: speakeasy-modifications
+actions:
+  - target: $["paths"]["/subscription/{subscription_id}"]["patch"]
+    update:
+      x-speakeasy-group: subscriptions
+    x-speakeasy-metadata:
+      type: method-name
+      before: sdk.subscription.update()
+      after: sdk.subscriptions.update()
+      reviewed_at: 1741597161466
+      created_at: 1741597020394
+  - target: $["paths"]["/subscription"]["get"]
+    update:
+      x-speakeasy-group: subscriptions
+    x-speakeasy-metadata:
+      type: method-name
+      before: sdk.subscription.list()
+      after: sdk.subscriptions.list()
+      reviewed_at: 1741597161465
+      created_at: 1741597020394
+  - target: $["paths"]["/subscription"]["post"]
+    update:
+      x-speakeasy-group: subscriptions
+    x-speakeasy-metadata:
+      type: method-name
+      before: sdk.subscription.create()
+      after: sdk.subscriptions.create()
+      reviewed_at: 1741597161466
+      created_at: 1741597020394
+  - target: $["paths"]["/subscription/{subscription_id}/resume"]["post"]
+    update:
+      x-speakeasy-group: subscriptions
+    x-speakeasy-metadata:
+      type: method-name
+      before: sdk.subscription.resume()
+      after: sdk.subscriptions.resume()
+      reviewed_at: 1741597161466
+      created_at: 1741597020394
+  - target: $["paths"]["/customers/{customer_id}/addresses"]["post"]
+    update:
+      x-speakeasy-group: customers.addresses
+    x-speakeasy-metadata:
+      type: method-name
+      before: sdk.addresses.create()
+      after: sdk.customers.addresses.create()
+      reviewed_at: 1741597161466
+      created_at: 1741597020394
+  - target: $["paths"]["/subscription/{subscription_id}/pause"]["post"]
+    update:
+      x-speakeasy-group: subscriptions
+    x-speakeasy-metadata:
+      type: method-name
+      before: sdk.subscription.pause()
+      after: sdk.subscriptions.pause()
+      reviewed_at: 1741597161468
+      created_at: 1741597020394
+  - target: $["paths"]["/subscription/{subscription_id}/cancel"]["post"]
+    update:
+      x-speakeasy-group: subscriptions
+      x-speakeasy-name-override: cancel
+    x-speakeasy-metadata:
+      type: method-name
+      before: sdk.subscription.cancelSubscription()
+      after: sdk.subscriptions.cancel()
+      reviewed_at: 1741597161468
+      created_at: 1741597020394
+  - target: $["paths"]["/api-keys"]["post"]
+    update:
+      x-speakeasy-group: developerTools
+    x-speakeasy-metadata:
+      type: method-name
+      before: sdk.Developer Tools.create()
+      after: sdk.developerTools.create()
+      reviewed_at: 1741597161466
+      created_at: 1741597020394
+  - target: $["paths"]["/customers/{customer_id}/addresses"]["get"]
+    update:
+      x-speakeasy-group: customers.addresses
+    x-speakeasy-metadata:
+      type: method-name
+      before: sdk.addresses.list()
+      after: sdk.customers.addresses.list()
+      reviewed_at: 1741597161466
+      created_at: 1741597020394
+  - target: $["paths"]["/subscription/{subscription_id}/activate"]["post"]
+    update:
+      x-speakeasy-group: subscriptions
+    x-speakeasy-metadata:
+      type: method-name
+      before: sdk.subscription.activate()
+      after: sdk.subscriptions.activate()
+      reviewed_at: 1741597161466
+      created_at: 1741597020394
+  - target: $["paths"]["/api-keys/paymentProvider"]["post"]
+    update:
+      x-speakeasy-group: developerTools
+      x-speakeasy-name-override: createPaymentProviderKey
+    x-speakeasy-metadata:
+      type: method-name
+      before: sdk.Developer Tools.paymentProviderKey()
+      after: sdk.developerTools.createPaymentProviderKey()
+      reviewed_at: 1741597161466
+      created_at: 1741597020394
+  - target: $["paths"]["/customers/{customer_id}/addresses/{address_id}"]["patch"]
+    update:
+      x-speakeasy-group: customers.addresses
+    x-speakeasy-metadata:
+      type: method-name
+      before: sdk.addresses.update()
+      after: sdk.customers.addresses.update()
+      reviewed_at: 1741597161466
+      created_at: 1741597020394

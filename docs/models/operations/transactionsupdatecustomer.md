@@ -1,0 +1,30 @@
+# TransactionsUpdateCustomer
+
+## Example Usage
+
+```typescript
+import { TransactionsUpdateCustomer } from "open-billing/models/operations";
+
+let value: TransactionsUpdateCustomer = {
+  id: "<id>",
+  name: "<value>",
+  status: "active",
+  description: "generally save why nor ocelot baggy",
+  email: "Isai_Runolfsdottir@hotmail.com",
+  createdAt: "1712485440589",
+  updatedAt: "1741570328826",
+};
+```
+
+## Fields
+
+| Field                                                                                                                                    | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `id`                                                                                                                                     | *string*                                                                                                                                 | :heavy_check_mark:                                                                                                                       | N/A                                                                                                                                      |
+| `name`                                                                                                                                   | *string*                                                                                                                                 | :heavy_check_mark:                                                                                                                       | N/A                                                                                                                                      |
+| `status`                                                                                                                                 | [operations.TransactionsUpdateTransactionsResponse200Status](../../models/operations/transactionsupdatetransactionsresponse200status.md) | :heavy_check_mark:                                                                                                                       | N/A                                                                                                                                      |
+| `description`                                                                                                                            | *string*                                                                                                                                 | :heavy_check_mark:                                                                                                                       | N/A                                                                                                                                      |
+| `customData`                                                                                                                             | *any*                                                                                                                                    | :heavy_minus_sign:                                                                                                                       | N/A                                                                                                                                      |
+| `email`                                                                                                                                  | *string*                                                                                                                                 | :heavy_check_mark:                                                                                                                       | N/A                                                                                                                                      |
+| `createdAt`                                                                                                                              | *string*                                                                                                                                 | :heavy_check_mark:                                                                                                                       | N/A                                                                                                                                      |
+| `updatedAt`                                                                                                                              | *string*                                                                                                                                 | :heavy_check_mark:                                                                                                                       | N/A                                                                                                                                      |

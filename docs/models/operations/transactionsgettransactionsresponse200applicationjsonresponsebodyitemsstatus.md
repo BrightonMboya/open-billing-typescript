@@ -1,0 +1,17 @@
+# TransactionsGetTransactionsResponse200ApplicationJSONResponseBodyItemsStatus
+
+## Example Usage
+
+```typescript
+import { TransactionsGetTransactionsResponse200ApplicationJSONResponseBodyItemsStatus } from "open-billing/models/operations";
+
+let value:
+  TransactionsGetTransactionsResponse200ApplicationJSONResponseBodyItemsStatus =
+    "active";
+```
+
+## Values
+
+```typescript
+"active" | "archived"
+```

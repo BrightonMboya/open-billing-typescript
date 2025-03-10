@@ -1,0 +1,25 @@
+# TransactionsGetMethodDetails2
+
+## Example Usage
+
+```typescript
+import { TransactionsGetMethodDetails2 } from "open-billing/models/operations";
+
+let value: TransactionsGetMethodDetails2 = {
+  paymentMethod: "CARD",
+  details: {
+    last4: "<value>",
+    brand: "<value>",
+    expMonth: 5291.74,
+    expYear: 5428.07,
+    cardholderName: "<value>",
+  },
+};
+```
+
+## Fields
+
+| Field                                                                                                                                                | Type                                                                                                                                                 | Required                                                                                                                                             | Description                                                                                                                                          |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `paymentMethod`                                                                                                                                      | [operations.TransactionsGetMethodDetailsTransactionsPaymentMethod](../../models/operations/transactionsgetmethoddetailstransactionspaymentmethod.md) | :heavy_check_mark:                                                                                                                                   | N/A                                                                                                                                                  |
+| `details`                                                                                                                                            | [operations.TransactionsGetMethodDetailsTransactionsDetails](../../models/operations/transactionsgetmethoddetailstransactionsdetails.md)             | :heavy_check_mark:                                                                                                                                   | N/A                                                                                                                                                  |

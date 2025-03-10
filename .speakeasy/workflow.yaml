@@ -1,0 +1,20 @@
+workflowVersion: 1.0.0
+speakeasyVersion: latest
+sources:
+    Open Billing:
+        inputs:
+            - location: https://api.openbilling.org/doc
+        overlays:
+            - location: .speakeasy/speakeasy-modifications-overlay.yaml
+        registry:
+            location: registry.speakeasyapi.dev/jani-payments/billing/open-billing
+targets:
+    open-billing:
+        target: typescript
+        source: Open Billing
+        codeSamples:
+            registry:
+                location: registry.speakeasyapi.dev/jani-payments/billing/open-billing-typescript-code-samples
+            labelOverride:
+                fixedValue: Typescript (SDK)
+            blocking: false

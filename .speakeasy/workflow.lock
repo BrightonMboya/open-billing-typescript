@@ -1,0 +1,38 @@
+speakeasyVersion: 1.476.2
+sources:
+    Open Billing:
+        sourceNamespace: open-billing
+        sourceRevisionDigest: sha256:5b9d851f3232b6838f002f84d493c3fab640863ca45bf697d8d9500574847a6f
+        sourceBlobDigest: sha256:5d45c4ffad915721ed87fbfe8907aad5a25493bbab4462465eacce293b1398d3
+        tags:
+            - latest
+            - 1.0.0
+targets:
+    open-billing:
+        source: Open Billing
+        sourceNamespace: open-billing
+        sourceRevisionDigest: sha256:5b9d851f3232b6838f002f84d493c3fab640863ca45bf697d8d9500574847a6f
+        sourceBlobDigest: sha256:5d45c4ffad915721ed87fbfe8907aad5a25493bbab4462465eacce293b1398d3
+        codeSamplesNamespace: open-billing-typescript-code-samples
+        codeSamplesRevisionDigest: sha256:79916f6cc91600e5a24cadf52b26a11e20ce019e8b42c208dfbdfd97311be9dc
+workflow:
+    workflowVersion: 1.0.0
+    speakeasyVersion: latest
+    sources:
+        Open Billing:
+            inputs:
+                - location: https://api.openbilling.org/doc
+            overlays:
+                - location: .speakeasy/speakeasy-modifications-overlay.yaml
+            registry:
+                location: registry.speakeasyapi.dev/jani-payments/billing/open-billing
+    targets:
+        open-billing:
+            target: typescript
+            source: Open Billing
+            codeSamples:
+                registry:
+                    location: registry.speakeasyapi.dev/jani-payments/billing/open-billing-typescript-code-samples
+                labelOverride:
+                    fixedValue: Typescript (SDK)
+                blocking: false
