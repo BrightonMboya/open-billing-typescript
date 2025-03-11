@@ -10,8 +10,8 @@ let value: SubscriptionCreateDiscount = {
   amount: "232.62",
   currencyCode: "HNL",
   type: "flat_per_seat",
-  createdAt: "1741139629772",
-  updatedAt: "1741594491282",
+  createdAt: "1741196081337",
+  updatedAt: "1741650942847",
   restrictedTo: [
     "<value>",
   ],

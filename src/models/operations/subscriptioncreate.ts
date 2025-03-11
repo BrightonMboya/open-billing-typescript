@@ -274,7 +274,7 @@ export type Data = {
   billingDetails: SubscriptionCreateBillingDetails;
   currentBillingPeriod: SubscriptionCreateCurrentBillingPeriod;
   billingCycle: SubscriptionCreateBillingCycle;
-  scheduledChange: Array<ScheduledChange>;
+  scheduledChange: Array<ScheduledChange | null>;
   items: Array<SubscriptionCreateItems>;
   /**
    * Any valid JSON value
@@ -1949,7 +1949,9 @@ export const Data$inboundSchema: z.ZodType<Data, z.ZodTypeDef, unknown> = z
       SubscriptionCreateCurrentBillingPeriod$inboundSchema
     ),
     billing_cycle: z.lazy(() => SubscriptionCreateBillingCycle$inboundSchema),
-    scheduled_change: z.array(z.lazy(() => ScheduledChange$inboundSchema)),
+    scheduled_change: z.array(
+      z.nullable(z.lazy(() => ScheduledChange$inboundSchema)),
+    ),
     items: z.array(z.lazy(() => SubscriptionCreateItems$inboundSchema)),
     custom_data: z.lazy(() => SubscriptionCreateCustomData$inboundSchema)
       .optional(),
@@ -1998,7 +2000,7 @@ export type Data$Outbound = {
   billing_details: SubscriptionCreateBillingDetails$Outbound;
   current_billing_period: SubscriptionCreateCurrentBillingPeriod$Outbound;
   billing_cycle: SubscriptionCreateBillingCycle$Outbound;
-  scheduled_change: Array<ScheduledChange$Outbound>;
+  scheduled_change: Array<ScheduledChange$Outbound | null>;
   items: Array<SubscriptionCreateItems$Outbound>;
   custom_data?: SubscriptionCreateCustomData$Outbound | undefined;
   management_urls: SubscriptionCreateManagementUrls$Outbound;
@@ -2032,7 +2034,9 @@ export const Data$outboundSchema: z.ZodType<Data$Outbound, z.ZodTypeDef, Data> =
       SubscriptionCreateCurrentBillingPeriod$outboundSchema
     ),
     billingCycle: z.lazy(() => SubscriptionCreateBillingCycle$outboundSchema),
-    scheduledChange: z.array(z.lazy(() => ScheduledChange$outboundSchema)),
+    scheduledChange: z.array(
+      z.nullable(z.lazy(() => ScheduledChange$outboundSchema)),
+    ),
     items: z.array(z.lazy(() => SubscriptionCreateItems$outboundSchema)),
     customData: z.lazy(() => SubscriptionCreateCustomData$outboundSchema)
       .optional(),

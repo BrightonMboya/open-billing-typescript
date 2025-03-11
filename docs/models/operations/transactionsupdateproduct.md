@@ -9,7 +9,7 @@ let value: TransactionsUpdateProduct = {
   id: "<id>",
   name: "<value>",
   description: "spirit expostulate vice apud ugh wound",
-  updatedAt: "1741576770798",
+  updatedAt: "1741633223148",
   customData: {},
 };
 ```

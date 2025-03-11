@@ -25,8 +25,8 @@ let value: TransactionsCreateTransactionsItems = {
       },
       status: "archived",
       id: "<id>",
-      createdAt: "1710734740974",
-      updatedAt: "1741519613641",
+      createdAt: "1710791193035",
+      updatedAt: "1741576065702",
     },
   ],
   quantity: 2921.77,
@@ -35,7 +35,7 @@ let value: TransactionsCreateTransactionsItems = {
     name: "<value>",
     description:
       "whether boo poor deliberately pleasing afore pick obediently kissingly blue",
-    updatedAt: "1741517533958",
+    updatedAt: "1741573986020",
     customData: {},
   },
 };

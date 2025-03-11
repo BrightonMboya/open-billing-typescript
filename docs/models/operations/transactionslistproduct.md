@@ -10,7 +10,7 @@ let value: TransactionsListProduct = {
   name: "<value>",
   description:
     "psst before anguished emergent upward rival inasmuch uh-huh the",
-  updatedAt: "1741520044384",
+  updatedAt: "1741576496554",
   customData: {},
 };
 ```

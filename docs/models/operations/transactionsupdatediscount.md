@@ -10,8 +10,8 @@ let value: TransactionsUpdateDiscount = {
   amount: "304.20",
   currencyCode: "MKD",
   type: "flat",
-  createdAt: "1733344982737",
-  updatedAt: "1741533180792",
+  createdAt: "1733401435120",
+  updatedAt: "1741589633175",
   restrictedTo: [
     "<value>",
   ],

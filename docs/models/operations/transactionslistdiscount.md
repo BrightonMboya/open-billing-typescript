@@ -10,8 +10,8 @@ let value: TransactionsListDiscount = {
   amount: "187.36",
   currencyCode: "QAR",
   type: "flat_per_seat",
-  createdAt: "1715588662333",
-  updatedAt: "1741528223421",
+  createdAt: "1715645114541",
+  updatedAt: "1741584675630",
   restrictedTo: [
     "<value>",
   ],

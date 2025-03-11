@@ -10,7 +10,7 @@ let value: TransactionsGetPayments = {
   status: "PENDING",
   paymentMethod: "BANK_TRANSFER",
   provider: "PAYSTACK",
-  createdAt: "1740433301770",
+  createdAt: "1740489754073",
   providerReference: "<value>",
   providerMetadata: {},
   methodDetails: {

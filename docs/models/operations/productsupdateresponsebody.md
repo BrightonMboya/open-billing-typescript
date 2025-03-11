@@ -12,7 +12,7 @@ let value: ProductsUpdateResponseBody = {
   name: "<value>",
   description:
     "meh instead technician inasmuch sympathetically disappointment nor until",
-  updatedAt: "1741544992073",
+  updatedAt: "1741601443449",
   customData: {},
 };
 ```

@@ -42,8 +42,8 @@ let value: TransactionsCreateResponseBody = {
           },
           status: "archived",
           id: "<id>",
-          createdAt: "1710573721549",
-          updatedAt: "1741566311191",
+          createdAt: "1710630173647",
+          updatedAt: "1741622763289",
         },
       ],
       quantity: 4428.73,
@@ -52,7 +52,7 @@ let value: TransactionsCreateResponseBody = {
         name: "<value>",
         description:
           "phooey the worthless times worldly hover nimble whoever mmm boohoo",
-        updatedAt: "1741552335210",
+        updatedAt: "1741608787310",
         customData: {},
       },
     },
@@ -62,7 +62,7 @@ let value: TransactionsCreateResponseBody = {
     status: "PROCESSING",
     paymentMethod: "BANK_TRANSFER",
     provider: "FLUTTERWAVE",
-    createdAt: "1721056678950",
+    createdAt: "1721113131050",
     providerReference: "<value>",
     providerMetadata: {},
     methodDetails: {
@@ -81,13 +81,13 @@ let value: TransactionsCreateResponseBody = {
     description:
       "oof blah feminize sans annual before hotfoot pulp unconscious",
     email: "Amir.Bruen@hotmail.com",
-    createdAt: "1729911862254",
-    updatedAt: "1741574029984",
+    createdAt: "1729968314356",
+    updatedAt: "1741630482086",
   },
   address: {
     id: "<id>",
     customData: {},
-    updatedAt: "1741587678375",
+    updatedAt: "1741644130478",
   },
   invoiceId: "<id>",
 };

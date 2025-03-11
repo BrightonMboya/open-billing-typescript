@@ -9,7 +9,7 @@ let value: Product = {
   id: "<id>",
   name: "<value>",
   description: "huzzah close convection aha shark nimble duh wordy phew",
-  updatedAt: "1741554154989",
+  updatedAt: "1741610607045",
   customData: {},
 };
 ```

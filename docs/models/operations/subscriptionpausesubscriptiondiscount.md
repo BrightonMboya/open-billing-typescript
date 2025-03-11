@@ -10,8 +10,8 @@ let value: SubscriptionPauseSubscriptionDiscount = {
   amount: "458.50",
   currencyCode: "KHR",
   type: "percentage",
-  createdAt: "1737834237691",
-  updatedAt: "1741592422652",
+  createdAt: "1737890689434",
+  updatedAt: "1741648874395",
   restrictedTo: [
     "<value>",
   ],

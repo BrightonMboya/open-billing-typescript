@@ -222,9 +222,7 @@ const openBilling = new OpenBilling({
 async function run() {
   const result = await openBilling.subscriptions.cancel({
     subscriptionId: "<id>",
-    requestBody: {
-      effectiveFrom: "next_billing_period",
-    },
+    requestBody: {},
   });
 
   // Handle the result
@@ -254,9 +252,7 @@ const openBilling = new OpenBillingCore({
 async function run() {
   const res = await subscriptionsCancel(openBilling, {
     subscriptionId: "<id>",
-    requestBody: {
-      effectiveFrom: "next_billing_period",
-    },
+    requestBody: {},
   });
 
   if (!res.ok) {
@@ -311,7 +307,6 @@ async function run() {
   const result = await openBilling.subscriptions.pause({
     subscriptionId: "<id>",
     requestBody: {
-      effectiveFrom: "next_billing_period",
       onResume: "continue_existing_billing_period",
     },
   });
@@ -344,7 +339,6 @@ async function run() {
   const res = await subscriptionsPause(openBilling, {
     subscriptionId: "<id>",
     requestBody: {
-      effectiveFrom: "next_billing_period",
       onResume: "continue_existing_billing_period",
     },
   });
@@ -401,10 +395,7 @@ const openBilling = new OpenBilling({
 async function run() {
   const result = await openBilling.subscriptions.resume({
     subscriptionId: "<id>",
-    requestBody: {
-      effectiveFrom: "next_billing_period",
-      onResume: "start_new_billing_period",
-    },
+    requestBody: {},
   });
 
   // Handle the result
@@ -434,10 +425,7 @@ const openBilling = new OpenBillingCore({
 async function run() {
   const res = await subscriptionsResume(openBilling, {
     subscriptionId: "<id>",
-    requestBody: {
-      effectiveFrom: "next_billing_period",
-      onResume: "start_new_billing_period",
-    },
+    requestBody: {},
   });
 
   if (!res.ok) {

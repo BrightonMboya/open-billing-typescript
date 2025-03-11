@@ -19,17 +19,20 @@ export type SDKOptions = {
   /**
    * The security details required to authenticate the SDK
    */
-  security?: components.Security | (() => Promise<components.Security>);
+  security?:
+    | components.Security
+    | (() => Promise<components.Security>)
+    | undefined;
 
   httpClient?: HTTPClient;
   /**
    * Allows overriding the default server used by the SDK
    */
-  serverIdx?: number;
+  serverIdx?: number | undefined;
   /**
    * Allows overriding the default server URL used by the SDK
    */
-  serverURL?: string;
+  serverURL?: string | undefined;
   /**
    * Allows overriding the default retry config used by the SDK
    */
@@ -58,7 +61,7 @@ export function serverURLFromOptions(options: SDKOptions): URL | null {
 export const SDK_METADATA = {
   language: "typescript",
   openapiDocVersion: "1.0.0",
-  sdkVersion: "0.1.1",
-  genVersion: "2.495.1",
-  userAgent: "speakeasy-sdk/typescript 0.1.1 2.495.1 1.0.0 open-billing",
+  sdkVersion: "0.2.0",
+  genVersion: "2.546.3",
+  userAgent: "speakeasy-sdk/typescript 0.2.0 2.546.3 1.0.0 open-billing",
 } as const;

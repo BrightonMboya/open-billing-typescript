@@ -10,8 +10,8 @@ let value: SubscriptionUpdateSubscriptionDiscount = {
   amount: "397.92",
   currencyCode: "SLE",
   type: "flat",
-  createdAt: "1740567137449",
-  updatedAt: "1741585173658",
+  createdAt: "1740623589413",
+  updatedAt: "1741641625623",
   restrictedTo: [
     "<value>",
   ],

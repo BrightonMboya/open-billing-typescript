@@ -11,8 +11,8 @@ let value: TransactionsGetCustomer = {
   status: "active",
   description: "uh-huh on incidentally nasalise while broken puppet",
   email: "Yolanda.Lesch@gmail.com",
-  createdAt: "1737794482020",
-  updatedAt: "1741534534095",
+  createdAt: "1737850934327",
+  updatedAt: "1741590986402",
 };
 ```
 

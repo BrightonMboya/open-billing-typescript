@@ -9,7 +9,7 @@ let value: TransactionsGetProduct = {
   id: "<id>",
   name: "<value>",
   description: "square boring engage whether override ambitious despite",
-  updatedAt: "1741556700706",
+  updatedAt: "1741613152980",
   customData: {},
 };
 ```

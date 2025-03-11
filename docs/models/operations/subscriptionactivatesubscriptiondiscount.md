@@ -10,8 +10,8 @@ let value: SubscriptionActivateSubscriptionDiscount = {
   amount: "176.50",
   currencyCode: "XAF",
   type: "percentage",
-  createdAt: "1741591135728",
-  updatedAt: "1741527816429",
+  createdAt: "1741647587613",
+  updatedAt: "1741584268315",
   restrictedTo: [
     "<value>",
   ],

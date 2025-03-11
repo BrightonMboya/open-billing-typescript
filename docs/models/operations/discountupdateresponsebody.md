@@ -12,8 +12,8 @@ let value: DiscountUpdateResponseBody = {
   amount: "820.77",
   currencyCode: "UZS",
   type: "flat_per_seat",
-  createdAt: "1715088467395",
-  updatedAt: "1741565109231",
+  createdAt: "1715144918913",
+  updatedAt: "1741621560749",
   restrictedTo: [
     "<value>",
   ],

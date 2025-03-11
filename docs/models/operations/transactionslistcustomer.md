@@ -11,8 +11,8 @@ let value: TransactionsListCustomer = {
   status: "active",
   description: "onset eek oof",
   email: "Kayleigh.Kub51@hotmail.com",
-  createdAt: "1737239622726",
-  updatedAt: "1741583722723",
+  createdAt: "1737296074928",
+  updatedAt: "1741640174925",
 };
 ```
 
