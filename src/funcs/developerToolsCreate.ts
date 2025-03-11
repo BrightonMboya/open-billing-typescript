@@ -18,12 +18,13 @@ import {
   UnexpectedClientError,
 } from "../models/errors/httpclienterrors.js";
 import { SDKValidationError } from "../models/errors/sdkvalidationerror.js";
+import { APICall, APIPromise } from "../types/async.js";
 import { Result } from "../types/fp.js";
 
-export async function developerToolsCreate(
+export function developerToolsCreate(
   client: OpenBillingCore,
   options?: RequestOptions,
-): Promise<
+): APIPromise<
   Result<
     string,
     | APIError
@@ -35,6 +36,30 @@ export async function developerToolsCreate(
     | ConnectionError
   >
 > {
+  return new APIPromise($do(
+    client,
+    options,
+  ));
+}
+
+async function $do(
+  client: OpenBillingCore,
+  options?: RequestOptions,
+): Promise<
+  [
+    Result<
+      string,
+      | APIError
+      | SDKValidationError
+      | UnexpectedClientError
+      | InvalidRequestError
+      | RequestAbortedError
+      | RequestTimeoutError
+      | ConnectionError
+    >,
+    APICall,
+  ]
+> {
   const path = pathToFunc("/api-keys")();
 
   const headers = new Headers(compactMap({
@@ -45,6 +70,7 @@ export async function developerToolsCreate(
   const requestSecurity = resolveGlobalSecurity(securityInput);
 
   const context = {
+    baseURL: options?.serverURL ?? client._baseURL ?? "",
     operationID: "post_/api-keys",
     oAuth2Scopes: [],
 
@@ -66,7 +92,7 @@ export async function developerToolsCreate(
     timeoutMs: options?.timeoutMs || client._options.timeoutMs || -1,
   }, options);
   if (!requestRes.ok) {
-    return requestRes;
+    return [requestRes, { status: "invalid" }];
   }
   const req = requestRes.value;
 
@@ -77,7 +103,7 @@ export async function developerToolsCreate(
     retryCodes: context.retryCodes,
   });
   if (!doResult.ok) {
-    return doResult;
+    return [doResult, { status: "request-error", request: req }];
   }
   const response = doResult.value;
 
@@ -96,8 +122,8 @@ export async function developerToolsCreate(
     M.fail("5XX"),
   )(response);
   if (!result.ok) {
-    return result;
+    return [result, { status: "complete", request: req, response }];
   }
 
-  return result;
+  return [result, { status: "complete", request: req, response }];
 }

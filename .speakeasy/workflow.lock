@@ -1,20 +1,21 @@
-speakeasyVersion: 1.476.2
+speakeasyVersion: 1.514.1
 sources:
     Open Billing:
         sourceNamespace: open-billing
-        sourceRevisionDigest: sha256:5b9d851f3232b6838f002f84d493c3fab640863ca45bf697d8d9500574847a6f
-        sourceBlobDigest: sha256:5d45c4ffad915721ed87fbfe8907aad5a25493bbab4462465eacce293b1398d3
+        sourceRevisionDigest: sha256:fe888881e6ade40082815d5a215fcca49c1c17d8a04c6d761232eaa95009785a
+        sourceBlobDigest: sha256:0e8bb566ca2c9592341c0b30f1e332ed9611891d044acd02b817c2fc3ee10965
         tags:
             - latest
+            - speakeasy-sdk-regen-1741612052
             - 1.0.0
 targets:
     open-billing:
         source: Open Billing
         sourceNamespace: open-billing
-        sourceRevisionDigest: sha256:5b9d851f3232b6838f002f84d493c3fab640863ca45bf697d8d9500574847a6f
-        sourceBlobDigest: sha256:5d45c4ffad915721ed87fbfe8907aad5a25493bbab4462465eacce293b1398d3
+        sourceRevisionDigest: sha256:fe888881e6ade40082815d5a215fcca49c1c17d8a04c6d761232eaa95009785a
+        sourceBlobDigest: sha256:0e8bb566ca2c9592341c0b30f1e332ed9611891d044acd02b817c2fc3ee10965
         codeSamplesNamespace: open-billing-typescript-code-samples
-        codeSamplesRevisionDigest: sha256:79916f6cc91600e5a24cadf52b26a11e20ce019e8b42c208dfbdfd97311be9dc
+        codeSamplesRevisionDigest: sha256:37e80abfe634b5e97d9a2ac39ba1d071e158d332489b2e202f5a3023de350e4a
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
@@ -30,6 +31,9 @@ workflow:
         open-billing:
             target: typescript
             source: Open Billing
+            publish:
+                npm:
+                    token: $npm_token
             codeSamples:
                 registry:
                     location: registry.speakeasyapi.dev/jani-payments/billing/open-billing-typescript-code-samples

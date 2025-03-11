@@ -10,7 +10,7 @@ let value: TransactionsUpdatePayments = {
   status: "COMPLETED",
   paymentMethod: "BANK_TRANSFER",
   provider: "ORANGE",
-  createdAt: "1739794557761",
+  createdAt: "1739851010134",
   providerReference: "<value>",
   providerMetadata: {},
   methodDetails: {

@@ -19,12 +19,13 @@ import {
 } from "../models/errors/httpclienterrors.js";
 import { SDKValidationError } from "../models/errors/sdkvalidationerror.js";
 import * as operations from "../models/operations/index.js";
+import { APICall, APIPromise } from "../types/async.js";
 import { Result } from "../types/fp.js";
 
-export async function discountsList(
+export function discountsList(
   client: OpenBillingCore,
   options?: RequestOptions,
-): Promise<
+): APIPromise<
   Result<
     Array<operations.DiscountListResponseBody>,
     | APIError
@@ -36,6 +37,30 @@ export async function discountsList(
     | ConnectionError
   >
 > {
+  return new APIPromise($do(
+    client,
+    options,
+  ));
+}
+
+async function $do(
+  client: OpenBillingCore,
+  options?: RequestOptions,
+): Promise<
+  [
+    Result<
+      Array<operations.DiscountListResponseBody>,
+      | APIError
+      | SDKValidationError
+      | UnexpectedClientError
+      | InvalidRequestError
+      | RequestAbortedError
+      | RequestTimeoutError
+      | ConnectionError
+    >,
+    APICall,
+  ]
+> {
   const path = pathToFunc("/discounts")();
 
   const headers = new Headers(compactMap({
@@ -46,6 +71,7 @@ export async function discountsList(
   const requestSecurity = resolveGlobalSecurity(securityInput);
 
   const context = {
+    baseURL: options?.serverURL ?? client._baseURL ?? "",
     operationID: "discount:list",
     oAuth2Scopes: [],
 
@@ -67,7 +93,7 @@ export async function discountsList(
     timeoutMs: options?.timeoutMs || client._options.timeoutMs || -1,
   }, options);
   if (!requestRes.ok) {
-    return requestRes;
+    return [requestRes, { status: "invalid" }];
   }
   const req = requestRes.value;
 
@@ -78,7 +104,7 @@ export async function discountsList(
     retryCodes: context.retryCodes,
   });
   if (!doResult.ok) {
-    return doResult;
+    return [doResult, { status: "request-error", request: req }];
   }
   const response = doResult.value;
 
@@ -97,8 +123,8 @@ export async function discountsList(
     M.fail("5XX"),
   )(response);
   if (!result.ok) {
-    return result;
+    return [result, { status: "complete", request: req, response }];
   }
 
-  return result;
+  return [result, { status: "complete", request: req, response }];
 }

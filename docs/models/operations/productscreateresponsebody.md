@@ -11,7 +11,7 @@ let value: ProductsCreateResponseBody = {
   id: "<id>",
   name: "<value>",
   description: "although dishearten unaccountably unconscious notwithstanding",
-  updatedAt: "1741512431163",
+  updatedAt: "1741568882524",
   customData: {},
 };
 ```

@@ -10,8 +10,8 @@ let value: SubscriptionResumeSubscriptionDiscount = {
   amount: "256.91",
   currencyCode: "TZS",
   type: "percentage",
-  createdAt: "1738410809450",
-  updatedAt: "1741526801905",
+  createdAt: "1738467261273",
+  updatedAt: "1741583253728",
   restrictedTo: [
     "<value>",
   ],

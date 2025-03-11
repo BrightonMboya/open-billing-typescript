@@ -10,8 +10,8 @@ let value: SubscriptionCancelSubscriptionDiscount = {
   amount: "169.02",
   currencyCode: "TTD",
   type: "flat",
-  createdAt: "1724902673572",
-  updatedAt: "1741520781158",
+  createdAt: "1724959125262",
+  updatedAt: "1741577232848",
   restrictedTo: [
     "<value>",
   ],

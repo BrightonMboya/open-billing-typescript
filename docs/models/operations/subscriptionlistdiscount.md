@@ -10,8 +10,8 @@ let value: SubscriptionListDiscount = {
   amount: "509.81",
   currencyCode: "GYD",
   type: "flat_per_seat",
-  createdAt: "1713127825955",
-  updatedAt: "1741548964587",
+  createdAt: "1713184277574",
+  updatedAt: "1741605416206",
   restrictedTo: [
     "<value>",
   ],

@@ -12,8 +12,8 @@ let value: DiscountCreateResponseBody = {
   amount: "904.05",
   currencyCode: "PYG",
   type: "flat_per_seat",
-  createdAt: "1720396163272",
-  updatedAt: "1741576157934",
+  createdAt: "1720452614765",
+  updatedAt: "1741632609428",
   restrictedTo: [
     "<value>",
   ],

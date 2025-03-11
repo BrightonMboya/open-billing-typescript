@@ -10,8 +10,8 @@ let value: TransactionsCreateDiscount = {
   amount: "881.19",
   currencyCode: "VND",
   type: "flat",
-  createdAt: "1729220723468",
-  updatedAt: "1741556269943",
+  createdAt: "1729277175569",
+  updatedAt: "1741612722044",
   restrictedTo: [
     "<value>",
   ],

@@ -23,8 +23,8 @@ let value: Price = {
   },
   status: "active",
   id: "<id>",
-  createdAt: "1727369683509",
-  updatedAt: "1741581208190",
+  createdAt: "1727426135558",
+  updatedAt: "1741637660239",
 };
 ```
 

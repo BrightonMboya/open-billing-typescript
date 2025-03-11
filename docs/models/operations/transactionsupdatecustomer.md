@@ -11,8 +11,8 @@ let value: TransactionsUpdateCustomer = {
   status: "active",
   description: "generally save why nor ocelot baggy",
   email: "Isai_Runolfsdottir@hotmail.com",
-  createdAt: "1712485440589",
-  updatedAt: "1741570328826",
+  createdAt: "1712541892964",
+  updatedAt: "1741626781202",
 };
 ```
 

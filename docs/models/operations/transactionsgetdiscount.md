@@ -10,8 +10,8 @@ let value: TransactionsGetDiscount = {
   amount: "990.54",
   currencyCode: "MUR",
   type: "flat_per_seat",
-  createdAt: "1713159582998",
-  updatedAt: "1741542406016",
+  createdAt: "1713216035314",
+  updatedAt: "1741598858332",
   restrictedTo: [
     "<value>",
   ],

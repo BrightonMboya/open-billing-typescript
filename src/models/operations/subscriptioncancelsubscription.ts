@@ -251,7 +251,7 @@ export type SubscriptionCancelSubscriptionData = {
   billingDetails: SubscriptionCancelSubscriptionBillingDetails;
   currentBillingPeriod: SubscriptionCancelSubscriptionCurrentBillingPeriod;
   billingCycle: SubscriptionCancelSubscriptionBillingCycle;
-  scheduledChange: Array<SubscriptionCancelSubscriptionScheduledChange>;
+  scheduledChange: Array<SubscriptionCancelSubscriptionScheduledChange | null>;
   items: Array<SubscriptionCancelSubscriptionItems>;
   /**
    * Any valid JSON value
@@ -1924,7 +1924,9 @@ export const SubscriptionCancelSubscriptionData$inboundSchema: z.ZodType<
     SubscriptionCancelSubscriptionBillingCycle$inboundSchema
   ),
   scheduled_change: z.array(
-    z.lazy(() => SubscriptionCancelSubscriptionScheduledChange$inboundSchema),
+    z.nullable(z.lazy(() =>
+      SubscriptionCancelSubscriptionScheduledChange$inboundSchema
+    )),
   ),
   items: z.array(
     z.lazy(() => SubscriptionCancelSubscriptionItems$inboundSchema),
@@ -1980,7 +1982,7 @@ export type SubscriptionCancelSubscriptionData$Outbound = {
     SubscriptionCancelSubscriptionCurrentBillingPeriod$Outbound;
   billing_cycle: SubscriptionCancelSubscriptionBillingCycle$Outbound;
   scheduled_change: Array<
-    SubscriptionCancelSubscriptionScheduledChange$Outbound
+    SubscriptionCancelSubscriptionScheduledChange$Outbound | null
   >;
   items: Array<SubscriptionCancelSubscriptionItems$Outbound>;
   custom_data?: SubscriptionCancelSubscriptionCustomData$Outbound | undefined;
@@ -2017,7 +2019,9 @@ export const SubscriptionCancelSubscriptionData$outboundSchema: z.ZodType<
     SubscriptionCancelSubscriptionBillingCycle$outboundSchema
   ),
   scheduledChange: z.array(
-    z.lazy(() => SubscriptionCancelSubscriptionScheduledChange$outboundSchema),
+    z.nullable(z.lazy(() =>
+      SubscriptionCancelSubscriptionScheduledChange$outboundSchema
+    )),
   ),
   items: z.array(
     z.lazy(() => SubscriptionCancelSubscriptionItems$outboundSchema),

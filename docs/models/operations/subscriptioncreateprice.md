@@ -23,8 +23,8 @@ let value: SubscriptionCreatePrice = {
   },
   status: "active",
   id: "<id>",
-  createdAt: "1741263198832",
-  updatedAt: "1741516415302",
+  createdAt: "1741319650384",
+  updatedAt: "1741572866854",
 };
 ```
 

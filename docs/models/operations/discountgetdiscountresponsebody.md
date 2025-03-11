@@ -10,8 +10,8 @@ let value: DiscountGetDiscountResponseBody = {
   amount: "160.54",
   currencyCode: "SSP",
   type: "flat_per_seat",
-  createdAt: "1724509038621",
-  updatedAt: "1741561833464",
+  createdAt: "1724565490120",
+  updatedAt: "1741618284963",
   restrictedTo: [
     "<value>",
   ],

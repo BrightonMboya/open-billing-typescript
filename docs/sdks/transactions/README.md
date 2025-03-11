@@ -142,9 +142,7 @@ const openBilling = new OpenBilling({
 });
 
 async function run() {
-  const result = await openBilling.transactions.list({
-    perPage: 30,
-  });
+  const result = await openBilling.transactions.list({});
 
   // Handle the result
   console.log(result);
@@ -171,9 +169,7 @@ const openBilling = new OpenBillingCore({
 });
 
 async function run() {
-  const res = await transactionsList(openBilling, {
-    perPage: 30,
-  });
+  const res = await transactionsList(openBilling, {});
 
   if (!res.ok) {
     throw res.error;

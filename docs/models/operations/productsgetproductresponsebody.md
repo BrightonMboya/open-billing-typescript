@@ -11,7 +11,7 @@ let value: ProductsGetProductResponseBody = {
   id: "<id>",
   name: "<value>",
   description: "mouser inject worth uh-huh substitution psst upon er",
-  updatedAt: "1741563818945",
+  updatedAt: "1741620270310",
   customData: {},
 };
 ```

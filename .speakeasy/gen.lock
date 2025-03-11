@@ -3,25 +3,29 @@ id: fccca7fa-9f7b-4995-b91c-ca00aed39d12
 management:
   docChecksum: 3514b529ea6ff9a2e0cb1b8d2b5a8cf5
   docVersion: 1.0.0
-  speakeasyVersion: 1.476.2
-  generationVersion: 2.495.1
-  releaseVersion: 0.1.1
-  configChecksum: a09b4abc911f923e7975c81ab7581881
+  speakeasyVersion: 1.514.1
+  generationVersion: 2.546.3
+  releaseVersion: 0.2.0
+  configChecksum: d193a0e5d682272705dd8254bbe571ed
+  repoURL: https://github.com/BrightonMboya/open-billing-typescript.git
+  installationURL: https://github.com/BrightonMboya/open-billing-typescript
+  published: true
 features:
   typescript:
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.11
-    core: 3.18.17
+    core: 3.21.3
     defaultEnabledRetries: 0.1.0
     devContainers: 2.90.0
     enumUnions: 0.1.0
     envVarSecurityUsage: 0.1.2
-    globalSecurity: 2.82.12
+    globalSecurity: 2.82.13
     globalSecurityCallbacks: 0.1.0
     globalServerURLs: 2.82.4
     groups: 2.81.2
+    mcpServer: 0.6.0
     nameOverrides: 2.81.2
-    nullables: 0.1.0
+    nullables: 0.1.1
     responseFormat: 0.2.3
     retries: 2.83.0
     sdkHooks: 0.2.0
@@ -30,7 +34,6 @@ generatedFiles:
   - .devcontainer/README.md
   - .devcontainer/devcontainer.json
   - .devcontainer/setup.sh
-  - .eslintrc.cjs
   - .gitattributes
   - .npmignore
   - FUNCTIONS.md
@@ -594,6 +597,7 @@ generatedFiles:
   - docs/sdks/subscriptions/README.md
   - docs/sdks/transactions/README.md
   - docs/types/rfcdate.md
+  - eslint.config.mjs
   - jsr.json
   - package.json
   - src/core.ts
@@ -642,6 +646,43 @@ generatedFiles:
   - src/lib/sdks.ts
   - src/lib/security.ts
   - src/lib/url.ts
+  - src/mcp-server/build.mts
+  - src/mcp-server/cli.ts
+  - src/mcp-server/cli/start/command.ts
+  - src/mcp-server/cli/start/impl.ts
+  - src/mcp-server/console-logger.ts
+  - src/mcp-server/extensions.ts
+  - src/mcp-server/mcp-server.ts
+  - src/mcp-server/resources.ts
+  - src/mcp-server/scopes.ts
+  - src/mcp-server/server.ts
+  - src/mcp-server/shared.ts
+  - src/mcp-server/tools.ts
+  - src/mcp-server/tools/developerToolsCreate.ts
+  - src/mcp-server/tools/developerToolsCreatePaymentProviderKey.ts
+  - src/mcp-server/tools/discountsCreate.ts
+  - src/mcp-server/tools/discountsGet.ts
+  - src/mcp-server/tools/discountsList.ts
+  - src/mcp-server/tools/discountsUpdate.ts
+  - src/mcp-server/tools/pricesCreate.ts
+  - src/mcp-server/tools/pricesGet.ts
+  - src/mcp-server/tools/pricesList.ts
+  - src/mcp-server/tools/pricesUpdate.ts
+  - src/mcp-server/tools/productsCreate.ts
+  - src/mcp-server/tools/productsGet.ts
+  - src/mcp-server/tools/productsList.ts
+  - src/mcp-server/tools/productsUpdate.ts
+  - src/mcp-server/tools/subscriptionsActivate.ts
+  - src/mcp-server/tools/subscriptionsCancel.ts
+  - src/mcp-server/tools/subscriptionsCreate.ts
+  - src/mcp-server/tools/subscriptionsList.ts
+  - src/mcp-server/tools/subscriptionsPause.ts
+  - src/mcp-server/tools/subscriptionsResume.ts
+  - src/mcp-server/tools/subscriptionsUpdate.ts
+  - src/mcp-server/tools/transactionsCreate.ts
+  - src/mcp-server/tools/transactionsGet.ts
+  - src/mcp-server/tools/transactionsList.ts
+  - src/mcp-server/tools/transactionsUpdate.ts
   - src/models/components/index.ts
   - src/models/components/security.ts
   - src/models/errors/apierror.ts
@@ -698,6 +739,7 @@ generatedFiles:
   - src/sdk/sdk.ts
   - src/sdk/subscriptions.ts
   - src/sdk/transactions.ts
+  - src/types/async.ts
   - src/types/blobs.ts
   - src/types/constdatetime.ts
   - src/types/enums.ts

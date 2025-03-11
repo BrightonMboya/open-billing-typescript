@@ -44,37 +44,86 @@ Developer-friendly & type-safe Typescript SDK specifically catered to leverage *
 <!-- Start SDK Installation [installation] -->
 ## SDK Installation
 
-> [!TIP]
-> To finish publishing your SDK to npm and others you must [run your first generation action](https://www.speakeasy.com/docs/github-setup#step-by-step-guide).
-
-
 The SDK can be installed with either [npm](https://www.npmjs.com/), [pnpm](https://pnpm.io/), [bun](https://bun.sh/) or [yarn](https://classic.yarnpkg.com/en/) package managers.
 
 ### NPM
 
 ```bash
-npm add <UNSET>
+npm add open-billing
 ```
 
 ### PNPM
 
 ```bash
-pnpm add <UNSET>
+pnpm add open-billing
 ```
 
 ### Bun
 
 ```bash
-bun add <UNSET>
+bun add open-billing
 ```
 
 ### Yarn
 
 ```bash
-yarn add <UNSET> zod
+yarn add open-billing zod
 
 # Note that Yarn does not install peer dependencies automatically. You will need
 # to install zod as shown above.
+```
+
+
+
+### Model Context Protocol (MCP) Server
+
+This SDK is also an installable MCP server where the various SDK methods are
+exposed as tools that can be invoked by AI applications.
+
+> Node.js v20 or greater is required to run the MCP server.
+
+<details>
+<summary>Claude installation steps</summary>
+
+Add the following server definition to your `claude_desktop_config.json` file:
+
+```json
+{
+  "mcpServers": {
+    "OpenBilling": {
+      "command": "npx",
+      "args": [
+        "-y", "--package", "open-billing",
+        "--",
+        "mcp", "start",
+        "--bearer", "...",
+        "--organization-id", "..."
+      ]
+    }
+  }
+}
+```
+
+</details>
+
+<details>
+<summary>Cursor installation steps</summary>
+
+Go to `Cursor Settings > Features > MCP Servers > Add new MCP server` and use the following settings:
+
+- Name: OpenBilling
+- Type: `command`
+- Command:
+```sh
+npx -y --package open-billing -- mcp start --bearer ... --organization-id ... 
+```
+
+</details>
+
+For a full list of server arguments, run:
+
+```sh
+npx -y --package open-billing -- mcp start --help
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -394,7 +443,7 @@ In some rare cases, the SDK can fail to get a response from the server or even m
 
 ### Override Server URL Per-Client
 
-The default server can also be overridden globally by passing a URL to the `serverURL: string` optional parameter when initializing the SDK client instance. For example:
+The default server can be overridden globally by passing a URL to the `serverURL: string` optional parameter when initializing the SDK client instance. For example:
 ```typescript
 import { OpenBilling } from "open-billing";
 

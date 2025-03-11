@@ -10,8 +10,8 @@ let value: DiscountListResponseBody = {
   amount: "277.59",
   currencyCode: "BRL",
   type: "percentage",
-  createdAt: "1740222382921",
-  updatedAt: "1741526940925",
+  createdAt: "1740278834401",
+  updatedAt: "1741583392405",
   restrictedTo: [
     "<value>",
   ],
