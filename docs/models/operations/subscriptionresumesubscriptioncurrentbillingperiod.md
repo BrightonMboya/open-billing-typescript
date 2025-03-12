@@ -7,8 +7,8 @@ import { SubscriptionResumeSubscriptionCurrentBillingPeriod } from "open-billing
 import { RFCDate } from "open-billing/types";
 
 let value: SubscriptionResumeSubscriptionCurrentBillingPeriod = {
-  startsAt: new RFCDate("2023-03-11"),
-  endsAt: new RFCDate("2023-08-17"),
+  startsAt: new RFCDate("2023-05-22"),
+  endsAt: new RFCDate("2024-05-31"),
 };
 ```
 

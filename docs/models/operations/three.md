@@ -7,9 +7,9 @@ import { Three } from "open-billing/models/operations";
 
 let value: Three = {
   paymentMethod: "BANK_TRANSFER",
-  paymentProvider: "MTN",
-  amount: 6837.27,
-  currencyCode: "BIF",
+  paymentProvider: "PAYSTACK",
+  amount: 6863.8,
+  currencyCode: "GEL",
   bankReference: "<value>",
   bankName: "<value>",
 };

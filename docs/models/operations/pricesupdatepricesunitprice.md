@@ -6,8 +6,8 @@
 import { PricesUpdatePricesUnitPrice } from "open-billing/models/operations";
 
 let value: PricesUpdatePricesUnitPrice = {
-  amount: 1970.54,
-  currencyCode: "KPW",
+  amount: 9040.45,
+  currencyCode: "PYG",
 };
 ```
 

@@ -7,7 +7,7 @@ import { TransactionsCreateBillingCycle } from "open-billing/models/operations";
 
 let value: TransactionsCreateBillingCycle = {
   interval: "year",
-  frequency: 9114.51,
+  frequency: 6201.26,
 };
 ```
 

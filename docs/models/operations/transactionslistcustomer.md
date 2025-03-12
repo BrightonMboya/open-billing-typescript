@@ -9,10 +9,10 @@ let value: TransactionsListCustomer = {
   id: "<id>",
   name: "<value>",
   status: "active",
-  description: "onset eek oof",
-  email: "Kayleigh.Kub51@hotmail.com",
-  createdAt: "1737296074928",
-  updatedAt: "1741640174925",
+  description: "awkwardly loosely than",
+  email: "Ada64@gmail.com",
+  createdAt: "1725822561067",
+  updatedAt: "1741747894188",
 };
 ```
 

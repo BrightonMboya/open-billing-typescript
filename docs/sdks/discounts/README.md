@@ -101,9 +101,12 @@ const openBilling = new OpenBilling({
 
 async function run() {
   const result = await openBilling.discounts.create({
+    id: "<id>",
     amount: 4865.89,
     currencyCode: "NZD",
     type: "percentage",
+    createdAt: "1725593098493",
+    updatedAt: "1741752773496",
   });
 
   // Handle the result
@@ -132,9 +135,12 @@ const openBilling = new OpenBillingCore({
 
 async function run() {
   const res = await discountsCreate(openBilling, {
+    id: "<id>",
     amount: 4865.89,
     currencyCode: "NZD",
     type: "percentage",
+    createdAt: "1725593098493",
+    updatedAt: "1741752773496",
   });
 
   if (!res.ok) {

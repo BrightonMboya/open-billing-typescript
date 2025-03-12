@@ -5,7 +5,7 @@
 ```typescript
 import { SubscriptionActivateSubscriptionSubscriptionsType } from "open-billing/models/operations";
 
-let value: SubscriptionActivateSubscriptionSubscriptionsType = "custom";
+let value: SubscriptionActivateSubscriptionSubscriptionsType = "standard";
 ```
 
 ## Values

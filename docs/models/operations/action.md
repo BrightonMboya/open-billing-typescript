@@ -5,7 +5,7 @@
 ```typescript
 import { Action } from "open-billing/models/operations";
 
-let value: Action = "cancel";
+let value: Action = "resume";
 ```
 
 ## Values

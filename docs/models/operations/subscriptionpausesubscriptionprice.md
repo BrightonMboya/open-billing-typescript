@@ -7,24 +7,24 @@ import { SubscriptionPauseSubscriptionPrice } from "open-billing/models/operatio
 
 let value: SubscriptionPauseSubscriptionPrice = {
   productId: "<id>",
-  type: "custom",
+  type: "standard",
   name: "<value>",
   billingCycle: {
-    interval: "week",
-    frequency: 5243.8,
+    interval: "day",
+    frequency: 7057.1,
   },
   trialPeriod: {
-    interval: "day",
-    frequency: 1598.45,
+    interval: "week",
+    frequency: 3108.4,
   },
   unitPrice: {
-    amount: 468.06,
-    currencyCode: "ZAR",
+    amount: 7186.27,
+    currencyCode: "GYD",
   },
-  status: "active",
+  status: "archived",
   id: "<id>",
-  createdAt: "1715749322697",
-  updatedAt: "1741620176078",
+  createdAt: "1735956146478",
+  updatedAt: "1741716425014",
 };
 ```
 

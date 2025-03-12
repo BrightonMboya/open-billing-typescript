@@ -6,14 +6,14 @@
 import { PricesListBillingCycle } from "open-billing/models/operations";
 
 let value: PricesListBillingCycle = {
-  interval: "day",
-  frequency: 4880.56,
+  interval: "year",
+  frequency: 9413.78,
 };
 ```
 
 ## Fields
 
-| Field                                                                                      | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `interval`                                                                                 | [operations.PricesListPricesInterval](../../models/operations/priceslistpricesinterval.md) | :heavy_check_mark:                                                                         | N/A                                                                                        |
-| `frequency`                                                                                | *number*                                                                                   | :heavy_check_mark:                                                                         | N/A                                                                                        |
+| Field                                                                          | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `interval`                                                                     | [operations.PricesListInterval](../../models/operations/priceslistinterval.md) | :heavy_check_mark:                                                             | N/A                                                                            |
+| `frequency`                                                                    | *number*                                                                       | :heavy_check_mark:                                                             | N/A                                                                            |

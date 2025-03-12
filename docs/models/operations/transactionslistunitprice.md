@@ -6,8 +6,8 @@
 import { TransactionsListUnitPrice } from "open-billing/models/operations";
 
 let value: TransactionsListUnitPrice = {
-  amount: 928.51,
-  currencyCode: "CDF",
+  amount: 5592.48,
+  currencyCode: "TZS",
 };
 ```
 

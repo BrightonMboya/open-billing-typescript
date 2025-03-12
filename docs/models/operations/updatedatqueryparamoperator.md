@@ -5,7 +5,7 @@
 ```typescript
 import { UpdatedAtQueryParamOperator } from "open-billing/models/operations";
 
-let value: UpdatedAtQueryParamOperator = "GT";
+let value: UpdatedAtQueryParamOperator = "LT";
 ```
 
 ## Values

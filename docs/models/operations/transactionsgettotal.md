@@ -6,9 +6,9 @@
 import { TransactionsGetTotal } from "open-billing/models/operations";
 
 let value: TransactionsGetTotal = {
-  subtotal: 3659.98,
-  discount: 1020.19,
-  grandTotal: 7878.5,
+  subtotal: 6238.67,
+  discount: 4397.45,
+  grandTotal: 105.85,
 };
 ```
 

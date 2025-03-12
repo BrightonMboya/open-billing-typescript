@@ -6,14 +6,14 @@
 import { PricesCreateBillingCycle } from "open-billing/models/operations";
 
 let value: PricesCreateBillingCycle = {
-  interval: "year",
-  frequency: 4783.7,
+  interval: "day",
+  frequency: 978.44,
 };
 ```
 
 ## Fields
 
-| Field                                                                                          | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `interval`                                                                                     | [operations.PricesCreatePricesInterval](../../models/operations/pricescreatepricesinterval.md) | :heavy_check_mark:                                                                             | N/A                                                                                            |
-| `frequency`                                                                                    | *number*                                                                                       | :heavy_check_mark:                                                                             | N/A                                                                                            |
+| Field                                                                              | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `interval`                                                                         | [operations.PricesCreateInterval](../../models/operations/pricescreateinterval.md) | :heavy_check_mark:                                                                 | N/A                                                                                |
+| `frequency`                                                                        | *number*                                                                           | :heavy_check_mark:                                                                 | N/A                                                                                |

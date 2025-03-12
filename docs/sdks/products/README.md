@@ -6,7 +6,7 @@
 ### Available Operations
 
 * [list](#list)
-* [create](#create)
+* [createWithPrices](#createwithprices)
 * [get](#get)
 * [update](#update)
 
@@ -85,7 +85,7 @@ run();
 | --------------- | --------------- | --------------- |
 | errors.APIError | 4XX, 5XX        | \*/\*           |
 
-## create
+## createWithPrices
 
 ### Example Usage
 
@@ -100,9 +100,22 @@ const openBilling = new OpenBilling({
 });
 
 async function run() {
-  const result = await openBilling.products.create({
+  const result = await openBilling.products.createWithPrices({
     name: "<value>",
-    description: "yuck vice between gee ugh ha",
+    status: "active",
+    type: "custom",
+    billingCycle: {
+      interval: "month",
+      frequency: 3727.94,
+    },
+    trialPeriod: {
+      interval: "day",
+      frequency: 4075.71,
+    },
+    unitPrice: {
+      amount: 6944.36,
+      currencyCode: "SRD",
+    },
   });
 
   // Handle the result
@@ -118,7 +131,7 @@ The standalone function version of this method:
 
 ```typescript
 import { OpenBillingCore } from "open-billing/core.js";
-import { productsCreate } from "open-billing/funcs/productsCreate.js";
+import { productsCreateWithPrices } from "open-billing/funcs/productsCreateWithPrices.js";
 
 // Use `OpenBillingCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -130,9 +143,22 @@ const openBilling = new OpenBillingCore({
 });
 
 async function run() {
-  const res = await productsCreate(openBilling, {
+  const res = await productsCreateWithPrices(openBilling, {
     name: "<value>",
-    description: "yuck vice between gee ugh ha",
+    status: "active",
+    type: "custom",
+    billingCycle: {
+      interval: "month",
+      frequency: 3727.94,
+    },
+    trialPeriod: {
+      interval: "day",
+      frequency: 4075.71,
+    },
+    unitPrice: {
+      amount: 6944.36,
+      currencyCode: "SRD",
+    },
   });
 
   if (!res.ok) {
@@ -152,14 +178,14 @@ run();
 
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                      | [operations.ProductsCreateRequestBody](../../models/operations/productscreaterequestbody.md)                                                                                   | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `request`                                                                                                                                                                      | [operations.ProductsCreateWithPricesRequestBody](../../models/operations/productscreatewithpricesrequestbody.md)                                                               | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 | `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise\<[operations.ProductsCreateResponseBody](../../models/operations/productscreateresponsebody.md)\>**
+**Promise\<[operations.ProductsCreateWithPricesResponseBody](../../models/operations/productscreatewithpricesresponsebody.md)\>**
 
 ### Errors
 

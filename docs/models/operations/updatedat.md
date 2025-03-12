@@ -6,15 +6,15 @@
 ### `Date`
 
 ```typescript
-const value: Date = new Date("2024-03-30T23:27:16.931Z");
+const value: Date = new Date("2024-08-19T03:18:40.071Z");
 ```
 
 ### `operations.UpdatedAtQueryParam2`
 
 ```typescript
 const value: operations.UpdatedAtQueryParam2 = {
-  operator: "GT",
-  value: new Date("2024-05-10T04:19:54.493Z"),
+  operator: "GTE",
+  value: new Date("2023-03-21T13:40:19.741Z"),
 };
 ```
 

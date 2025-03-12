@@ -22,11 +22,6 @@ export type ProductsGetProductStatus = ClosedEnum<
 >;
 
 /**
- * Any valid JSON value
- */
-export type ProductsGetProductCustomData = {};
-
-/**
  * Returns a Product using its id
  */
 export type ProductsGetProductResponseBody = {
@@ -36,10 +31,6 @@ export type ProductsGetProductResponseBody = {
   status?: ProductsGetProductStatus | undefined;
   createdAt?: string | undefined;
   updatedAt: string;
-  /**
-   * Any valid JSON value
-   */
-  customData: ProductsGetProductCustomData;
 };
 
 /** @internal */
@@ -126,56 +117,6 @@ export namespace ProductsGetProductStatus$ {
 }
 
 /** @internal */
-export const ProductsGetProductCustomData$inboundSchema: z.ZodType<
-  ProductsGetProductCustomData,
-  z.ZodTypeDef,
-  unknown
-> = z.object({});
-
-/** @internal */
-export type ProductsGetProductCustomData$Outbound = {};
-
-/** @internal */
-export const ProductsGetProductCustomData$outboundSchema: z.ZodType<
-  ProductsGetProductCustomData$Outbound,
-  z.ZodTypeDef,
-  ProductsGetProductCustomData
-> = z.object({});
-
-/**
- * @internal
- * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
- */
-export namespace ProductsGetProductCustomData$ {
-  /** @deprecated use `ProductsGetProductCustomData$inboundSchema` instead. */
-  export const inboundSchema = ProductsGetProductCustomData$inboundSchema;
-  /** @deprecated use `ProductsGetProductCustomData$outboundSchema` instead. */
-  export const outboundSchema = ProductsGetProductCustomData$outboundSchema;
-  /** @deprecated use `ProductsGetProductCustomData$Outbound` instead. */
-  export type Outbound = ProductsGetProductCustomData$Outbound;
-}
-
-export function productsGetProductCustomDataToJSON(
-  productsGetProductCustomData: ProductsGetProductCustomData,
-): string {
-  return JSON.stringify(
-    ProductsGetProductCustomData$outboundSchema.parse(
-      productsGetProductCustomData,
-    ),
-  );
-}
-
-export function productsGetProductCustomDataFromJSON(
-  jsonString: string,
-): SafeParseResult<ProductsGetProductCustomData, SDKValidationError> {
-  return safeParse(
-    jsonString,
-    (x) => ProductsGetProductCustomData$inboundSchema.parse(JSON.parse(x)),
-    `Failed to parse 'ProductsGetProductCustomData' from JSON`,
-  );
-}
-
-/** @internal */
 export const ProductsGetProductResponseBody$inboundSchema: z.ZodType<
   ProductsGetProductResponseBody,
   z.ZodTypeDef,
@@ -187,11 +128,6 @@ export const ProductsGetProductResponseBody$inboundSchema: z.ZodType<
   status: ProductsGetProductStatus$inboundSchema.optional(),
   createdAt: z.string().optional(),
   updatedAt: z.string(),
-  custom_data: z.lazy(() => ProductsGetProductCustomData$inboundSchema),
-}).transform((v) => {
-  return remap$(v, {
-    "custom_data": "customData",
-  });
 });
 
 /** @internal */
@@ -202,7 +138,6 @@ export type ProductsGetProductResponseBody$Outbound = {
   status?: string | undefined;
   createdAt?: string | undefined;
   updatedAt: string;
-  custom_data: ProductsGetProductCustomData$Outbound;
 };
 
 /** @internal */
@@ -217,11 +152,6 @@ export const ProductsGetProductResponseBody$outboundSchema: z.ZodType<
   status: ProductsGetProductStatus$outboundSchema.optional(),
   createdAt: z.string().optional(),
   updatedAt: z.string(),
-  customData: z.lazy(() => ProductsGetProductCustomData$outboundSchema),
-}).transform((v) => {
-  return remap$(v, {
-    customData: "custom_data",
-  });
 });
 
 /**

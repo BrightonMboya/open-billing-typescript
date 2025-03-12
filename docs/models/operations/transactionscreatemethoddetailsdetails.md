@@ -8,8 +8,8 @@ import { TransactionsCreateMethodDetailsDetails } from "open-billing/models/oper
 let value: TransactionsCreateMethodDetailsDetails = {
   last4: "<value>",
   brand: "<value>",
-  expMonth: 7079.83,
-  expYear: 7672.1,
+  expMonth: 9804.67,
+  expYear: 5886.62,
   cardholderName: "<value>",
 };
 ```

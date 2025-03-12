@@ -7,11 +7,11 @@ import { SubscriptionPauseSubscriptionDiscount } from "open-billing/models/opera
 
 let value: SubscriptionPauseSubscriptionDiscount = {
   id: "<id>",
-  amount: "458.50",
-  currencyCode: "KHR",
-  type: "percentage",
-  createdAt: "1737890689434",
-  updatedAt: "1741648874395",
+  amount: "729.83",
+  currencyCode: "BAM",
+  type: "flat_per_seat",
+  createdAt: "1733421105634",
+  updatedAt: "1741712868542",
   restrictedTo: [
     "<value>",
   ],

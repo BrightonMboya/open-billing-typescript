@@ -7,7 +7,7 @@ import { TransactionsCreateItems } from "open-billing/models/operations";
 
 let value: TransactionsCreateItems = {
   priceId: "<id>",
-  quantity: 7917.62,
+  quantity: 7811.93,
 };
 ```
 

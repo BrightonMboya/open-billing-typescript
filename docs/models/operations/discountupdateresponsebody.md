@@ -9,11 +9,11 @@ import { DiscountUpdateResponseBody } from "open-billing/models/operations";
 
 let value: DiscountUpdateResponseBody = {
   id: "<id>",
-  amount: "820.77",
-  currencyCode: "UZS",
+  amount: "739.89",
+  currencyCode: "UYU",
   type: "flat_per_seat",
-  createdAt: "1715144918913",
-  updatedAt: "1741621560749",
+  createdAt: "1726928668031",
+  updatedAt: "1741723922819",
   restrictedTo: [
     "<value>",
   ],

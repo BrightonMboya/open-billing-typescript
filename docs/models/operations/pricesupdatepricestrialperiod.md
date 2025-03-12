@@ -6,8 +6,8 @@
 import { PricesUpdatePricesTrialPeriod } from "open-billing/models/operations";
 
 let value: PricesUpdatePricesTrialPeriod = {
-  interval: "week",
-  frequency: 3708.53,
+  interval: "month",
+  frequency: 3990.25,
 };
 ```
 

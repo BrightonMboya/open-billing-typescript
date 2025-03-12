@@ -7,24 +7,24 @@ import { TransactionsUpdatePrice } from "open-billing/models/operations";
 
 let value: TransactionsUpdatePrice = {
   productId: "<id>",
-  type: "custom",
+  type: "standard",
   name: "<value>",
   billingCycle: {
-    interval: "year",
-    frequency: 4235.5,
+    interval: "day",
+    frequency: 9970.47,
   },
   trialPeriod: {
-    interval: "month",
-    frequency: 7420.1,
+    interval: "day",
+    frequency: 3125.63,
   },
   unitPrice: {
-    amount: 8971.46,
-    currencyCode: "BTN",
+    amount: 2084.14,
+    currencyCode: "VUV",
   },
   status: "archived",
   id: "<id>",
-  createdAt: "1732022874985",
-  updatedAt: "1741570964772",
+  createdAt: "1726154346297",
+  updatedAt: "1741745800175",
 };
 ```
 
@@ -40,7 +40,7 @@ let value: TransactionsUpdatePrice = {
 | `trialPeriod`                                                                                                                                                                                            | [operations.TransactionsUpdateTrialPeriod](../../models/operations/transactionsupdatetrialperiod.md)                                                                                                     | :heavy_check_mark:                                                                                                                                                                                       | N/A                                                                                                                                                                                                      |
 | `unitPrice`                                                                                                                                                                                              | [operations.TransactionsUpdateUnitPrice](../../models/operations/transactionsupdateunitprice.md)                                                                                                         | :heavy_check_mark:                                                                                                                                                                                       | N/A                                                                                                                                                                                                      |
 | `status`                                                                                                                                                                                                 | [operations.TransactionsUpdateTransactionsResponse200ApplicationJSONResponseBodyItemsStatus](../../models/operations/transactionsupdatetransactionsresponse200applicationjsonresponsebodyitemsstatus.md) | :heavy_check_mark:                                                                                                                                                                                       | N/A                                                                                                                                                                                                      |
-| `customData`                                                                                                                                                                                             | [operations.TransactionsUpdateTransactionsResponse200CustomData](../../models/operations/transactionsupdatetransactionsresponse200customdata.md)                                                         | :heavy_minus_sign:                                                                                                                                                                                       | Any valid JSON value                                                                                                                                                                                     |
+| `customData`                                                                                                                                                                                             | [operations.TransactionsUpdateTransactionsResponseCustomData](../../models/operations/transactionsupdatetransactionsresponsecustomdata.md)                                                               | :heavy_minus_sign:                                                                                                                                                                                       | Any valid JSON value                                                                                                                                                                                     |
 | `id`                                                                                                                                                                                                     | *string*                                                                                                                                                                                                 | :heavy_check_mark:                                                                                                                                                                                       | N/A                                                                                                                                                                                                      |
 | `createdAt`                                                                                                                                                                                              | *string*                                                                                                                                                                                                 | :heavy_check_mark:                                                                                                                                                                                       | N/A                                                                                                                                                                                                      |
 | `updatedAt`                                                                                                                                                                                              | *string*                                                                                                                                                                                                 | :heavy_check_mark:                                                                                                                                                                                       | N/A                                                                                                                                                                                                      |

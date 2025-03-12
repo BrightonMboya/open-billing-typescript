@@ -5,7 +5,7 @@
 ```typescript
 import { SubscriptionListAction } from "open-billing/models/operations";
 
-let value: SubscriptionListAction = "pause";
+let value: SubscriptionListAction = "resume";
 ```
 
 ## Values

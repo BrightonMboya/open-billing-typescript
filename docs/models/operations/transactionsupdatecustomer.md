@@ -8,11 +8,11 @@ import { TransactionsUpdateCustomer } from "open-billing/models/operations";
 let value: TransactionsUpdateCustomer = {
   id: "<id>",
   name: "<value>",
-  status: "active",
-  description: "generally save why nor ocelot baggy",
-  email: "Isai_Runolfsdottir@hotmail.com",
-  createdAt: "1712541892964",
-  updatedAt: "1741626781202",
+  status: "archived",
+  description: "cantaloupe inside towards ignorance",
+  email: "Dudley_Dibbert86@yahoo.com",
+  createdAt: "1740640802792",
+  updatedAt: "1741729389799",
 };
 ```
 

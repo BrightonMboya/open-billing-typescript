@@ -5,7 +5,7 @@
 ```typescript
 import { TransactionsGetType } from "open-billing/models/operations";
 
-let value: TransactionsGetType = "flat";
+let value: TransactionsGetType = "percentage";
 ```
 
 ## Values

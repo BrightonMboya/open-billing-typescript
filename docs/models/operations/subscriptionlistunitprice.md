@@ -6,8 +6,8 @@
 import { SubscriptionListUnitPrice } from "open-billing/models/operations";
 
 let value: SubscriptionListUnitPrice = {
-  amount: 8792.35,
-  currencyCode: "MKD",
+  amount: 8783.73,
+  currencyCode: "PYG",
 };
 ```
 

@@ -6,8 +6,8 @@
 import { UnitPrice } from "open-billing/models/operations";
 
 let value: UnitPrice = {
-  amount: 9615.71,
-  currencyCode: "DKK",
+  amount: 971.01,
+  currencyCode: "TND",
 };
 ```
 

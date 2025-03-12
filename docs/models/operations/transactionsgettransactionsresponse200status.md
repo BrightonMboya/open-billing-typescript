@@ -5,7 +5,7 @@
 ```typescript
 import { TransactionsGetTransactionsResponse200Status } from "open-billing/models/operations";
 
-let value: TransactionsGetTransactionsResponse200Status = "archived";
+let value: TransactionsGetTransactionsResponse200Status = "active";
 ```
 
 ## Values

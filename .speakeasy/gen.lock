@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: fccca7fa-9f7b-4995-b91c-ca00aed39d12
 management:
-  docChecksum: 3514b529ea6ff9a2e0cb1b8d2b5a8cf5
+  docChecksum: 5762edfa1dfd838fadeaaf594744856e
   docVersion: 1.0.0
-  speakeasyVersion: 1.514.1
-  generationVersion: 2.546.3
-  releaseVersion: 0.2.0
-  configChecksum: d193a0e5d682272705dd8254bbe571ed
+  speakeasyVersion: 1.517.0
+  generationVersion: 2.548.1
+  releaseVersion: 0.3.2
+  configChecksum: 5aafcad900a46bd083916a91d0518143
   repoURL: https://github.com/BrightonMboya/open-billing-typescript.git
   installationURL: https://github.com/BrightonMboya/open-billing-typescript
   published: true
@@ -14,7 +14,7 @@ features:
   typescript:
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.11
-    core: 3.21.3
+    core: 3.21.4
     defaultEnabledRetries: 0.1.0
     devContainers: 2.90.0
     enumUnions: 0.1.0
@@ -23,7 +23,7 @@ features:
     globalSecurityCallbacks: 0.1.0
     globalServerURLs: 2.82.4
     groups: 2.81.2
-    mcpServer: 0.6.0
+    mcpServer: 0.7.0
     nameOverrides: 2.81.2
     nullables: 0.1.1
     responseFormat: 0.2.3
@@ -41,6 +41,12 @@ generatedFiles:
   - USAGE.md
   - docs/lib/utils/retryconfig.md
   - docs/models/components/security.md
+  - docs/models/errors/addressescreateresponsebody.md
+  - docs/models/errors/addressesgetresponsebody.md
+  - docs/models/errors/addressesupdateresponsebody.md
+  - docs/models/errors/customerscreateresponsebody.md
+  - docs/models/errors/customersgetresponsebody.md
+  - docs/models/errors/customersupdateresponsebody.md
   - docs/models/errors/discountcreateresponsebody.md
   - docs/models/errors/discountgetdiscountresponsebody.md
   - docs/models/errors/discountupdateresponsebody.md
@@ -67,6 +73,23 @@ generatedFiles:
   - docs/models/errors/transactionsupdateresponsebody.md
   - docs/models/operations/action.md
   - docs/models/operations/address.md
+  - docs/models/operations/addressescreatecustomdata.md
+  - docs/models/operations/addressescreaterequest.md
+  - docs/models/operations/addressescreaterequestbody.md
+  - docs/models/operations/addressescreateresponsebody.md
+  - docs/models/operations/addressescreatestatus.md
+  - docs/models/operations/addressesgetrequest.md
+  - docs/models/operations/addressesgetresponsebody.md
+  - docs/models/operations/addressesgetstatus.md
+  - docs/models/operations/addresseslistcustomdata.md
+  - docs/models/operations/addresseslistrequest.md
+  - docs/models/operations/addresseslistresponsebody.md
+  - docs/models/operations/addressesliststatus.md
+  - docs/models/operations/addressesupdatecustomdata.md
+  - docs/models/operations/addressesupdaterequest.md
+  - docs/models/operations/addressesupdaterequestbody.md
+  - docs/models/operations/addressesupdateresponsebody.md
+  - docs/models/operations/addressesupdatestatus.md
   - docs/models/operations/billedat.md
   - docs/models/operations/billingcycle.md
   - docs/models/operations/billingdetails.md
@@ -76,6 +99,26 @@ generatedFiles:
   - docs/models/operations/currentbillingperiod.md
   - docs/models/operations/customdata.md
   - docs/models/operations/customer.md
+  - docs/models/operations/customerscreatecustomdata.md
+  - docs/models/operations/customerscreatecustomerscustomdata.md
+  - docs/models/operations/customerscreatecustomersstatus.md
+  - docs/models/operations/customerscreaterequestbody.md
+  - docs/models/operations/customerscreateresponsebody.md
+  - docs/models/operations/customerscreatestatus.md
+  - docs/models/operations/customersgetcustomdata.md
+  - docs/models/operations/customersgetrequest.md
+  - docs/models/operations/customersgetresponsebody.md
+  - docs/models/operations/customersgetstatus.md
+  - docs/models/operations/customerslistcustomdata.md
+  - docs/models/operations/customerslistresponsebody.md
+  - docs/models/operations/customersliststatus.md
+  - docs/models/operations/customersupdatecustomdata.md
+  - docs/models/operations/customersupdatecustomerscustomdata.md
+  - docs/models/operations/customersupdatecustomersstatus.md
+  - docs/models/operations/customersupdaterequest.md
+  - docs/models/operations/customersupdaterequestbody.md
+  - docs/models/operations/customersupdateresponsebody.md
+  - docs/models/operations/customersupdatestatus.md
   - docs/models/operations/data.md
   - docs/models/operations/details.md
   - docs/models/operations/direction.md
@@ -132,10 +175,15 @@ generatedFiles:
   - docs/models/operations/pricescreatebillingcycle.md
   - docs/models/operations/pricescreatecustomdata.md
   - docs/models/operations/pricescreateinterval.md
+  - docs/models/operations/pricescreatepricesbillingcycle.md
   - docs/models/operations/pricescreatepricescustomdata.md
   - docs/models/operations/pricescreatepricesinterval.md
+  - docs/models/operations/pricescreatepricesresponse200interval.md
   - docs/models/operations/pricescreatepricesresponseinterval.md
   - docs/models/operations/pricescreatepricesstatus.md
+  - docs/models/operations/pricescreatepricestrialperiod.md
+  - docs/models/operations/pricescreatepricestype.md
+  - docs/models/operations/pricescreatepricesunitprice.md
   - docs/models/operations/pricescreaterequestbody.md
   - docs/models/operations/pricescreateresponsebody.md
   - docs/models/operations/pricescreatestatus.md
@@ -181,18 +229,23 @@ generatedFiles:
   - docs/models/operations/pricesupdatetype.md
   - docs/models/operations/pricesupdateunitprice.md
   - docs/models/operations/product.md
-  - docs/models/operations/productscreatecustomdata.md
-  - docs/models/operations/productscreaterequestbody.md
-  - docs/models/operations/productscreateresponsebody.md
-  - docs/models/operations/productscreatestatus.md
-  - docs/models/operations/productsgetproductcustomdata.md
+  - docs/models/operations/productscreatewithpricesbillingcycle.md
+  - docs/models/operations/productscreatewithpricescustomdata.md
+  - docs/models/operations/productscreatewithpricesinterval.md
+  - docs/models/operations/productscreatewithpricesproductsinterval.md
+  - docs/models/operations/productscreatewithpricesproductsresponseinterval.md
+  - docs/models/operations/productscreatewithpricesproductsstatus.md
+  - docs/models/operations/productscreatewithpricesrequestbody.md
+  - docs/models/operations/productscreatewithpricesresponsebody.md
+  - docs/models/operations/productscreatewithpricesstatus.md
+  - docs/models/operations/productscreatewithpricestrialperiod.md
+  - docs/models/operations/productscreatewithpricestype.md
+  - docs/models/operations/productscreatewithpricesunitprice.md
   - docs/models/operations/productsgetproductrequest.md
   - docs/models/operations/productsgetproductresponsebody.md
   - docs/models/operations/productsgetproductstatus.md
-  - docs/models/operations/productslistcustomdata.md
   - docs/models/operations/productsliststatus.md
   - docs/models/operations/productsupdatecustomdata.md
-  - docs/models/operations/productsupdateproductscustomdata.md
   - docs/models/operations/productsupdateproductsstatus.md
   - docs/models/operations/productsupdaterequest.md
   - docs/models/operations/productsupdaterequestbody.md
@@ -301,6 +354,7 @@ generatedFiles:
   - docs/models/operations/subscriptionlistmanagementurls.md
   - docs/models/operations/subscriptionlistpaymentterms.md
   - docs/models/operations/subscriptionlistprice.md
+  - docs/models/operations/subscriptionlistrequest.md
   - docs/models/operations/subscriptionlistresponsebody.md
   - docs/models/operations/subscriptionlistscheduledchange.md
   - docs/models/operations/subscriptionliststatus.md
@@ -424,6 +478,8 @@ generatedFiles:
   - docs/models/operations/transactionscreatepaymentdetailspaymentmethod.md
   - docs/models/operations/transactionscreatepaymentdetailspaymentprovider.md
   - docs/models/operations/transactionscreatepaymentmethod.md
+  - docs/models/operations/transactionscreateprice.md
+  - docs/models/operations/transactionscreateproduct.md
   - docs/models/operations/transactionscreateprovider.md
   - docs/models/operations/transactionscreaterequestbody.md
   - docs/models/operations/transactionscreateresponsebody.md
@@ -433,7 +489,6 @@ generatedFiles:
   - docs/models/operations/transactionscreatetransactionscustomdata.md
   - docs/models/operations/transactionscreatetransactionsinterval.md
   - docs/models/operations/transactionscreatetransactionsitems.md
-  - docs/models/operations/transactionscreatetransactionsresponse200applicationjsoncustomdata.md
   - docs/models/operations/transactionscreatetransactionsresponse200applicationjsonresponsebodyitemsproductstatus.md
   - docs/models/operations/transactionscreatetransactionsresponse200applicationjsonresponsebodyitemsstatus.md
   - docs/models/operations/transactionscreatetransactionsresponse200applicationjsonresponsebodystatus.md
@@ -482,7 +537,6 @@ generatedFiles:
   - docs/models/operations/transactionsgettransactionsresponse200applicationjsonresponsebodyitemsstatus.md
   - docs/models/operations/transactionsgettransactionsresponse200applicationjsonresponsebodystatus.md
   - docs/models/operations/transactionsgettransactionsresponse200applicationjsonstatus.md
-  - docs/models/operations/transactionsgettransactionsresponse200customdata.md
   - docs/models/operations/transactionsgettransactionsresponse200status.md
   - docs/models/operations/transactionsgettransactionsresponsecustomdata.md
   - docs/models/operations/transactionsgettransactionsresponsestatus.md
@@ -527,7 +581,6 @@ generatedFiles:
   - docs/models/operations/transactionslisttransactionsresponse200applicationjsonresponsebodydatastatus.md
   - docs/models/operations/transactionslisttransactionsresponse200applicationjsonresponsebodystatus.md
   - docs/models/operations/transactionslisttransactionsresponse200applicationjsonstatus.md
-  - docs/models/operations/transactionslisttransactionsresponse200customdata.md
   - docs/models/operations/transactionslisttransactionsresponse200status.md
   - docs/models/operations/transactionslisttransactionsresponsecustomdata.md
   - docs/models/operations/transactionslisttransactionsresponsestatus.md
@@ -573,7 +626,6 @@ generatedFiles:
   - docs/models/operations/transactionsupdatetransactionsresponse200applicationjsonresponsebodyitemsstatus.md
   - docs/models/operations/transactionsupdatetransactionsresponse200applicationjsonresponsebodystatus.md
   - docs/models/operations/transactionsupdatetransactionsresponse200applicationjsonstatus.md
-  - docs/models/operations/transactionsupdatetransactionsresponse200customdata.md
   - docs/models/operations/transactionsupdatetransactionsresponse200status.md
   - docs/models/operations/transactionsupdatetransactionsresponsecustomdata.md
   - docs/models/operations/transactionsupdatetransactionsresponsestatus.md
@@ -589,6 +641,8 @@ generatedFiles:
   - docs/models/operations/updatedat.md
   - docs/models/operations/updatedatqueryparam2.md
   - docs/models/operations/updatedatqueryparamoperator.md
+  - docs/sdks/addresses/README.md
+  - docs/sdks/customers/README.md
   - docs/sdks/developertools/README.md
   - docs/sdks/discounts/README.md
   - docs/sdks/openbilling/README.md
@@ -601,6 +655,14 @@ generatedFiles:
   - jsr.json
   - package.json
   - src/core.ts
+  - src/funcs/customersAddressesCreate.ts
+  - src/funcs/customersAddressesGet.ts
+  - src/funcs/customersAddressesList.ts
+  - src/funcs/customersAddressesUpdate.ts
+  - src/funcs/customersCreate.ts
+  - src/funcs/customersGet.ts
+  - src/funcs/customersList.ts
+  - src/funcs/customersUpdate.ts
   - src/funcs/developerToolsCreate.ts
   - src/funcs/developerToolsCreatePaymentProviderKey.ts
   - src/funcs/discountsCreate.ts
@@ -611,7 +673,7 @@ generatedFiles:
   - src/funcs/pricesGet.ts
   - src/funcs/pricesList.ts
   - src/funcs/pricesUpdate.ts
-  - src/funcs/productsCreate.ts
+  - src/funcs/productsCreateWithPrices.ts
   - src/funcs/productsGet.ts
   - src/funcs/productsList.ts
   - src/funcs/productsUpdate.ts
@@ -658,6 +720,14 @@ generatedFiles:
   - src/mcp-server/server.ts
   - src/mcp-server/shared.ts
   - src/mcp-server/tools.ts
+  - src/mcp-server/tools/customersAddressesCreate.ts
+  - src/mcp-server/tools/customersAddressesGet.ts
+  - src/mcp-server/tools/customersAddressesList.ts
+  - src/mcp-server/tools/customersAddressesUpdate.ts
+  - src/mcp-server/tools/customersCreate.ts
+  - src/mcp-server/tools/customersGet.ts
+  - src/mcp-server/tools/customersList.ts
+  - src/mcp-server/tools/customersUpdate.ts
   - src/mcp-server/tools/developerToolsCreate.ts
   - src/mcp-server/tools/developerToolsCreatePaymentProviderKey.ts
   - src/mcp-server/tools/discountsCreate.ts
@@ -668,7 +738,7 @@ generatedFiles:
   - src/mcp-server/tools/pricesGet.ts
   - src/mcp-server/tools/pricesList.ts
   - src/mcp-server/tools/pricesUpdate.ts
-  - src/mcp-server/tools/productsCreate.ts
+  - src/mcp-server/tools/productsCreateWithPrices.ts
   - src/mcp-server/tools/productsGet.ts
   - src/mcp-server/tools/productsList.ts
   - src/mcp-server/tools/productsUpdate.ts
@@ -685,7 +755,13 @@ generatedFiles:
   - src/mcp-server/tools/transactionsUpdate.ts
   - src/models/components/index.ts
   - src/models/components/security.ts
+  - src/models/errors/addressescreate.ts
+  - src/models/errors/addressesget.ts
+  - src/models/errors/addressesupdate.ts
   - src/models/errors/apierror.ts
+  - src/models/errors/customerscreate.ts
+  - src/models/errors/customersget.ts
+  - src/models/errors/customersupdate.ts
   - src/models/errors/discountcreate.ts
   - src/models/errors/discountgetdiscount.ts
   - src/models/errors/discountupdate.ts
@@ -706,6 +782,14 @@ generatedFiles:
   - src/models/errors/transactionscreate.ts
   - src/models/errors/transactionsget.ts
   - src/models/errors/transactionsupdate.ts
+  - src/models/operations/addressescreate.ts
+  - src/models/operations/addressesget.ts
+  - src/models/operations/addresseslist.ts
+  - src/models/operations/addressesupdate.ts
+  - src/models/operations/customerscreate.ts
+  - src/models/operations/customersget.ts
+  - src/models/operations/customerslist.ts
+  - src/models/operations/customersupdate.ts
   - src/models/operations/discountcreate.ts
   - src/models/operations/discountgetdiscount.ts
   - src/models/operations/discountlist.ts
@@ -716,7 +800,7 @@ generatedFiles:
   - src/models/operations/pricesgetprice.ts
   - src/models/operations/priceslist.ts
   - src/models/operations/pricesupdate.ts
-  - src/models/operations/productscreate.ts
+  - src/models/operations/productscreatewithprices.ts
   - src/models/operations/productsgetproduct.ts
   - src/models/operations/productslist.ts
   - src/models/operations/productsupdate.ts
@@ -731,6 +815,8 @@ generatedFiles:
   - src/models/operations/transactionsget.ts
   - src/models/operations/transactionslist.ts
   - src/models/operations/transactionsupdate.ts
+  - src/sdk/addresses.ts
+  - src/sdk/customers.ts
   - src/sdk/developertools.ts
   - src/sdk/discounts.ts
   - src/sdk/index.ts
@@ -754,7 +840,7 @@ examples:
     speakeasy-default-products:list:
       responses:
         "200":
-          application/json: [{"id": "<id>", "name": "<value>", "description": "yuck accountability pish likewise excepting unimpressively quickly", "updatedAt": "1741590294756", "custom_data": {}}, {"id": "<id>", "name": "<value>", "description": "boom however when uh-huh madly unless brightly for dead meh", "updatedAt": "1741574452721", "custom_data": {}}, {"id": "<id>", "name": "<value>", "description": "down dramatic damp inasmuch unlined monthly lampoon colligate linear", "updatedAt": "1741559681848", "custom_data": {}}]
+          application/json: [{"id": "<id>", "name": "<value>", "description": "yuck accountability pish likewise excepting unimpressively quickly", "updatedAt": "1741590294756"}, {"id": "<id>", "name": "<value>", "description": "boom however when uh-huh madly unless brightly for dead meh", "updatedAt": "1741574452721"}, {"id": "<id>", "name": "<value>", "description": "down dramatic damp inasmuch unlined monthly lampoon colligate linear", "updatedAt": "1741559681848"}]
   products:create:
     speakeasy-default-products:create:
       requestBody:
@@ -769,7 +855,7 @@ examples:
           product_id: "<id>"
       responses:
         "200":
-          application/json: {"id": "<id>", "name": "<value>", "description": "diversity extract neaten qua meanwhile bah because impassioned", "updatedAt": "1741572154582", "custom_data": {}}
+          application/json: {"id": "<id>", "name": "<value>", "description": "diversity extract neaten qua meanwhile bah because impassioned", "updatedAt": "1741572154582"}
         "404":
           application/json: {"message": "<value>", "error": "<value>"}
   products:update:
@@ -781,7 +867,7 @@ examples:
         application/json: {}
       responses:
         "200":
-          application/json: {"id": "<id>", "name": "<value>", "description": "awful underneath retention too mobility char innocently dowse restfully", "updatedAt": "1741530548935", "custom_data": {}}
+          application/json: {"id": "<id>", "name": "<value>", "description": "awful underneath retention too mobility char innocently dowse restfully", "updatedAt": "1741530548935"}
         "400":
           application/json: {"message": "<value>", "error": "<value>"}
         "404":
@@ -830,7 +916,7 @@ examples:
   discount:create:
     speakeasy-default-discount:create:
       requestBody:
-        application/json: {"amount": 4865.89, "currency_code": "NZD", "type": "percentage"}
+        application/json: {"id": "<id>", "amount": 4865.89, "currency_code": "NZD", "type": "percentage", "created_at": "1725593098493", "updated_at": "1741752773496"}
       responses:
         "200":
           application/json: {"id": "<id>", "amount": "134.36", "currency_code": "BAM", "type": "flat_per_seat", "created_at": "1740052597100", "updated_at": "1741509522979", "restricted_to": []}
@@ -948,7 +1034,7 @@ examples:
         application/json: {"items": [{"price_id": "<id>", "quantity": 6384.24}], "status": "billed", "customer_id": "<id>", "address_id": "<id>", "product_id": "<id>", "currency_code": "BSD", "payment_details": {"payment_method": "MOBILE_MONEY", "payment_provider": "ORANGE", "amount": 9510.62, "currency_code": "AED", "mobile_network": "<value>", "phone_suffix": "<value>"}}
       responses:
         "200":
-          application/json: {"status": "billed", "customer_id": "<id>", "address_id": "<id>", "product_id": "<id>", "currency_code": "BGN", "details": {"total": {"subtotal": 7926.2, "discount": 8165.88, "grand_total": 5862.2}}, "items": [{"price": [{"product_id": "<id>", "type": "standard", "name": "<value>", "billing_cycle": {"interval": "week", "frequency": 177.59}, "trial_period": {"interval": "day", "frequency": 2113.37}, "unit_price": {"amount": 647.38, "currency_code": "GNF"}, "status": "active", "id": "<id>", "created_at": "1712390398810", "updated_at": "1741518239033"}, {"product_id": "<id>", "type": "custom", "name": "<value>", "billing_cycle": {"interval": "week", "frequency": 365.21}, "trial_period": {"interval": "month", "frequency": 6502.37}, "unit_price": {"amount": 2006.64, "currency_code": "ALL"}, "status": "archived", "id": "<id>", "created_at": "1710930932311", "updated_at": "1741566511450"}, {"product_id": "<id>", "type": "custom", "name": "<value>", "billing_cycle": {"interval": "year", "frequency": 4522.24}, "trial_period": {"interval": "week", "frequency": 2597.72}, "unit_price": {"amount": 7823.67, "currency_code": "BWP"}, "status": "archived", "id": "<id>", "created_at": "1739104378802", "updated_at": "1741576948823"}], "quantity": 7602.59, "product": {"id": "<id>", "name": "<value>", "description": "fencing fencing vainly kookily", "updatedAt": "1741568257025", "custom_data": {}}}, {"price": [], "quantity": 8604.2, "product": {"id": "<id>", "name": "<value>", "description": "superb nudge embalm simple ouch when pfft ah vainly far-off", "updatedAt": "1741531786053", "custom_data": {}}}, {"price": [{"product_id": "<id>", "type": "standard", "name": "<value>", "billing_cycle": {"interval": "day", "frequency": 7492.99}, "trial_period": {"interval": "day", "frequency": 3831.56}, "unit_price": {"amount": 5720.12, "currency_code": "LSL"}, "status": "active", "id": "<id>", "created_at": "1729514222517", "updated_at": "1741593978493"}, {"product_id": "<id>", "type": "standard", "name": "<value>", "billing_cycle": {"interval": "week", "frequency": 8272.61}, "trial_period": {"interval": "year", "frequency": 5906.34}, "unit_price": {"amount": 2238.77, "currency_code": "SEK"}, "status": "archived", "id": "<id>", "created_at": "1737385438204", "updated_at": "1741526802099"}, {"product_id": "<id>", "type": "standard", "name": "<value>", "billing_cycle": {"interval": "year", "frequency": 9525.44}, "trial_period": {"interval": "day", "frequency": 7131.91}, "unit_price": {"amount": 8833.21, "currency_code": "USD"}, "status": "active", "id": "<id>", "created_at": "1727873141469", "updated_at": "1741566974012"}], "quantity": 7458.53, "product": {"id": "<id>", "name": "<value>", "description": "father an flat somber given", "updatedAt": "1741512735892", "custom_data": {}}}], "payments": {"id": "<id>", "status": "PROCESSING", "payment_method": "CARD", "provider": "STRIPE", "created_at": "1737629635739", "provider_reference": "<value>", "provider_metadata": {}, "method_details": {"payment_method": "BANK_TRANSFER", "details": {"bank_name": "<value>", "bank_reference": "<value>"}}}, "created_at": "2025-04-07", "customer": {"id": "<id>", "name": "<value>", "status": "archived", "description": "besides mispronounce best-seller browse colorfully blank greatly failing", "email": "Mohamed_OKeefe-Ryan96@yahoo.com", "createdAt": "1719142341688", "updatedAt": "1741567853917"}, "address": {"id": "<id>", "custom_data": {}, "updated_at": "1741550963401"}, "invoice_id": "<id>"}
+          application/json: {"status": "billed", "customer_id": "<id>", "address_id": "<id>", "product_id": "<id>", "currency_code": "BGN", "details": {"total": {"subtotal": 7926.2, "discount": 8165.88, "grand_total": 5862.2}}, "items": [{"price": [{"product_id": "<id>", "type": "standard", "name": "<value>", "billing_cycle": {"interval": "week", "frequency": 177.59}, "trial_period": {"interval": "day", "frequency": 2113.37}, "unit_price": {"amount": 647.38, "currency_code": "GNF"}, "status": "active", "id": "<id>", "created_at": "1712390398810", "updated_at": "1741518239033"}, {"product_id": "<id>", "type": "custom", "name": "<value>", "billing_cycle": {"interval": "week", "frequency": 365.21}, "trial_period": {"interval": "month", "frequency": 6502.37}, "unit_price": {"amount": 2006.64, "currency_code": "ALL"}, "status": "archived", "id": "<id>", "created_at": "1710930932311", "updated_at": "1741566511450"}, {"product_id": "<id>", "type": "custom", "name": "<value>", "billing_cycle": {"interval": "year", "frequency": 4522.24}, "trial_period": {"interval": "week", "frequency": 2597.72}, "unit_price": {"amount": 7823.67, "currency_code": "BWP"}, "status": "archived", "id": "<id>", "created_at": "1739104378802", "updated_at": "1741576948823"}], "quantity": 7602.59, "product": {"id": "<id>", "name": "<value>", "description": "fencing fencing vainly kookily", "updatedAt": "1741568257025"}}, {"price": [], "quantity": 8604.2, "product": {"id": "<id>", "name": "<value>", "description": "superb nudge embalm simple ouch when pfft ah vainly far-off", "updatedAt": "1741531786053"}}, {"price": [{"product_id": "<id>", "type": "standard", "name": "<value>", "billing_cycle": {"interval": "day", "frequency": 7492.99}, "trial_period": {"interval": "day", "frequency": 3831.56}, "unit_price": {"amount": 5720.12, "currency_code": "LSL"}, "status": "active", "id": "<id>", "created_at": "1729514222517", "updated_at": "1741593978493"}, {"product_id": "<id>", "type": "standard", "name": "<value>", "billing_cycle": {"interval": "week", "frequency": 8272.61}, "trial_period": {"interval": "year", "frequency": 5906.34}, "unit_price": {"amount": 2238.77, "currency_code": "SEK"}, "status": "archived", "id": "<id>", "created_at": "1737385438204", "updated_at": "1741526802099"}, {"product_id": "<id>", "type": "standard", "name": "<value>", "billing_cycle": {"interval": "year", "frequency": 9525.44}, "trial_period": {"interval": "day", "frequency": 7131.91}, "unit_price": {"amount": 8833.21, "currency_code": "USD"}, "status": "active", "id": "<id>", "created_at": "1727873141469", "updated_at": "1741566974012"}], "quantity": 7458.53, "product": {"id": "<id>", "name": "<value>", "description": "father an flat somber given", "updatedAt": "1741512735892"}}], "payments": {"id": "<id>", "status": "PROCESSING", "payment_method": "CARD", "provider": "STRIPE", "created_at": "1737629635739", "provider_reference": "<value>", "provider_metadata": {}, "method_details": {"payment_method": "BANK_TRANSFER", "details": {"bank_name": "<value>", "bank_reference": "<value>"}}}, "created_at": "2025-04-07", "customer": {"id": "<id>", "name": "<value>", "status": "archived", "description": "besides mispronounce best-seller browse colorfully blank greatly failing", "email": "Mohamed_OKeefe-Ryan96@yahoo.com", "createdAt": "1719142341688", "updatedAt": "1741567853917"}, "address": {"id": "<id>", "custom_data": {}, "updated_at": "1741550963401"}, "invoice_id": "<id>"}
         "404":
           application/json: {"message": "<value>", "error": "<value>"}
   transactions:list:
@@ -958,7 +1044,7 @@ examples:
           per_page: 30
       responses:
         "200":
-          application/json: {"data": [{"status": "cancelled", "customer_id": "<id>", "address_id": "<id>", "product_id": "<id>", "currency_code": "PKR", "details": {"total": {"subtotal": 1777.06, "discount": 2297.16, "grand_total": 1528.37}}, "items": [{"price": [{"product_id": "<id>", "type": "standard", "name": "<value>", "billing_cycle": {"interval": "month", "frequency": 861.4}, "trial_period": {"interval": "day", "frequency": 6879.6}, "unit_price": {"amount": 5098.83, "currency_code": "NPR"}, "status": "active", "id": "<id>", "created_at": "1711782001217", "updated_at": "1741541288449"}, {"product_id": "<id>", "type": "standard", "name": "<value>", "billing_cycle": {"interval": "day", "frequency": 9311.65}, "trial_period": {"interval": "month", "frequency": 8764.07}, "unit_price": {"amount": 4900.78, "currency_code": "AUD"}, "status": "active", "id": "<id>", "created_at": "1737199666125", "updated_at": "1741511094906"}], "quantity": 8971.96, "product": {"id": "<id>", "name": "<value>", "description": "excepting unimpressively quickly skean yowza beneath", "updatedAt": "1741595336143", "custom_data": {}}}, {"price": [{"product_id": "<id>", "type": "standard", "name": "<value>", "billing_cycle": {"interval": "week", "frequency": 967.09}, "trial_period": {"interval": "month", "frequency": 4456.73}, "unit_price": {"amount": 52.29, "currency_code": "SYP"}, "status": "archived", "id": "<id>", "created_at": "1734577178032", "updated_at": "1741553214375"}, {"product_id": "<id>", "type": "custom", "name": "<value>", "billing_cycle": {"interval": "year", "frequency": 206.15}, "trial_period": {"interval": "week", "frequency": 9936.77}, "unit_price": {"amount": 7267, "currency_code": "SHP"}, "status": "active", "id": "<id>", "created_at": "1710982899263", "updated_at": "1741565875929"}], "quantity": 6887.84, "product": {"id": "<id>", "name": "<value>", "description": "censor tenement commonly softly boo massive sorrowful", "updatedAt": "1741523539504", "custom_data": {}}}], "payments": {"id": "<id>", "status": "PENDING", "payment_method": "MOBILE_MONEY", "provider": "STRIPE", "created_at": "1738299242568", "provider_reference": "<value>", "provider_metadata": {}, "method_details": {"payment_method": "MOBILE_MONEY", "details": {"network": "<value>", "phone_suffix": "<value>"}}}, "created_at": "2024-07-27", "customer": {"id": "<id>", "name": "<value>", "status": "active", "description": "rosy fork shampoo outnumber so hence heartache", "email": "Aimee_DAmore62@yahoo.com", "createdAt": "1714479451052", "updatedAt": "1741587293111"}, "address": {"id": "<id>", "custom_data": {}, "updated_at": "1741512050543"}, "invoice_id": "<id>"}, {"status": "cancelled", "customer_id": "<id>", "address_id": "<id>", "product_id": "<id>", "currency_code": "KGS", "details": {"total": {"subtotal": 2907.91, "discount": 8800.82, "grand_total": 4417.92}}, "items": [{"price": [], "quantity": 3.6, "product": {"id": "<id>", "name": "<value>", "description": "up questionably forgery glow warmhearted apud", "updatedAt": "1741515012641", "custom_data": {}}}, {"price": [{"product_id": "<id>", "type": "standard", "name": "<value>", "billing_cycle": {"interval": "year", "frequency": 3597.08}, "trial_period": {"interval": "month", "frequency": 4120.66}, "unit_price": {"amount": 802.89, "currency_code": "PYG"}, "status": "active", "id": "<id>", "created_at": "1740803884124", "updated_at": "1741589656751"}, {"product_id": "<id>", "type": "standard", "name": "<value>", "billing_cycle": {"interval": "week", "frequency": 3140.43}, "trial_period": {"interval": "week", "frequency": 7927.75}, "unit_price": {"amount": 4.21, "currency_code": "SOS"}, "status": "active", "id": "<id>", "created_at": "1721671478427", "updated_at": "1741515193027"}], "quantity": 6512.66, "product": {"id": "<id>", "name": "<value>", "description": "gosh boohoo terribly gosh facilitate in excluding", "updatedAt": "1741530404089", "custom_data": {}}}], "payments": {"id": "<id>", "status": "REFUNDED", "payment_method": "MOBILE_MONEY", "provider": "ORANGE", "created_at": "1734029217318", "provider_reference": "<value>", "provider_metadata": {}, "method_details": {"payment_method": "BANK_TRANSFER", "details": {"bank_name": "<value>", "bank_reference": "<value>"}}}, "created_at": "2025-06-08", "customer": {"id": "<id>", "name": "<value>", "status": "active", "description": "anenst secret burgeon duh powerfully considering despite", "email": "Leta_Rice25@hotmail.com", "createdAt": "1730476570386", "updatedAt": "1741515067742"}, "address": {"id": "<id>", "custom_data": {}, "updated_at": "1741578178451"}, "invoice_id": "<id>"}, {"status": "cancelled", "customer_id": "<id>", "address_id": "<id>", "product_id": "<id>", "currency_code": "ERN", "details": {"total": {"subtotal": 1685.72, "discount": 2061.96, "grand_total": 7415.84}}, "items": [{"price": [{"product_id": "<id>", "type": "standard", "name": "<value>", "billing_cycle": {"interval": "year", "frequency": 8394.53}, "trial_period": {"interval": "week", "frequency": 7343.2}, "unit_price": {"amount": 6899.54, "currency_code": "GBP"}, "status": "active", "id": "<id>", "created_at": "1740180955376", "updated_at": "1741575247316"}], "quantity": 9526.36, "product": {"id": "<id>", "name": "<value>", "description": "ethical busily archaeology coaxingly ew ack formula substitution", "updatedAt": "1741538042011", "custom_data": {}}}, {"price": [{"product_id": "<id>", "type": "standard", "name": "<value>", "billing_cycle": {"interval": "year", "frequency": 9554.9}, "trial_period": {"interval": "week", "frequency": 9595.63}, "unit_price": {"amount": 9488.71, "currency_code": "PLN"}, "status": "active", "id": "<id>", "created_at": "1741398522354", "updated_at": "1741563440778"}], "quantity": 6718.3, "product": {"id": "<id>", "name": "<value>", "description": "tightly stiff polarisation commercial ugh lift long serpentine", "updatedAt": "1741538942595", "custom_data": {}}}, {"price": [{"product_id": "<id>", "type": "custom", "name": "<value>", "billing_cycle": {"interval": "day", "frequency": 5521.46}, "trial_period": {"interval": "day", "frequency": 8710.16}, "unit_price": {"amount": 966.47, "currency_code": "HKD"}, "status": "active", "id": "<id>", "created_at": "1732136407047", "updated_at": "1741514954779"}, {"product_id": "<id>", "type": "custom", "name": "<value>", "billing_cycle": {"interval": "year", "frequency": 5106.54}, "trial_period": {"interval": "month", "frequency": 1912.55}, "unit_price": {"amount": 7060.4, "currency_code": "VUV"}, "status": "active", "id": "<id>", "created_at": "1737538484357", "updated_at": "1741541504673"}, {"product_id": "<id>", "type": "custom", "name": "<value>", "billing_cycle": {"interval": "year", "frequency": 7876.76}, "trial_period": {"interval": "month", "frequency": 1784.49}, "unit_price": {"amount": 2156.23, "currency_code": "BRL"}, "status": "active", "id": "<id>", "created_at": "1710916900757", "updated_at": "1741560488617"}], "quantity": 8599.66, "product": {"id": "<id>", "name": "<value>", "description": "versus amidst opposite buck shocked unto", "updatedAt": "1741536418007", "custom_data": {}}}], "payments": {"id": "<id>", "status": "REFUNDED", "payment_method": "MOBILE_MONEY", "provider": "PAYSTACK", "created_at": "1715354271212", "provider_reference": "<value>", "provider_metadata": {}, "method_details": {"payment_method": "CARD", "details": {"last4": "<value>", "brand": "<value>", "exp_month": 6343.35, "exp_year": 7296.97, "cardholder_name": "<value>"}}}, "created_at": "2023-03-22", "customer": {"id": "<id>", "name": "<value>", "status": "active", "description": "psst likewise now", "email": "Noelia97@yahoo.com", "createdAt": "1726534859177", "updatedAt": "1741594030599"}, "address": {"id": "<id>", "custom_data": {}, "updated_at": "1741515873450"}, "invoice_id": "<id>"}], "meta": {"total": 2627.26, "per_page": 3729.35, "next_cursor": "<value>"}}
+          application/json: {"data": [{"status": "cancelled", "customer_id": "<id>", "address_id": "<id>", "product_id": "<id>", "currency_code": "PKR", "details": {"total": {"subtotal": 1777.06, "discount": 2297.16, "grand_total": 1528.37}}, "items": [{"price": [{"product_id": "<id>", "type": "standard", "name": "<value>", "billing_cycle": {"interval": "month", "frequency": 861.4}, "trial_period": {"interval": "day", "frequency": 6879.6}, "unit_price": {"amount": 5098.83, "currency_code": "NPR"}, "status": "active", "id": "<id>", "created_at": "1711782001217", "updated_at": "1741541288449"}, {"product_id": "<id>", "type": "standard", "name": "<value>", "billing_cycle": {"interval": "day", "frequency": 9311.65}, "trial_period": {"interval": "month", "frequency": 8764.07}, "unit_price": {"amount": 4900.78, "currency_code": "AUD"}, "status": "active", "id": "<id>", "created_at": "1737199666125", "updated_at": "1741511094906"}], "quantity": 8971.96, "product": {"id": "<id>", "name": "<value>", "description": "excepting unimpressively quickly skean yowza beneath", "updatedAt": "1741595336143"}}, {"price": [{"product_id": "<id>", "type": "standard", "name": "<value>", "billing_cycle": {"interval": "week", "frequency": 967.09}, "trial_period": {"interval": "month", "frequency": 4456.73}, "unit_price": {"amount": 52.29, "currency_code": "SYP"}, "status": "archived", "id": "<id>", "created_at": "1734577178032", "updated_at": "1741553214375"}, {"product_id": "<id>", "type": "custom", "name": "<value>", "billing_cycle": {"interval": "year", "frequency": 206.15}, "trial_period": {"interval": "week", "frequency": 9936.77}, "unit_price": {"amount": 7267, "currency_code": "SHP"}, "status": "active", "id": "<id>", "created_at": "1710982899263", "updated_at": "1741565875929"}], "quantity": 6887.84, "product": {"id": "<id>", "name": "<value>", "description": "censor tenement commonly softly boo massive sorrowful", "updatedAt": "1741523539504"}}], "payments": {"id": "<id>", "status": "PENDING", "payment_method": "MOBILE_MONEY", "provider": "STRIPE", "created_at": "1738299242568", "provider_reference": "<value>", "provider_metadata": {}, "method_details": {"payment_method": "MOBILE_MONEY", "details": {"network": "<value>", "phone_suffix": "<value>"}}}, "created_at": "2024-07-27", "customer": {"id": "<id>", "name": "<value>", "status": "active", "description": "rosy fork shampoo outnumber so hence heartache", "email": "Aimee_DAmore62@yahoo.com", "createdAt": "1714479451052", "updatedAt": "1741587293111"}, "address": {"id": "<id>", "custom_data": {}, "updated_at": "1741512050543"}, "invoice_id": "<id>"}, {"status": "cancelled", "customer_id": "<id>", "address_id": "<id>", "product_id": "<id>", "currency_code": "KGS", "details": {"total": {"subtotal": 2907.91, "discount": 8800.82, "grand_total": 4417.92}}, "items": [{"price": [], "quantity": 3.6, "product": {"id": "<id>", "name": "<value>", "description": "up questionably forgery glow warmhearted apud", "updatedAt": "1741515012641"}}, {"price": [{"product_id": "<id>", "type": "standard", "name": "<value>", "billing_cycle": {"interval": "year", "frequency": 3597.08}, "trial_period": {"interval": "month", "frequency": 4120.66}, "unit_price": {"amount": 802.89, "currency_code": "PYG"}, "status": "active", "id": "<id>", "created_at": "1740803884124", "updated_at": "1741589656751"}, {"product_id": "<id>", "type": "standard", "name": "<value>", "billing_cycle": {"interval": "week", "frequency": 3140.43}, "trial_period": {"interval": "week", "frequency": 7927.75}, "unit_price": {"amount": 4.21, "currency_code": "SOS"}, "status": "active", "id": "<id>", "created_at": "1721671478427", "updated_at": "1741515193027"}], "quantity": 6512.66, "product": {"id": "<id>", "name": "<value>", "description": "gosh boohoo terribly gosh facilitate in excluding", "updatedAt": "1741530404089"}}], "payments": {"id": "<id>", "status": "REFUNDED", "payment_method": "MOBILE_MONEY", "provider": "ORANGE", "created_at": "1734029217318", "provider_reference": "<value>", "provider_metadata": {}, "method_details": {"payment_method": "BANK_TRANSFER", "details": {"bank_name": "<value>", "bank_reference": "<value>"}}}, "created_at": "2025-06-08", "customer": {"id": "<id>", "name": "<value>", "status": "active", "description": "anenst secret burgeon duh powerfully considering despite", "email": "Leta_Rice25@hotmail.com", "createdAt": "1730476570386", "updatedAt": "1741515067742"}, "address": {"id": "<id>", "custom_data": {}, "updated_at": "1741578178451"}, "invoice_id": "<id>"}, {"status": "cancelled", "customer_id": "<id>", "address_id": "<id>", "product_id": "<id>", "currency_code": "ERN", "details": {"total": {"subtotal": 1685.72, "discount": 2061.96, "grand_total": 7415.84}}, "items": [{"price": [{"product_id": "<id>", "type": "standard", "name": "<value>", "billing_cycle": {"interval": "year", "frequency": 8394.53}, "trial_period": {"interval": "week", "frequency": 7343.2}, "unit_price": {"amount": 6899.54, "currency_code": "GBP"}, "status": "active", "id": "<id>", "created_at": "1740180955376", "updated_at": "1741575247316"}], "quantity": 9526.36, "product": {"id": "<id>", "name": "<value>", "description": "ethical busily archaeology coaxingly ew ack formula substitution", "updatedAt": "1741538042011"}}, {"price": [{"product_id": "<id>", "type": "standard", "name": "<value>", "billing_cycle": {"interval": "year", "frequency": 9554.9}, "trial_period": {"interval": "week", "frequency": 9595.63}, "unit_price": {"amount": 9488.71, "currency_code": "PLN"}, "status": "active", "id": "<id>", "created_at": "1741398522354", "updated_at": "1741563440778"}], "quantity": 6718.3, "product": {"id": "<id>", "name": "<value>", "description": "tightly stiff polarisation commercial ugh lift long serpentine", "updatedAt": "1741538942595"}}, {"price": [{"product_id": "<id>", "type": "custom", "name": "<value>", "billing_cycle": {"interval": "day", "frequency": 5521.46}, "trial_period": {"interval": "day", "frequency": 8710.16}, "unit_price": {"amount": 966.47, "currency_code": "HKD"}, "status": "active", "id": "<id>", "created_at": "1732136407047", "updated_at": "1741514954779"}, {"product_id": "<id>", "type": "custom", "name": "<value>", "billing_cycle": {"interval": "year", "frequency": 5106.54}, "trial_period": {"interval": "month", "frequency": 1912.55}, "unit_price": {"amount": 7060.4, "currency_code": "VUV"}, "status": "active", "id": "<id>", "created_at": "1737538484357", "updated_at": "1741541504673"}, {"product_id": "<id>", "type": "custom", "name": "<value>", "billing_cycle": {"interval": "year", "frequency": 7876.76}, "trial_period": {"interval": "month", "frequency": 1784.49}, "unit_price": {"amount": 2156.23, "currency_code": "BRL"}, "status": "active", "id": "<id>", "created_at": "1710916900757", "updated_at": "1741560488617"}], "quantity": 8599.66, "product": {"id": "<id>", "name": "<value>", "description": "versus amidst opposite buck shocked unto", "updatedAt": "1741536418007"}}], "payments": {"id": "<id>", "status": "REFUNDED", "payment_method": "MOBILE_MONEY", "provider": "PAYSTACK", "created_at": "1715354271212", "provider_reference": "<value>", "provider_metadata": {}, "method_details": {"payment_method": "CARD", "details": {"last4": "<value>", "brand": "<value>", "exp_month": 6343.35, "exp_year": 7296.97, "cardholder_name": "<value>"}}}, "created_at": "2023-03-22", "customer": {"id": "<id>", "name": "<value>", "status": "active", "description": "psst likewise now", "email": "Noelia97@yahoo.com", "createdAt": "1726534859177", "updatedAt": "1741594030599"}, "address": {"id": "<id>", "custom_data": {}, "updated_at": "1741515873450"}, "invoice_id": "<id>"}], "meta": {"total": 2627.26, "per_page": 3729.35, "next_cursor": "<value>"}}
   transactions:get:
     speakeasy-default-transactions:get:
       parameters:
@@ -966,7 +1052,7 @@ examples:
           transaction_id: "<id>"
       responses:
         "200":
-          application/json: {"status": "cancelled", "customer_id": "<id>", "address_id": "<id>", "product_id": "<id>", "currency_code": "MOP", "details": {"total": {"subtotal": 5442.21, "discount": 5212.35, "grand_total": 9699.61}}, "items": [{"price": [{"product_id": "<id>", "type": "standard", "name": "<value>", "billing_cycle": {"interval": "day", "frequency": 9371.46}, "trial_period": {"interval": "week", "frequency": 8013.73}, "unit_price": {"amount": 788.88, "currency_code": "CZK"}, "status": "active", "id": "<id>", "created_at": "1713042886939", "updated_at": "1741557258228"}], "quantity": 8058.76, "product": {"id": "<id>", "name": "<value>", "description": "disapprove glum ugh roundabout middle ha", "updatedAt": "1741543433758", "custom_data": {}}}], "payments": {"id": "<id>", "status": "REFUNDED", "payment_method": "BANK_TRANSFER", "provider": "DPO", "created_at": "1723156988869", "provider_reference": "<value>", "provider_metadata": {}, "method_details": {"payment_method": "MOBILE_MONEY", "details": {"network": "<value>", "phone_suffix": "<value>"}}}, "created_at": "2025-03-23", "customer": {"id": "<id>", "name": "<value>", "status": "archived", "description": "wilt descendant following ugh manner minor obediently aw fibre hassle", "email": "Cloyd_Greenfelder@yahoo.com", "createdAt": "1740170249911", "updatedAt": "1741555316886"}, "address": {"id": "<id>", "custom_data": {}, "updated_at": "1741579803406"}, "invoice_id": "<id>"}
+          application/json: {"status": "cancelled", "customer_id": "<id>", "address_id": "<id>", "product_id": "<id>", "currency_code": "MOP", "details": {"total": {"subtotal": 5442.21, "discount": 5212.35, "grand_total": 9699.61}}, "items": [{"price": [{"product_id": "<id>", "type": "standard", "name": "<value>", "billing_cycle": {"interval": "day", "frequency": 9371.46}, "trial_period": {"interval": "week", "frequency": 8013.73}, "unit_price": {"amount": 788.88, "currency_code": "CZK"}, "status": "active", "id": "<id>", "created_at": "1713042886939", "updated_at": "1741557258228"}], "quantity": 8058.76, "product": {"id": "<id>", "name": "<value>", "description": "disapprove glum ugh roundabout middle ha", "updatedAt": "1741543433758"}}], "payments": {"id": "<id>", "status": "REFUNDED", "payment_method": "BANK_TRANSFER", "provider": "DPO", "created_at": "1723156988869", "provider_reference": "<value>", "provider_metadata": {}, "method_details": {"payment_method": "MOBILE_MONEY", "details": {"network": "<value>", "phone_suffix": "<value>"}}}, "created_at": "2025-03-23", "customer": {"id": "<id>", "name": "<value>", "status": "archived", "description": "wilt descendant following ugh manner minor obediently aw fibre hassle", "email": "Cloyd_Greenfelder@yahoo.com", "createdAt": "1740170249911", "updatedAt": "1741555316886"}, "address": {"id": "<id>", "custom_data": {}, "updated_at": "1741579803406"}, "invoice_id": "<id>"}
         "404":
           application/json: {"message": "<value>", "error": "<value>"}
   transactions:update:
@@ -978,7 +1064,7 @@ examples:
         application/json: {"status": "cancelled"}
       responses:
         "200":
-          application/json: {"status": "cancelled", "customer_id": "<id>", "address_id": "<id>", "product_id": "<id>", "currency_code": "HNL", "details": {"total": {"subtotal": 9914.64, "discount": 6276.9, "grand_total": 4888.52}}, "items": [{"price": [], "quantity": 8965.01, "product": {"id": "<id>", "name": "<value>", "description": "for drat underneath sticky yuck even", "updatedAt": "1741564757751", "custom_data": {}}}, {"price": [{"product_id": "<id>", "type": "standard", "name": "<value>", "billing_cycle": {"interval": "week", "frequency": 2632.08}, "trial_period": {"interval": "week", "frequency": 8459.14}, "unit_price": {"amount": 6528.5, "currency_code": "TJS"}, "status": "archived", "id": "<id>", "created_at": "1716477262721", "updated_at": "1741567520462"}, {"product_id": "<id>", "type": "standard", "name": "<value>", "billing_cycle": {"interval": "week", "frequency": 1981.83}, "trial_period": {"interval": "week", "frequency": 6833.56}, "unit_price": {"amount": 1758.43, "currency_code": "FJD"}, "status": "active", "id": "<id>", "created_at": "1711922141406", "updated_at": "1741546932150"}, {"product_id": "<id>", "type": "standard", "name": "<value>", "billing_cycle": {"interval": "week", "frequency": 8830.01}, "trial_period": {"interval": "week", "frequency": 6965.06}, "unit_price": {"amount": 6988.76, "currency_code": "AED"}, "status": "active", "id": "<id>", "created_at": "1725133091684", "updated_at": "1741560952012"}], "quantity": 8135.77, "product": {"id": "<id>", "name": "<value>", "description": "hence heartbeat jet misjudge scare cinema", "updatedAt": "1741521360431", "custom_data": {}}}, {"price": [{"product_id": "<id>", "type": "standard", "name": "<value>", "billing_cycle": {"interval": "week", "frequency": 8729.59}, "trial_period": {"interval": "day", "frequency": 7508.35}, "unit_price": {"amount": 1631.07, "currency_code": "SEK"}, "status": "archived", "id": "<id>", "created_at": "1729715155811", "updated_at": "1741520150175"}, {"product_id": "<id>", "type": "standard", "name": "<value>", "billing_cycle": {"interval": "year", "frequency": 4005.12}, "trial_period": {"interval": "week", "frequency": 7774.54}, "unit_price": {"amount": 6209.05, "currency_code": "ERN"}, "status": "archived", "id": "<id>", "created_at": "1719595234672", "updated_at": "1741557340928"}, {"product_id": "<id>", "type": "custom", "name": "<value>", "billing_cycle": {"interval": "day", "frequency": 392.2}, "trial_period": {"interval": "week", "frequency": 9754.4}, "unit_price": {"amount": 7333.31, "currency_code": "SEK"}, "status": "active", "id": "<id>", "created_at": "1726694951120", "updated_at": "1741530750870"}], "quantity": 4987.67, "product": {"id": "<id>", "name": "<value>", "description": "hm eminent sham excitedly following pro parched gah", "updatedAt": "1741540209020", "custom_data": {}}}], "payments": {"id": "<id>", "status": "PENDING", "payment_method": "CARD", "provider": "AIRTEL", "created_at": "1734678255835", "provider_reference": "<value>", "provider_metadata": {}, "method_details": {"payment_method": "MOBILE_MONEY", "details": {"network": "<value>", "phone_suffix": "<value>"}}}, "created_at": "2023-01-25", "customer": {"id": "<id>", "name": "<value>", "status": "active", "description": "queasily down worthy generously than narrate pish off", "email": "Estevan.Jacobs18@yahoo.com", "createdAt": "1715000839669", "updatedAt": "1741523572707"}, "address": {"id": "<id>", "custom_data": {}, "updated_at": "1741541845823"}, "invoice_id": "<id>"}
+          application/json: {"status": "cancelled", "customer_id": "<id>", "address_id": "<id>", "product_id": "<id>", "currency_code": "HNL", "details": {"total": {"subtotal": 9914.64, "discount": 6276.9, "grand_total": 4888.52}}, "items": [{"price": [], "quantity": 8965.01, "product": {"id": "<id>", "name": "<value>", "description": "for drat underneath sticky yuck even", "updatedAt": "1741564757751"}}, {"price": [{"product_id": "<id>", "type": "standard", "name": "<value>", "billing_cycle": {"interval": "week", "frequency": 2632.08}, "trial_period": {"interval": "week", "frequency": 8459.14}, "unit_price": {"amount": 6528.5, "currency_code": "TJS"}, "status": "archived", "id": "<id>", "created_at": "1716477262721", "updated_at": "1741567520462"}, {"product_id": "<id>", "type": "standard", "name": "<value>", "billing_cycle": {"interval": "week", "frequency": 1981.83}, "trial_period": {"interval": "week", "frequency": 6833.56}, "unit_price": {"amount": 1758.43, "currency_code": "FJD"}, "status": "active", "id": "<id>", "created_at": "1711922141406", "updated_at": "1741546932150"}, {"product_id": "<id>", "type": "standard", "name": "<value>", "billing_cycle": {"interval": "week", "frequency": 8830.01}, "trial_period": {"interval": "week", "frequency": 6965.06}, "unit_price": {"amount": 6988.76, "currency_code": "AED"}, "status": "active", "id": "<id>", "created_at": "1725133091684", "updated_at": "1741560952012"}], "quantity": 8135.77, "product": {"id": "<id>", "name": "<value>", "description": "hence heartbeat jet misjudge scare cinema", "updatedAt": "1741521360431"}}, {"price": [{"product_id": "<id>", "type": "standard", "name": "<value>", "billing_cycle": {"interval": "week", "frequency": 8729.59}, "trial_period": {"interval": "day", "frequency": 7508.35}, "unit_price": {"amount": 1631.07, "currency_code": "SEK"}, "status": "archived", "id": "<id>", "created_at": "1729715155811", "updated_at": "1741520150175"}, {"product_id": "<id>", "type": "standard", "name": "<value>", "billing_cycle": {"interval": "year", "frequency": 4005.12}, "trial_period": {"interval": "week", "frequency": 7774.54}, "unit_price": {"amount": 6209.05, "currency_code": "ERN"}, "status": "archived", "id": "<id>", "created_at": "1719595234672", "updated_at": "1741557340928"}, {"product_id": "<id>", "type": "custom", "name": "<value>", "billing_cycle": {"interval": "day", "frequency": 392.2}, "trial_period": {"interval": "week", "frequency": 9754.4}, "unit_price": {"amount": 7333.31, "currency_code": "SEK"}, "status": "active", "id": "<id>", "created_at": "1726694951120", "updated_at": "1741530750870"}], "quantity": 4987.67, "product": {"id": "<id>", "name": "<value>", "description": "hm eminent sham excitedly following pro parched gah", "updatedAt": "1741540209020"}}], "payments": {"id": "<id>", "status": "PENDING", "payment_method": "CARD", "provider": "AIRTEL", "created_at": "1734678255835", "provider_reference": "<value>", "provider_metadata": {}, "method_details": {"payment_method": "MOBILE_MONEY", "details": {"network": "<value>", "phone_suffix": "<value>"}}}, "created_at": "2023-01-25", "customer": {"id": "<id>", "name": "<value>", "status": "active", "description": "queasily down worthy generously than narrate pish off", "email": "Estevan.Jacobs18@yahoo.com", "createdAt": "1715000839669", "updatedAt": "1741523572707"}, "address": {"id": "<id>", "custom_data": {}, "updated_at": "1741541845823"}, "invoice_id": "<id>"}
         "404":
           application/json: {"message": "<value>", "error": "<value>"}
   post_/api-keys:
@@ -991,5 +1077,91 @@ examples:
       responses:
         "200":
           application/json: "<value>"
+  products:createWithPrices:
+    speakeasy-default-products:create-with-prices:
+      requestBody:
+        application/json: {"name": "<value>", "status": "active", "type": "custom", "billing_cycle": {"interval": "month", "frequency": 3727.94}, "trial_period": {"interval": "day", "frequency": 4075.71}, "unit_price": {"amount": 6944.36, "currency_code": "SRD"}}
+      responses:
+        "200":
+          application/json: {"product": {"id": "<id>", "name": "<value>", "description": "commemorate qua plus some excitedly enchanted vainly till uh-huh", "updatedAt": "1741750097191"}, "price": [{"product_id": "<id>", "type": "custom", "name": "<value>", "billing_cycle": {"interval": "year", "frequency": 1219.64}, "trial_period": {"interval": "year", "frequency": 9983.14}, "unit_price": {"amount": 2339.98, "currency_code": "TZS"}, "status": "archived", "id": "<id>", "created_at": "1729150257639", "updated_at": "1741765424326"}]}
+  customers:list:
+    speakeasy-default-customers:list:
+      responses:
+        "200":
+          application/json: [{"id": "<id>", "email": "Marie.Fay@yahoo.com", "name": "<value>", "custom_data": {}, "createdAt": "1710802335364", "updatedAt": "1741759674901"}, {"id": "<id>", "email": "Annetta_Langosh0@gmail.com", "name": "<value>", "custom_data": {}, "createdAt": "1721845220166", "updatedAt": "1741739580723"}, {"id": "<id>", "email": "Tommie.Terry5@gmail.com", "name": "<value>", "custom_data": {}, "createdAt": "1737387764703", "updatedAt": "1741699193484"}]
+  customers:create:
+    speakeasy-default-customers:create:
+      requestBody:
+        application/json: {"email": "Loyal79@yahoo.com", "name": "<value>"}
+      responses:
+        "200":
+          application/json: {"id": "<id>", "email": "Cecelia58@gmail.com", "name": "<value>", "custom_data": {}, "createdAt": "1740440846329", "updatedAt": "1741728460507"}
+        "400":
+          application/json: {"message": "<value>", "error": "<value>"}
+  customers:get:
+    speakeasy-default-customers:get:
+      parameters:
+        path:
+          customer_id: "<id>"
+      responses:
+        "200":
+          application/json: {"id": "<id>", "email": "Keeley_Lebsack@hotmail.com", "name": "<value>", "custom_data": {}, "createdAt": "1718535534504", "updatedAt": "1741716056758"}
+        "404":
+          application/json: {"message": "<value>", "error": "<value>"}
+  customers:update:
+    speakeasy-default-customers:update:
+      parameters:
+        path:
+          customer_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {"id": "<id>", "email": "Lavern48@hotmail.com", "name": "<value>", "custom_data": {}, "createdAt": "1711952919177", "updatedAt": "1741775070974"}
+        "404":
+          application/json: {"message": "<value>", "error": "<value>"}
+  addresses:list:
+    speakeasy-default-addresses:list:
+      parameters:
+        path:
+          customer_id: "<id>"
+      responses:
+        "200":
+          application/json: [{"id": "<id>", "custom_data": {}, "updated_at": "1741744898001"}, {"id": "<id>", "custom_data": {}, "updated_at": "1741756220115"}, {"id": "<id>", "custom_data": {}, "updated_at": "1741712967921"}]
+  addresses:create:
+    speakeasy-default-addresses:create:
+      parameters:
+        path:
+          customer_id: "<id>"
+      requestBody:
+        application/json: {"description": "yuck vice between gee ugh ha", "first_line": "<value>", "city": "San Bruno"}
+      responses:
+        "200":
+          application/json: {"id": "<id>", "custom_data": {}, "updated_at": "1741763299821"}
+        "400":
+          application/json: {"message": "<value>", "error": "<value>"}
+  addresses:get:
+    speakeasy-default-addresses:get:
+      parameters:
+        path:
+          address_id: "<id>"
+      responses:
+        "200":
+          application/json: {"id": "<id>", "description": "diversity extract neaten qua meanwhile bah because impassioned", "firstLine": "<value>", "custom_data": ["<value>"], "city": "Lake Gladysside", "status": "archived", "createdAt": "1736852354709", "updated_at": "1741733496256", "customer_id": "<id>"}
+        "404":
+          application/json: {"message": "<value>", "error": "<value>"}
+  addresses:update:
+    speakeasy-default-addresses:update:
+      parameters:
+        path:
+          customer_id: "<id>"
+          address_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {"id": "<id>", "custom_data": {}, "updated_at": "1741771699459"}
+        "404":
+          application/json: {"message": "<value>", "error": "<value>"}
 examplesVersion: 1.0.0
 generatedTests: {}

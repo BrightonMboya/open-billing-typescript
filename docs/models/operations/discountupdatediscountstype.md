@@ -5,7 +5,7 @@
 ```typescript
 import { DiscountUpdateDiscountsType } from "open-billing/models/operations";
 
-let value: DiscountUpdateDiscountsType = "percentage";
+let value: DiscountUpdateDiscountsType = "flat_per_seat";
 ```
 
 ## Values

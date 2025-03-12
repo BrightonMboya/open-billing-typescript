@@ -5,7 +5,7 @@
 ```typescript
 import { QueryParamStatus } from "open-billing/models/operations";
 
-let value: QueryParamStatus = "cancelled";
+let value: QueryParamStatus = "billed";
 ```
 
 ## Values

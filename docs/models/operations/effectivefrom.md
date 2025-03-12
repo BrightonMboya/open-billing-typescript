@@ -5,7 +5,7 @@
 ```typescript
 import { EffectiveFrom } from "open-billing/models/operations";
 
-let value: EffectiveFrom = "immediately";
+let value: EffectiveFrom = "next_billing_period";
 ```
 
 ## Values

@@ -12,6 +12,14 @@ import {
 } from "./resources.js";
 import { MCPScope, mcpScopes } from "./scopes.js";
 import { createRegisterTool } from "./tools.js";
+import { tool$customersAddressesCreate } from "./tools/customersAddressesCreate.js";
+import { tool$customersAddressesGet } from "./tools/customersAddressesGet.js";
+import { tool$customersAddressesList } from "./tools/customersAddressesList.js";
+import { tool$customersAddressesUpdate } from "./tools/customersAddressesUpdate.js";
+import { tool$customersCreate } from "./tools/customersCreate.js";
+import { tool$customersGet } from "./tools/customersGet.js";
+import { tool$customersList } from "./tools/customersList.js";
+import { tool$customersUpdate } from "./tools/customersUpdate.js";
 import { tool$developerToolsCreate } from "./tools/developerToolsCreate.js";
 import { tool$developerToolsCreatePaymentProviderKey } from "./tools/developerToolsCreatePaymentProviderKey.js";
 import { tool$discountsCreate } from "./tools/discountsCreate.js";
@@ -22,7 +30,7 @@ import { tool$pricesCreate } from "./tools/pricesCreate.js";
 import { tool$pricesGet } from "./tools/pricesGet.js";
 import { tool$pricesList } from "./tools/pricesList.js";
 import { tool$pricesUpdate } from "./tools/pricesUpdate.js";
-import { tool$productsCreate } from "./tools/productsCreate.js";
+import { tool$productsCreateWithPrices } from "./tools/productsCreateWithPrices.js";
 import { tool$productsGet } from "./tools/productsGet.js";
 import { tool$productsList } from "./tools/productsList.js";
 import { tool$productsUpdate } from "./tools/productsUpdate.js";
@@ -48,7 +56,7 @@ export function createMCPServer(deps: {
 }) {
   const server = new McpServer({
     name: "OpenBilling",
-    version: "0.2.0",
+    version: "0.3.2",
   });
 
   const client = new OpenBillingCore({
@@ -78,13 +86,17 @@ export function createMCPServer(deps: {
   void register; // suppress unused warnings
 
   tool(tool$productsList);
-  tool(tool$productsCreate);
+  tool(tool$productsCreateWithPrices);
   tool(tool$productsGet);
   tool(tool$productsUpdate);
   tool(tool$pricesList);
   tool(tool$pricesCreate);
   tool(tool$pricesGet);
   tool(tool$pricesUpdate);
+  tool(tool$customersList);
+  tool(tool$customersCreate);
+  tool(tool$customersGet);
+  tool(tool$customersUpdate);
   tool(tool$discountsList);
   tool(tool$discountsCreate);
   tool(tool$discountsGet);
@@ -102,6 +114,10 @@ export function createMCPServer(deps: {
   tool(tool$transactionsUpdate);
   tool(tool$developerToolsCreate);
   tool(tool$developerToolsCreatePaymentProviderKey);
+  tool(tool$customersAddressesList);
+  tool(tool$customersAddressesCreate);
+  tool(tool$customersAddressesGet);
+  tool(tool$customersAddressesUpdate);
 
   return server;
 }

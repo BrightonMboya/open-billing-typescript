@@ -9,7 +9,7 @@ import {
 
 let value:
   TransactionsUpdateTransactionsResponse200ApplicationJSONResponseBodyItemsProductStatus =
-    "archived";
+    "active";
 ```
 
 ## Values

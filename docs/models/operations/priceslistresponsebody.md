@@ -7,24 +7,24 @@ import { PricesListResponseBody } from "open-billing/models/operations";
 
 let value: PricesListResponseBody = {
   productId: "<id>",
-  type: "custom",
+  type: "standard",
   name: "<value>",
   billingCycle: {
-    interval: "month",
-    frequency: 9619.37,
+    interval: "week",
+    frequency: 1481.41,
   },
   trialPeriod: {
-    interval: "week",
-    frequency: 2408.29,
+    interval: "year",
+    frequency: 4783.7,
   },
   unitPrice: {
-    amount: 1002.94,
-    currencyCode: "ALL",
+    amount: 4973.91,
+    currencyCode: "NZD",
   },
-  status: "archived",
+  status: "active",
   id: "<id>",
-  createdAt: "1731244111874",
-  updatedAt: "1741635060757",
+  createdAt: "1714565305622",
+  updatedAt: "1741768648941",
 };
 ```
 

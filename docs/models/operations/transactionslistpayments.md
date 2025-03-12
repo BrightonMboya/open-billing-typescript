@@ -10,7 +10,7 @@ let value: TransactionsListPayments = {
   status: "COMPLETED",
   paymentMethod: "BANK_TRANSFER",
   provider: "MTN",
-  createdAt: "1727366242509",
+  createdAt: "1714340213496",
   providerReference: "<value>",
   providerMetadata: {},
   methodDetails: {

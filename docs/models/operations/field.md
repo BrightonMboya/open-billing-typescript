@@ -5,7 +5,7 @@
 ```typescript
 import { Field } from "open-billing/models/operations";
 
-let value: Field = "updated_at";
+let value: Field = "created_at";
 ```
 
 ## Values

@@ -5,7 +5,7 @@
 ```typescript
 import { Provider } from "open-billing/models/operations";
 
-let value: Provider = "STRIPE_API_KEY";
+let value: Provider = "PAYSTACK_API_KEY";
 ```
 
 ## Values

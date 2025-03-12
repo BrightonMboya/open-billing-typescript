@@ -10,21 +10,21 @@ let value: SubscriptionCancelSubscriptionPrice = {
   type: "custom",
   name: "<value>",
   billingCycle: {
-    interval: "week",
-    frequency: 1476.85,
+    interval: "year",
+    frequency: 4793.85,
   },
   trialPeriod: {
-    interval: "day",
-    frequency: 2419.01,
+    interval: "year",
+    frequency: 493.48,
   },
   unitPrice: {
-    amount: 4322.81,
-    currencyCode: "MAD",
+    amount: 2928.88,
+    currencyCode: "RUB",
   },
-  status: "archived",
+  status: "active",
   id: "<id>",
-  createdAt: "1740352477675",
-  updatedAt: "1741577361256",
+  createdAt: "1715702212836",
+  updatedAt: "1741706882002",
 };
 ```
 

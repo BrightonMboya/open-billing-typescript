@@ -15,6 +15,19 @@ export const PricesListType = {
 } as const;
 export type PricesListType = ClosedEnum<typeof PricesListType>;
 
+export const PricesListInterval = {
+  Day: "day",
+  Week: "week",
+  Month: "month",
+  Year: "year",
+} as const;
+export type PricesListInterval = ClosedEnum<typeof PricesListInterval>;
+
+export type PricesListBillingCycle = {
+  interval: PricesListInterval;
+  frequency: number;
+};
+
 export const PricesListPricesInterval = {
   Day: "day",
   Week: "week",
@@ -25,21 +38,8 @@ export type PricesListPricesInterval = ClosedEnum<
   typeof PricesListPricesInterval
 >;
 
-export type PricesListBillingCycle = {
-  interval: PricesListPricesInterval;
-  frequency: number;
-};
-
-export const PricesListInterval = {
-  Day: "day",
-  Week: "week",
-  Month: "month",
-  Year: "year",
-} as const;
-export type PricesListInterval = ClosedEnum<typeof PricesListInterval>;
-
 export type PricesListTrialPeriod = {
-  interval: PricesListInterval;
+  interval: PricesListPricesInterval;
   frequency: number;
 };
 
@@ -99,24 +99,24 @@ export namespace PricesListType$ {
 }
 
 /** @internal */
-export const PricesListPricesInterval$inboundSchema: z.ZodNativeEnum<
-  typeof PricesListPricesInterval
-> = z.nativeEnum(PricesListPricesInterval);
+export const PricesListInterval$inboundSchema: z.ZodNativeEnum<
+  typeof PricesListInterval
+> = z.nativeEnum(PricesListInterval);
 
 /** @internal */
-export const PricesListPricesInterval$outboundSchema: z.ZodNativeEnum<
-  typeof PricesListPricesInterval
-> = PricesListPricesInterval$inboundSchema;
+export const PricesListInterval$outboundSchema: z.ZodNativeEnum<
+  typeof PricesListInterval
+> = PricesListInterval$inboundSchema;
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
-export namespace PricesListPricesInterval$ {
-  /** @deprecated use `PricesListPricesInterval$inboundSchema` instead. */
-  export const inboundSchema = PricesListPricesInterval$inboundSchema;
-  /** @deprecated use `PricesListPricesInterval$outboundSchema` instead. */
-  export const outboundSchema = PricesListPricesInterval$outboundSchema;
+export namespace PricesListInterval$ {
+  /** @deprecated use `PricesListInterval$inboundSchema` instead. */
+  export const inboundSchema = PricesListInterval$inboundSchema;
+  /** @deprecated use `PricesListInterval$outboundSchema` instead. */
+  export const outboundSchema = PricesListInterval$outboundSchema;
 }
 
 /** @internal */
@@ -125,7 +125,7 @@ export const PricesListBillingCycle$inboundSchema: z.ZodType<
   z.ZodTypeDef,
   unknown
 > = z.object({
-  interval: PricesListPricesInterval$inboundSchema,
+  interval: PricesListInterval$inboundSchema,
   frequency: z.number(),
 });
 
@@ -141,7 +141,7 @@ export const PricesListBillingCycle$outboundSchema: z.ZodType<
   z.ZodTypeDef,
   PricesListBillingCycle
 > = z.object({
-  interval: PricesListPricesInterval$outboundSchema,
+  interval: PricesListInterval$outboundSchema,
   frequency: z.number(),
 });
 
@@ -177,24 +177,24 @@ export function pricesListBillingCycleFromJSON(
 }
 
 /** @internal */
-export const PricesListInterval$inboundSchema: z.ZodNativeEnum<
-  typeof PricesListInterval
-> = z.nativeEnum(PricesListInterval);
+export const PricesListPricesInterval$inboundSchema: z.ZodNativeEnum<
+  typeof PricesListPricesInterval
+> = z.nativeEnum(PricesListPricesInterval);
 
 /** @internal */
-export const PricesListInterval$outboundSchema: z.ZodNativeEnum<
-  typeof PricesListInterval
-> = PricesListInterval$inboundSchema;
+export const PricesListPricesInterval$outboundSchema: z.ZodNativeEnum<
+  typeof PricesListPricesInterval
+> = PricesListPricesInterval$inboundSchema;
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
-export namespace PricesListInterval$ {
-  /** @deprecated use `PricesListInterval$inboundSchema` instead. */
-  export const inboundSchema = PricesListInterval$inboundSchema;
-  /** @deprecated use `PricesListInterval$outboundSchema` instead. */
-  export const outboundSchema = PricesListInterval$outboundSchema;
+export namespace PricesListPricesInterval$ {
+  /** @deprecated use `PricesListPricesInterval$inboundSchema` instead. */
+  export const inboundSchema = PricesListPricesInterval$inboundSchema;
+  /** @deprecated use `PricesListPricesInterval$outboundSchema` instead. */
+  export const outboundSchema = PricesListPricesInterval$outboundSchema;
 }
 
 /** @internal */
@@ -203,7 +203,7 @@ export const PricesListTrialPeriod$inboundSchema: z.ZodType<
   z.ZodTypeDef,
   unknown
 > = z.object({
-  interval: PricesListInterval$inboundSchema,
+  interval: PricesListPricesInterval$inboundSchema,
   frequency: z.number(),
 });
 
@@ -219,7 +219,7 @@ export const PricesListTrialPeriod$outboundSchema: z.ZodType<
   z.ZodTypeDef,
   PricesListTrialPeriod
 > = z.object({
-  interval: PricesListInterval$outboundSchema,
+  interval: PricesListPricesInterval$outboundSchema,
   frequency: z.number(),
 });
 

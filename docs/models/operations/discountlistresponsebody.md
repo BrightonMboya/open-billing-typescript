@@ -7,11 +7,11 @@ import { DiscountListResponseBody } from "open-billing/models/operations";
 
 let value: DiscountListResponseBody = {
   id: "<id>",
-  amount: "277.59",
-  currencyCode: "BRL",
-  type: "percentage",
-  createdAt: "1740278834401",
-  updatedAt: "1741583392405",
+  amount: "618.83",
+  currencyCode: "BSD",
+  type: "flat_per_seat",
+  createdAt: "1737740652990",
+  updatedAt: "1741741053501",
   restrictedTo: [
     "<value>",
   ],

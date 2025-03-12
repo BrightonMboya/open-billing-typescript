@@ -6,7 +6,7 @@ import { developerToolsCreate } from "../../funcs/developerToolsCreate.js";
 import { formatResult, ToolDefinition } from "../tools.js";
 
 export const tool$developerToolsCreate: ToolDefinition = {
-  name: "developer-tools_create",
+  name: "developer-tools-create",
   description: ``,
   tool: async (client, ctx) => {
     const [result, apiCall] = await developerToolsCreate(

@@ -6,7 +6,7 @@
 import { SubscriptionPauseSubscriptionRequestBody } from "open-billing/models/operations";
 
 let value: SubscriptionPauseSubscriptionRequestBody = {
-  onResume: "continue_existing_billing_period",
+  onResume: "start_new_billing_period",
 };
 ```
 

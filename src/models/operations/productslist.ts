@@ -3,7 +3,6 @@
  */
 
 import * as z from "zod";
-import { remap as remap$ } from "../../lib/primitives.js";
 import { safeParse } from "../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
 import { Result as SafeParseResult } from "../../types/fp.js";
@@ -15,11 +14,6 @@ export const ProductsListStatus = {
 } as const;
 export type ProductsListStatus = ClosedEnum<typeof ProductsListStatus>;
 
-/**
- * Any valid JSON value
- */
-export type ProductsListCustomData = {};
-
 export type ResponseBody = {
   id: string;
   name: string;
@@ -27,10 +21,6 @@ export type ResponseBody = {
   status?: ProductsListStatus | undefined;
   createdAt?: string | undefined;
   updatedAt: string;
-  /**
-   * Any valid JSON value
-   */
-  customData: ProductsListCustomData;
 };
 
 /** @internal */
@@ -55,54 +45,6 @@ export namespace ProductsListStatus$ {
 }
 
 /** @internal */
-export const ProductsListCustomData$inboundSchema: z.ZodType<
-  ProductsListCustomData,
-  z.ZodTypeDef,
-  unknown
-> = z.object({});
-
-/** @internal */
-export type ProductsListCustomData$Outbound = {};
-
-/** @internal */
-export const ProductsListCustomData$outboundSchema: z.ZodType<
-  ProductsListCustomData$Outbound,
-  z.ZodTypeDef,
-  ProductsListCustomData
-> = z.object({});
-
-/**
- * @internal
- * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
- */
-export namespace ProductsListCustomData$ {
-  /** @deprecated use `ProductsListCustomData$inboundSchema` instead. */
-  export const inboundSchema = ProductsListCustomData$inboundSchema;
-  /** @deprecated use `ProductsListCustomData$outboundSchema` instead. */
-  export const outboundSchema = ProductsListCustomData$outboundSchema;
-  /** @deprecated use `ProductsListCustomData$Outbound` instead. */
-  export type Outbound = ProductsListCustomData$Outbound;
-}
-
-export function productsListCustomDataToJSON(
-  productsListCustomData: ProductsListCustomData,
-): string {
-  return JSON.stringify(
-    ProductsListCustomData$outboundSchema.parse(productsListCustomData),
-  );
-}
-
-export function productsListCustomDataFromJSON(
-  jsonString: string,
-): SafeParseResult<ProductsListCustomData, SDKValidationError> {
-  return safeParse(
-    jsonString,
-    (x) => ProductsListCustomData$inboundSchema.parse(JSON.parse(x)),
-    `Failed to parse 'ProductsListCustomData' from JSON`,
-  );
-}
-
-/** @internal */
 export const ResponseBody$inboundSchema: z.ZodType<
   ResponseBody,
   z.ZodTypeDef,
@@ -114,11 +56,6 @@ export const ResponseBody$inboundSchema: z.ZodType<
   status: ProductsListStatus$inboundSchema.optional(),
   createdAt: z.string().optional(),
   updatedAt: z.string(),
-  custom_data: z.lazy(() => ProductsListCustomData$inboundSchema),
-}).transform((v) => {
-  return remap$(v, {
-    "custom_data": "customData",
-  });
 });
 
 /** @internal */
@@ -129,7 +66,6 @@ export type ResponseBody$Outbound = {
   status?: string | undefined;
   createdAt?: string | undefined;
   updatedAt: string;
-  custom_data: ProductsListCustomData$Outbound;
 };
 
 /** @internal */
@@ -144,11 +80,6 @@ export const ResponseBody$outboundSchema: z.ZodType<
   status: ProductsListStatus$outboundSchema.optional(),
   createdAt: z.string().optional(),
   updatedAt: z.string(),
-  customData: z.lazy(() => ProductsListCustomData$outboundSchema),
-}).transform((v) => {
-  return remap$(v, {
-    customData: "custom_data",
-  });
 });
 
 /**

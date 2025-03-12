@@ -6,9 +6,12 @@
 import { DiscountCreateRequestBody } from "open-billing/models/operations";
 
 let value: DiscountCreateRequestBody = {
-  amount: 4569.11,
-  currencyCode: "UAH",
-  type: "percentage",
+  id: "<id>",
+  amount: 9233.06,
+  currencyCode: "TJS",
+  type: "flat_per_seat",
+  createdAt: "1739254288737",
+  updatedAt: "1741700732221",
 };
 ```
 
@@ -16,6 +19,7 @@ let value: DiscountCreateRequestBody = {
 
 | Field                                                                                      | Type                                                                                       | Required                                                                                   | Description                                                                                |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `id`                                                                                       | *string*                                                                                   | :heavy_check_mark:                                                                         | N/A                                                                                        |
 | `status`                                                                                   | [operations.DiscountCreateStatus](../../models/operations/discountcreatestatus.md)         | :heavy_minus_sign:                                                                         | N/A                                                                                        |
 | `description`                                                                              | *string*                                                                                   | :heavy_minus_sign:                                                                         | N/A                                                                                        |
 | `enabledForCheckout`                                                                       | *boolean*                                                                                  | :heavy_minus_sign:                                                                         | N/A                                                                                        |
@@ -27,4 +31,8 @@ let value: DiscountCreateRequestBody = {
 | `usageLimit`                                                                               | *number*                                                                                   | :heavy_minus_sign:                                                                         | N/A                                                                                        |
 | `expiresAt`                                                                                | *string*                                                                                   | :heavy_minus_sign:                                                                         | N/A                                                                                        |
 | `customData`                                                                               | [operations.DiscountCreateCustomData](../../models/operations/discountcreatecustomdata.md) | :heavy_minus_sign:                                                                         | Any valid JSON value                                                                       |
+| `timesUsed`                                                                                | *number*                                                                                   | :heavy_minus_sign:                                                                         | N/A                                                                                        |
+| `createdAt`                                                                                | *string*                                                                                   | :heavy_check_mark:                                                                         | N/A                                                                                        |
+| `updatedAt`                                                                                | *string*                                                                                   | :heavy_check_mark:                                                                         | N/A                                                                                        |
+| `projectId`                                                                                | *string*                                                                                   | :heavy_minus_sign:                                                                         | N/A                                                                                        |
 | `priceIds`                                                                                 | *string*[]                                                                                 | :heavy_minus_sign:                                                                         | N/A                                                                                        |

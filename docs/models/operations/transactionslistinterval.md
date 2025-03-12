@@ -5,7 +5,7 @@
 ```typescript
 import { TransactionsListInterval } from "open-billing/models/operations";
 
-let value: TransactionsListInterval = "month";
+let value: TransactionsListInterval = "year";
 ```
 
 ## Values

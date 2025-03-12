@@ -6,7 +6,7 @@
 import { SubscriptionActivateSubscriptionSubscriptionsResponseInterval } from "open-billing/models/operations";
 
 let value: SubscriptionActivateSubscriptionSubscriptionsResponseInterval =
-  "year";
+  "week";
 ```
 
 ## Values

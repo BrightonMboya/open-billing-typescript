@@ -8,7 +8,7 @@ import { SubscriptionPauseSubscriptionRequest } from "open-billing/models/operat
 let value: SubscriptionPauseSubscriptionRequest = {
   subscriptionId: "<id>",
   requestBody: {
-    onResume: "continue_existing_billing_period",
+    onResume: "start_new_billing_period",
   },
 };
 ```

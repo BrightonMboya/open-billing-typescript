@@ -7,24 +7,24 @@ import { SubscriptionActivateSubscriptionPrice } from "open-billing/models/opera
 
 let value: SubscriptionActivateSubscriptionPrice = {
   productId: "<id>",
-  type: "standard",
+  type: "custom",
   name: "<value>",
   billingCycle: {
-    interval: "month",
-    frequency: 3359.77,
+    interval: "day",
+    frequency: 2687.09,
   },
   trialPeriod: {
-    interval: "month",
-    frequency: 8152,
+    interval: "year",
+    frequency: 9555.69,
   },
   unitPrice: {
-    amount: 2176.63,
-    currencyCode: "ZAR",
+    amount: 3165.5,
+    currencyCode: "TJS",
   },
   status: "active",
   id: "<id>",
-  createdAt: "1719289583798",
-  updatedAt: "1741582759390",
+  createdAt: "1730241264050",
+  updatedAt: "1741762507715",
 };
 ```
 

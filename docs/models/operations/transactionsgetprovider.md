@@ -5,7 +5,7 @@
 ```typescript
 import { TransactionsGetProvider } from "open-billing/models/operations";
 
-let value: TransactionsGetProvider = "DPO";
+let value: TransactionsGetProvider = "MTN";
 ```
 
 ## Values

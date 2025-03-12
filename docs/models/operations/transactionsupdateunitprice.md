@@ -6,8 +6,8 @@
 import { TransactionsUpdateUnitPrice } from "open-billing/models/operations";
 
 let value: TransactionsUpdateUnitPrice = {
-  amount: 5585.23,
-  currencyCode: "ALL",
+  amount: 2593.41,
+  currencyCode: "YER",
 };
 ```
 

@@ -6,8 +6,8 @@
 import { PricesCreateUnitPrice } from "open-billing/models/operations";
 
 let value: PricesCreateUnitPrice = {
-  amount: 1369,
-  currencyCode: "THB",
+  amount: 9065.56,
+  currencyCode: "SLE",
 };
 ```
 

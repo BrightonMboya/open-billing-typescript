@@ -5,7 +5,7 @@
 ```typescript
 import { PaymentProvider } from "open-billing/models/operations";
 
-let value: PaymentProvider = "TIGO";
+let value: PaymentProvider = "STRIPE";
 ```
 
 ## Values

@@ -6,8 +6,8 @@
 import { QueryParam2 } from "open-billing/models/operations";
 
 let value: QueryParam2 = {
-  operator: "GT",
-  value: new Date("2025-07-15T12:28:05.877Z"),
+  operator: "GTE",
+  value: new Date("2024-09-13T01:40:13.089Z"),
 };
 ```
 

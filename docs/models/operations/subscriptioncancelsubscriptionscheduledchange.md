@@ -8,7 +8,7 @@ import { SubscriptionCancelSubscriptionScheduledChange } from "open-billing/mode
 let value: SubscriptionCancelSubscriptionScheduledChange = {
   id: "<id>",
   subscriptionId: "<id>",
-  action: "pause",
+  action: "resume",
   effectiveAt: "<value>",
   resumesAt: "<value>",
   status: "completed",

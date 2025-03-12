@@ -7,24 +7,24 @@ import { SubscriptionCreatePrice } from "open-billing/models/operations";
 
 let value: SubscriptionCreatePrice = {
   productId: "<id>",
-  type: "standard",
+  type: "custom",
   name: "<value>",
   billingCycle: {
-    interval: "month",
-    frequency: 9742.57,
+    interval: "year",
+    frequency: 7645.62,
   },
   trialPeriod: {
-    interval: "year",
-    frequency: 4090.54,
+    interval: "month",
+    frequency: 3354.98,
   },
   unitPrice: {
-    amount: 1629.54,
-    currencyCode: "NZD",
+    amount: 1476.85,
+    currencyCode: "AZN",
   },
   status: "active",
   id: "<id>",
-  createdAt: "1741319650384",
-  updatedAt: "1741572866854",
+  createdAt: "1723880447350",
+  updatedAt: "1741742718948",
 };
 ```
 

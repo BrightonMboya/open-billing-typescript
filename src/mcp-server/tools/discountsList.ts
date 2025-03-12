@@ -6,7 +6,7 @@ import { discountsList } from "../../funcs/discountsList.js";
 import { formatResult, ToolDefinition } from "../tools.js";
 
 export const tool$discountsList: ToolDefinition = {
-  name: "discounts_list",
+  name: "discounts-list",
   description: ``,
   tool: async (client, ctx) => {
     const [result, apiCall] = await discountsList(

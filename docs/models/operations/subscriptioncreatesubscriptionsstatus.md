@@ -5,7 +5,7 @@
 ```typescript
 import { SubscriptionCreateSubscriptionsStatus } from "open-billing/models/operations";
 
-let value: SubscriptionCreateSubscriptionsStatus = "scheduled";
+let value: SubscriptionCreateSubscriptionsStatus = "completed";
 ```
 
 ## Values

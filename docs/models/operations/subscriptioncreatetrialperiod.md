@@ -6,8 +6,8 @@
 import { SubscriptionCreateTrialPeriod } from "open-billing/models/operations";
 
 let value: SubscriptionCreateTrialPeriod = {
-  interval: "week",
-  frequency: 2211.61,
+  interval: "year",
+  frequency: 3518.93,
 };
 ```
 

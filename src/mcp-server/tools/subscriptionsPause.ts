@@ -11,7 +11,7 @@ const args = {
 };
 
 export const tool$subscriptionsPause: ToolDefinition<typeof args> = {
-  name: "subscriptions_pause",
+  name: "subscriptions-pause",
   description: ``,
   args,
   tool: async (client, args, ctx) => {

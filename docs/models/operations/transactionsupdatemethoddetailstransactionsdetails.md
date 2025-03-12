@@ -8,8 +8,8 @@ import { TransactionsUpdateMethodDetailsTransactionsDetails } from "open-billing
 let value: TransactionsUpdateMethodDetailsTransactionsDetails = {
   last4: "<value>",
   brand: "<value>",
-  expMonth: 8825.86,
-  expYear: 802.06,
+  expMonth: 9042.88,
+  expYear: 4493.69,
   cardholderName: "<value>",
 };
 ```

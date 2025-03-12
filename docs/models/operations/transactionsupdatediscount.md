@@ -7,11 +7,11 @@ import { TransactionsUpdateDiscount } from "open-billing/models/operations";
 
 let value: TransactionsUpdateDiscount = {
   id: "<id>",
-  amount: "304.20",
-  currencyCode: "MKD",
-  type: "flat",
-  createdAt: "1733401435120",
-  updatedAt: "1741589633175",
+  amount: "327.41",
+  currencyCode: "RON",
+  type: "percentage",
+  createdAt: "1713559007655",
+  updatedAt: "1741731548029",
   restrictedTo: [
     "<value>",
   ],

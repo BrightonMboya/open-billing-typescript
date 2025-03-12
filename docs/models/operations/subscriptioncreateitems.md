@@ -8,12 +8,12 @@ import { SubscriptionCreateItems } from "open-billing/models/operations";
 let value: SubscriptionCreateItems = {
   status: "trialing",
   priceId: "<id>",
-  quantity: 288398,
+  quantity: 958741,
   id: "<id>",
   subscriptionId: "<id>",
   recurring: false,
-  createdAt: "1717731002003",
-  updatedAt: "1741624464376",
+  createdAt: "1713947837546",
+  updatedAt: "1741706864044",
   previouslyBilledAt: "<value>",
   nextBilledAt: "<value>",
   trialStartedAt: "<value>",
@@ -21,24 +21,24 @@ let value: SubscriptionCreateItems = {
   price: [
     {
       productId: "<id>",
-      type: "standard",
+      type: "custom",
       name: "<value>",
       billingCycle: {
         interval: "month",
-        frequency: 5173.09,
+        frequency: 8481.51,
       },
       trialPeriod: {
-        interval: "week",
-        frequency: 5546.88,
+        interval: "year",
+        frequency: 9834.27,
       },
       unitPrice: {
-        amount: 2870.51,
-        currencyCode: "RON",
+        amount: 3998.02,
+        currencyCode: "BTN",
       },
       status: "active",
       id: "<id>",
-      createdAt: "1721487789080",
-      updatedAt: "1741638819774",
+      createdAt: "1731848110769",
+      updatedAt: "1741754362572",
     },
   ],
 };

@@ -5,7 +5,7 @@
 ```typescript
 import { TransactionsUpdateType } from "open-billing/models/operations";
 
-let value: TransactionsUpdateType = "percentage";
+let value: TransactionsUpdateType = "flat_per_seat";
 ```
 
 ## Values

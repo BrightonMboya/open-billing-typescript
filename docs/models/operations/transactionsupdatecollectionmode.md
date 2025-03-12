@@ -5,7 +5,7 @@
 ```typescript
 import { TransactionsUpdateCollectionMode } from "open-billing/models/operations";
 
-let value: TransactionsUpdateCollectionMode = "manual";
+let value: TransactionsUpdateCollectionMode = "automatic";
 ```
 
 ## Values

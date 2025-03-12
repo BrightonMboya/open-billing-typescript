@@ -7,24 +7,24 @@ import { SubscriptionResumeSubscriptionPrice } from "open-billing/models/operati
 
 let value: SubscriptionResumeSubscriptionPrice = {
   productId: "<id>",
-  type: "standard",
+  type: "custom",
   name: "<value>",
   billingCycle: {
-    interval: "day",
-    frequency: 8173.39,
+    interval: "week",
+    frequency: 9692.06,
   },
   trialPeriod: {
     interval: "week",
-    frequency: 8822.84,
+    frequency: 135.08,
   },
   unitPrice: {
-    amount: 7332.89,
-    currencyCode: "JMD",
+    amount: 4837.53,
+    currencyCode: "ERN",
   },
-  status: "active",
+  status: "archived",
   id: "<id>",
-  createdAt: "1726378795527",
-  updatedAt: "1741644039034",
+  createdAt: "1717588737972",
+  updatedAt: "1741724457269",
 };
 ```
 

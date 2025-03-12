@@ -3,6 +3,7 @@
  */
 
 import { ClientSDK } from "../lib/sdks.js";
+import { Customers } from "./customers.js";
 import { DeveloperTools } from "./developertools.js";
 import { Discounts } from "./discounts.js";
 import { Prices } from "./prices.js";
@@ -19,6 +20,11 @@ export class OpenBilling extends ClientSDK {
   private _prices?: Prices;
   get prices(): Prices {
     return (this._prices ??= new Prices(this._options));
+  }
+
+  private _customers?: Customers;
+  get customers(): Customers {
+    return (this._customers ??= new Customers(this._options));
   }
 
   private _discounts?: Discounts;

@@ -104,7 +104,7 @@ export type TransactionsGetTransactionsResponse200ApplicationJSONResponseBodySta
 /**
  * Any valid JSON value
  */
-export type TransactionsGetTransactionsResponse200CustomData = {};
+export type TransactionsGetTransactionsResponseCustomData = {};
 
 export type TransactionsGetPrice = {
   productId: string;
@@ -119,7 +119,7 @@ export type TransactionsGetPrice = {
   /**
    * Any valid JSON value
    */
-  customData?: TransactionsGetTransactionsResponse200CustomData | undefined;
+  customData?: TransactionsGetTransactionsResponseCustomData | undefined;
   id: string;
   createdAt: string;
   updatedAt: string;
@@ -135,11 +135,6 @@ export type TransactionsGetTransactionsResponse200ApplicationJSONResponseBodyIte
     typeof TransactionsGetTransactionsResponse200ApplicationJSONResponseBodyItemsStatus
   >;
 
-/**
- * Any valid JSON value
- */
-export type TransactionsGetTransactionsResponseCustomData = {};
-
 export type TransactionsGetProduct = {
   id: string;
   name: string;
@@ -149,10 +144,6 @@ export type TransactionsGetProduct = {
     | undefined;
   createdAt?: string | undefined;
   updatedAt: string;
-  /**
-   * Any valid JSON value
-   */
-  customData: TransactionsGetTransactionsResponseCustomData;
 };
 
 export type TransactionsGetItems = {
@@ -1013,64 +1004,63 @@ export namespace TransactionsGetTransactionsResponse200ApplicationJSONResponseBo
 }
 
 /** @internal */
-export const TransactionsGetTransactionsResponse200CustomData$inboundSchema:
+export const TransactionsGetTransactionsResponseCustomData$inboundSchema:
   z.ZodType<
-    TransactionsGetTransactionsResponse200CustomData,
+    TransactionsGetTransactionsResponseCustomData,
     z.ZodTypeDef,
     unknown
   > = z.object({});
 
 /** @internal */
-export type TransactionsGetTransactionsResponse200CustomData$Outbound = {};
+export type TransactionsGetTransactionsResponseCustomData$Outbound = {};
 
 /** @internal */
-export const TransactionsGetTransactionsResponse200CustomData$outboundSchema:
+export const TransactionsGetTransactionsResponseCustomData$outboundSchema:
   z.ZodType<
-    TransactionsGetTransactionsResponse200CustomData$Outbound,
+    TransactionsGetTransactionsResponseCustomData$Outbound,
     z.ZodTypeDef,
-    TransactionsGetTransactionsResponse200CustomData
+    TransactionsGetTransactionsResponseCustomData
   > = z.object({});
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
-export namespace TransactionsGetTransactionsResponse200CustomData$ {
-  /** @deprecated use `TransactionsGetTransactionsResponse200CustomData$inboundSchema` instead. */
+export namespace TransactionsGetTransactionsResponseCustomData$ {
+  /** @deprecated use `TransactionsGetTransactionsResponseCustomData$inboundSchema` instead. */
   export const inboundSchema =
-    TransactionsGetTransactionsResponse200CustomData$inboundSchema;
-  /** @deprecated use `TransactionsGetTransactionsResponse200CustomData$outboundSchema` instead. */
+    TransactionsGetTransactionsResponseCustomData$inboundSchema;
+  /** @deprecated use `TransactionsGetTransactionsResponseCustomData$outboundSchema` instead. */
   export const outboundSchema =
-    TransactionsGetTransactionsResponse200CustomData$outboundSchema;
-  /** @deprecated use `TransactionsGetTransactionsResponse200CustomData$Outbound` instead. */
-  export type Outbound =
-    TransactionsGetTransactionsResponse200CustomData$Outbound;
+    TransactionsGetTransactionsResponseCustomData$outboundSchema;
+  /** @deprecated use `TransactionsGetTransactionsResponseCustomData$Outbound` instead. */
+  export type Outbound = TransactionsGetTransactionsResponseCustomData$Outbound;
 }
 
-export function transactionsGetTransactionsResponse200CustomDataToJSON(
-  transactionsGetTransactionsResponse200CustomData:
-    TransactionsGetTransactionsResponse200CustomData,
+export function transactionsGetTransactionsResponseCustomDataToJSON(
+  transactionsGetTransactionsResponseCustomData:
+    TransactionsGetTransactionsResponseCustomData,
 ): string {
   return JSON.stringify(
-    TransactionsGetTransactionsResponse200CustomData$outboundSchema.parse(
-      transactionsGetTransactionsResponse200CustomData,
+    TransactionsGetTransactionsResponseCustomData$outboundSchema.parse(
+      transactionsGetTransactionsResponseCustomData,
     ),
   );
 }
 
-export function transactionsGetTransactionsResponse200CustomDataFromJSON(
+export function transactionsGetTransactionsResponseCustomDataFromJSON(
   jsonString: string,
 ): SafeParseResult<
-  TransactionsGetTransactionsResponse200CustomData,
+  TransactionsGetTransactionsResponseCustomData,
   SDKValidationError
 > {
   return safeParse(
     jsonString,
     (x) =>
-      TransactionsGetTransactionsResponse200CustomData$inboundSchema.parse(
+      TransactionsGetTransactionsResponseCustomData$inboundSchema.parse(
         JSON.parse(x),
       ),
-    `Failed to parse 'TransactionsGetTransactionsResponse200CustomData' from JSON`,
+    `Failed to parse 'TransactionsGetTransactionsResponseCustomData' from JSON`,
   );
 }
 
@@ -1090,7 +1080,7 @@ export const TransactionsGetPrice$inboundSchema: z.ZodType<
   status:
     TransactionsGetTransactionsResponse200ApplicationJSONResponseBodyStatus$inboundSchema,
   custom_data: z.lazy(() =>
-    TransactionsGetTransactionsResponse200CustomData$inboundSchema
+    TransactionsGetTransactionsResponseCustomData$inboundSchema
   ).optional(),
   id: z.string(),
   created_at: z.string(),
@@ -1118,7 +1108,7 @@ export type TransactionsGetPrice$Outbound = {
   unit_price: TransactionsGetUnitPrice$Outbound;
   status: string;
   custom_data?:
-    | TransactionsGetTransactionsResponse200CustomData$Outbound
+    | TransactionsGetTransactionsResponseCustomData$Outbound
     | undefined;
   id: string;
   created_at: string;
@@ -1141,7 +1131,7 @@ export const TransactionsGetPrice$outboundSchema: z.ZodType<
   status:
     TransactionsGetTransactionsResponse200ApplicationJSONResponseBodyStatus$outboundSchema,
   customData: z.lazy(() =>
-    TransactionsGetTransactionsResponse200CustomData$outboundSchema
+    TransactionsGetTransactionsResponseCustomData$outboundSchema
   ).optional(),
   id: z.string(),
   createdAt: z.string(),
@@ -1218,67 +1208,6 @@ export namespace TransactionsGetTransactionsResponse200ApplicationJSONResponseBo
 }
 
 /** @internal */
-export const TransactionsGetTransactionsResponseCustomData$inboundSchema:
-  z.ZodType<
-    TransactionsGetTransactionsResponseCustomData,
-    z.ZodTypeDef,
-    unknown
-  > = z.object({});
-
-/** @internal */
-export type TransactionsGetTransactionsResponseCustomData$Outbound = {};
-
-/** @internal */
-export const TransactionsGetTransactionsResponseCustomData$outboundSchema:
-  z.ZodType<
-    TransactionsGetTransactionsResponseCustomData$Outbound,
-    z.ZodTypeDef,
-    TransactionsGetTransactionsResponseCustomData
-  > = z.object({});
-
-/**
- * @internal
- * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
- */
-export namespace TransactionsGetTransactionsResponseCustomData$ {
-  /** @deprecated use `TransactionsGetTransactionsResponseCustomData$inboundSchema` instead. */
-  export const inboundSchema =
-    TransactionsGetTransactionsResponseCustomData$inboundSchema;
-  /** @deprecated use `TransactionsGetTransactionsResponseCustomData$outboundSchema` instead. */
-  export const outboundSchema =
-    TransactionsGetTransactionsResponseCustomData$outboundSchema;
-  /** @deprecated use `TransactionsGetTransactionsResponseCustomData$Outbound` instead. */
-  export type Outbound = TransactionsGetTransactionsResponseCustomData$Outbound;
-}
-
-export function transactionsGetTransactionsResponseCustomDataToJSON(
-  transactionsGetTransactionsResponseCustomData:
-    TransactionsGetTransactionsResponseCustomData,
-): string {
-  return JSON.stringify(
-    TransactionsGetTransactionsResponseCustomData$outboundSchema.parse(
-      transactionsGetTransactionsResponseCustomData,
-    ),
-  );
-}
-
-export function transactionsGetTransactionsResponseCustomDataFromJSON(
-  jsonString: string,
-): SafeParseResult<
-  TransactionsGetTransactionsResponseCustomData,
-  SDKValidationError
-> {
-  return safeParse(
-    jsonString,
-    (x) =>
-      TransactionsGetTransactionsResponseCustomData$inboundSchema.parse(
-        JSON.parse(x),
-      ),
-    `Failed to parse 'TransactionsGetTransactionsResponseCustomData' from JSON`,
-  );
-}
-
-/** @internal */
 export const TransactionsGetProduct$inboundSchema: z.ZodType<
   TransactionsGetProduct,
   z.ZodTypeDef,
@@ -1292,13 +1221,6 @@ export const TransactionsGetProduct$inboundSchema: z.ZodType<
       .optional(),
   createdAt: z.string().optional(),
   updatedAt: z.string(),
-  custom_data: z.lazy(() =>
-    TransactionsGetTransactionsResponseCustomData$inboundSchema
-  ),
-}).transform((v) => {
-  return remap$(v, {
-    "custom_data": "customData",
-  });
 });
 
 /** @internal */
@@ -1309,7 +1231,6 @@ export type TransactionsGetProduct$Outbound = {
   status?: string | undefined;
   createdAt?: string | undefined;
   updatedAt: string;
-  custom_data: TransactionsGetTransactionsResponseCustomData$Outbound;
 };
 
 /** @internal */
@@ -1326,13 +1247,6 @@ export const TransactionsGetProduct$outboundSchema: z.ZodType<
       .optional(),
   createdAt: z.string().optional(),
   updatedAt: z.string(),
-  customData: z.lazy(() =>
-    TransactionsGetTransactionsResponseCustomData$outboundSchema
-  ),
-}).transform((v) => {
-  return remap$(v, {
-    customData: "custom_data",
-  });
 });
 
 /**

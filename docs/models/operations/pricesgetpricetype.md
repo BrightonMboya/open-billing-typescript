@@ -5,7 +5,7 @@
 ```typescript
 import { PricesGetPriceType } from "open-billing/models/operations";
 
-let value: PricesGetPriceType = "standard";
+let value: PricesGetPriceType = "custom";
 ```
 
 ## Values

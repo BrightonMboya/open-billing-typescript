@@ -5,7 +5,7 @@
 ```typescript
 import { TransactionsCreateTransactionsType } from "open-billing/models/operations";
 
-let value: TransactionsCreateTransactionsType = "custom";
+let value: TransactionsCreateTransactionsType = "standard";
 ```
 
 ## Values

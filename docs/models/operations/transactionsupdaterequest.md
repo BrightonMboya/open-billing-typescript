@@ -8,7 +8,7 @@ import { TransactionsUpdateRequest } from "open-billing/models/operations";
 let value: TransactionsUpdateRequest = {
   transactionId: "<id>",
   requestBody: {
-    status: "cancelled",
+    status: "billed",
   },
 };
 ```

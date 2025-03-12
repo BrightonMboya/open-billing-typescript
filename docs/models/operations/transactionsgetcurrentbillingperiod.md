@@ -6,8 +6,8 @@
 import { TransactionsGetCurrentBillingPeriod } from "open-billing/models/operations";
 
 let value: TransactionsGetCurrentBillingPeriod = {
-  startsAt: new Date("2025-12-20T12:28:04.015Z"),
-  endsAt: new Date("2024-12-07T06:42:25.206Z"),
+  startsAt: new Date("2023-10-20T14:32:02.541Z"),
+  endsAt: new Date("2025-05-17T10:23:56.087Z"),
 };
 ```
 

@@ -5,7 +5,7 @@
 ```typescript
 import { SubscriptionCreateStatus } from "open-billing/models/operations";
 
-let value: SubscriptionCreateStatus = "cancelled";
+let value: SubscriptionCreateStatus = "trial";
 ```
 
 ## Values

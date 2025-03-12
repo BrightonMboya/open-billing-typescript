@@ -7,11 +7,11 @@ import { SubscriptionActivateSubscriptionDiscount } from "open-billing/models/op
 
 let value: SubscriptionActivateSubscriptionDiscount = {
   id: "<id>",
-  amount: "176.50",
-  currencyCode: "XAF",
-  type: "percentage",
-  createdAt: "1741647587613",
-  updatedAt: "1741584268315",
+  amount: "263.77",
+  currencyCode: "XCD",
+  type: "flat",
+  createdAt: "1732962322490",
+  updatedAt: "1741777572490",
   restrictedTo: [
     "<value>",
   ],

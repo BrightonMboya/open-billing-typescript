@@ -6,7 +6,7 @@
 import { SubscriptionCancelSubscriptionBillingCycle } from "open-billing/models/operations";
 
 let value: SubscriptionCancelSubscriptionBillingCycle = {
-  frequency: 337477,
+  frequency: 403026,
   interval: "<value>",
 };
 ```

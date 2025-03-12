@@ -6,8 +6,8 @@
 import { SubscriptionActivateSubscriptionSubscriptionsBillingCycle } from "open-billing/models/operations";
 
 let value: SubscriptionActivateSubscriptionSubscriptionsBillingCycle = {
-  interval: "day",
-  frequency: 3302.67,
+  interval: "month",
+  frequency: 1024.46,
 };
 ```
 

@@ -7,7 +7,7 @@ import { PaymentTerms } from "open-billing/models/operations";
 
 let value: PaymentTerms = {
   paymentInterval: "week",
-  paymentFrequency: 2586.84,
+  paymentFrequency: 3782.45,
 };
 ```
 

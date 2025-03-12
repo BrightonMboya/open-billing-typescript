@@ -8,7 +8,7 @@ import { BillingDetails } from "open-billing/models/operations";
 let value: BillingDetails = {
   paymentTerms: {
     paymentInterval: "year",
-    paymentFrequency: 333.04,
+    paymentFrequency: 1746.58,
   },
   enableCheckout: false,
   additionalInformation: "<value>",

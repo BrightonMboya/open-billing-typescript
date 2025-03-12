@@ -11,7 +11,7 @@ let value: ScheduledChange = {
   action: "resume",
   effectiveAt: "<value>",
   resumesAt: "<value>",
-  status: "completed",
+  status: "scheduled",
 };
 ```
 

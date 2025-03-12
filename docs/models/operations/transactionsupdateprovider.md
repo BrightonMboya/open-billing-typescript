@@ -5,7 +5,7 @@
 ```typescript
 import { TransactionsUpdateProvider } from "open-billing/models/operations";
 
-let value: TransactionsUpdateProvider = "AIRTEL";
+let value: TransactionsUpdateProvider = "MPESA";
 ```
 
 ## Values

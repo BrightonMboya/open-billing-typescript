@@ -7,11 +7,11 @@ import { TransactionsGetDiscount } from "open-billing/models/operations";
 
 let value: TransactionsGetDiscount = {
   id: "<id>",
-  amount: "990.54",
-  currencyCode: "MUR",
+  amount: "26.38",
+  currencyCode: "XOF",
   type: "flat_per_seat",
-  createdAt: "1713216035314",
-  updatedAt: "1741598858332",
+  createdAt: "1729922317156",
+  updatedAt: "1741699091028",
   restrictedTo: [
     "<value>",
   ],

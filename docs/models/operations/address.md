@@ -8,7 +8,7 @@ import { Address } from "open-billing/models/operations";
 let value: Address = {
   id: "<id>",
   customData: {},
-  updatedAt: "1741635696813",
+  updatedAt: "1741723994230",
 };
 ```
 

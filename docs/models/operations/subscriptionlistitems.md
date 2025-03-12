@@ -6,14 +6,14 @@
 import { SubscriptionListItems } from "open-billing/models/operations";
 
 let value: SubscriptionListItems = {
-  status: "inactive",
+  status: "active",
   priceId: "<id>",
-  quantity: 279068,
+  quantity: 159845,
   id: "<id>",
   subscriptionId: "<id>",
   recurring: false,
-  createdAt: "1716732298953",
-  updatedAt: "1741577221394",
+  createdAt: "1711724104205",
+  updatedAt: "1741781489277",
   previouslyBilledAt: "<value>",
   nextBilledAt: "<value>",
   trialStartedAt: "<value>",
@@ -21,24 +21,24 @@ let value: SubscriptionListItems = {
   price: [
     {
       productId: "<id>",
-      type: "custom",
+      type: "standard",
       name: "<value>",
       billingCycle: {
-        interval: "month",
-        frequency: 6719.57,
+        interval: "day",
+        frequency: 6128.67,
       },
       trialPeriod: {
-        interval: "year",
-        frequency: 27.03,
+        interval: "day",
+        frequency: 8818.97,
       },
       unitPrice: {
-        amount: 6471.97,
-        currencyCode: "MYR",
+        amount: 7196.2,
+        currencyCode: "YER",
       },
       status: "archived",
       id: "<id>",
-      createdAt: "1740479548597",
-      updatedAt: "1741568682449",
+      createdAt: "1719721549302",
+      updatedAt: "1741745095351",
     },
   ],
 };

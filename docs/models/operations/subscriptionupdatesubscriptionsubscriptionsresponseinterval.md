@@ -5,7 +5,8 @@
 ```typescript
 import { SubscriptionUpdateSubscriptionSubscriptionsResponseInterval } from "open-billing/models/operations";
 
-let value: SubscriptionUpdateSubscriptionSubscriptionsResponseInterval = "week";
+let value: SubscriptionUpdateSubscriptionSubscriptionsResponseInterval =
+  "month";
 ```
 
 ## Values

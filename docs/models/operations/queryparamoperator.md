@@ -5,7 +5,7 @@
 ```typescript
 import { QueryParamOperator } from "open-billing/models/operations";
 
-let value: QueryParamOperator = "LT";
+let value: QueryParamOperator = "LTE";
 ```
 
 ## Values

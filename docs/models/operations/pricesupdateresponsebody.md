@@ -7,24 +7,24 @@ import { PricesUpdateResponseBody } from "open-billing/models/operations";
 
 let value: PricesUpdateResponseBody = {
   productId: "<id>",
-  type: "custom",
+  type: "standard",
   name: "<value>",
   billingCycle: {
-    interval: "day",
-    frequency: 5188.35,
+    interval: "year",
+    frequency: 6360.61,
   },
   trialPeriod: {
-    interval: "week",
-    frequency: 5775.43,
+    interval: "day",
+    frequency: 1605.38,
   },
   unitPrice: {
-    amount: 9594.34,
-    currencyCode: "OMR",
+    amount: 7963.92,
+    currencyCode: "XPF",
   },
   status: "active",
   id: "<id>",
-  createdAt: "1723690795375",
-  updatedAt: "1741611289420",
+  createdAt: "1728885294912",
+  updatedAt: "1741771725245",
 };
 ```
 

@@ -8,9 +8,9 @@
 ```typescript
 const value: operations.One = {
   paymentMethod: "MOBILE_MONEY",
-  paymentProvider: "SELCOM",
-  amount: 3165.5,
-  currencyCode: "TJS",
+  paymentProvider: "ORANGE",
+  amount: 2871.53,
+  currencyCode: "MMK",
   mobileNetwork: "<value>",
   phoneSuffix: "<value>",
 };
@@ -21,13 +21,13 @@ const value: operations.One = {
 ```typescript
 const value: operations.Two = {
   paymentMethod: "CARD",
-  paymentProvider: "AIRTEL",
-  amount: 6339.82,
-  currencyCode: "SDG",
+  paymentProvider: "FLUTTERWAVE",
+  amount: 7396.33,
+  currencyCode: "XPF",
   cardLast4: "<value>",
   cardBrand: "<value>",
-  cardExpMonth: 155978,
-  cardExpYear: 426002,
+  cardExpMonth: 277990,
+  cardExpYear: 793282,
   cardHolderName: "<value>",
 };
 ```
@@ -37,9 +37,9 @@ const value: operations.Two = {
 ```typescript
 const value: operations.Three = {
   paymentMethod: "BANK_TRANSFER",
-  paymentProvider: "DPO",
-  amount: 1035.78,
-  currencyCode: "ALL",
+  paymentProvider: "TIGO",
+  amount: 5802.38,
+  currencyCode: "SLE",
   bankReference: "<value>",
   bankName: "<value>",
 };

@@ -108,12 +108,12 @@ export const Include = {
 export type Include = ClosedEnum<typeof Include>;
 
 export type TransactionsListRequest = {
+  customerId?: string | null | undefined;
   after?: string | undefined;
   perPage?: number | undefined;
   billedAt?: QueryParam2 | Date | undefined;
   createdAt?: CreatedAtQueryParam2 | Date | undefined;
   updatedAt?: UpdatedAtQueryParam2 | Date | undefined;
-  customerId?: Array<string> | undefined;
   id?: Array<string> | undefined;
   invoiceNumber?: Array<string> | undefined;
   subscriptionId?: Array<string> | SubscriptionIdQueryParam2 | undefined;
@@ -213,7 +213,7 @@ export type TransactionsListTransactionsResponse200ApplicationJSONResponseBodySt
 /**
  * Any valid JSON value
  */
-export type TransactionsListTransactionsResponse200CustomData = {};
+export type TransactionsListTransactionsResponseCustomData = {};
 
 export type TransactionsListPrice = {
   productId: string;
@@ -228,7 +228,7 @@ export type TransactionsListPrice = {
   /**
    * Any valid JSON value
    */
-  customData?: TransactionsListTransactionsResponse200CustomData | undefined;
+  customData?: TransactionsListTransactionsResponseCustomData | undefined;
   id: string;
   createdAt: string;
   updatedAt: string;
@@ -244,11 +244,6 @@ export type TransactionsListTransactionsResponse200ApplicationJSONResponseBodyDa
     typeof TransactionsListTransactionsResponse200ApplicationJSONResponseBodyDataStatus
   >;
 
-/**
- * Any valid JSON value
- */
-export type TransactionsListTransactionsResponseCustomData = {};
-
 export type TransactionsListProduct = {
   id: string;
   name: string;
@@ -258,10 +253,6 @@ export type TransactionsListProduct = {
     | undefined;
   createdAt?: string | undefined;
   updatedAt: string;
-  /**
-   * Any valid JSON value
-   */
-  customData: TransactionsListTransactionsResponseCustomData;
 };
 
 export type TransactionsListItems = {
@@ -1111,6 +1102,7 @@ export const TransactionsListRequest$inboundSchema: z.ZodType<
   z.ZodTypeDef,
   unknown
 > = z.object({
+  customer_id: z.nullable(z.string()).optional(),
   after: z.string().optional(),
   per_page: z.number().int().default(30),
   billed_at: z.union([
@@ -1125,7 +1117,6 @@ export const TransactionsListRequest$inboundSchema: z.ZodType<
     z.lazy(() => UpdatedAtQueryParam2$inboundSchema),
     z.string().datetime({ offset: true }).transform(v => new Date(v)),
   ]).optional(),
-  customer_id: z.array(z.string()).optional(),
   id: z.array(z.string()).optional(),
   invoice_number: z.array(z.string()).optional(),
   subscription_id: z.union([
@@ -1138,11 +1129,11 @@ export const TransactionsListRequest$inboundSchema: z.ZodType<
   include: z.array(Include$inboundSchema).optional(),
 }).transform((v) => {
   return remap$(v, {
+    "customer_id": "customerId",
     "per_page": "perPage",
     "billed_at": "billedAt",
     "created_at": "createdAt",
     "updated_at": "updatedAt",
-    "customer_id": "customerId",
     "invoice_number": "invoiceNumber",
     "subscription_id": "subscriptionId",
     "collection_mode": "collectionMode",
@@ -1152,12 +1143,12 @@ export const TransactionsListRequest$inboundSchema: z.ZodType<
 
 /** @internal */
 export type TransactionsListRequest$Outbound = {
+  customer_id?: string | null | undefined;
   after?: string | undefined;
   per_page: number;
   billed_at?: QueryParam2$Outbound | string | undefined;
   created_at?: CreatedAtQueryParam2$Outbound | string | undefined;
   updated_at?: UpdatedAtQueryParam2$Outbound | string | undefined;
-  customer_id?: Array<string> | undefined;
   id?: Array<string> | undefined;
   invoice_number?: Array<string> | undefined;
   subscription_id?: Array<string> | string | undefined;
@@ -1173,6 +1164,7 @@ export const TransactionsListRequest$outboundSchema: z.ZodType<
   z.ZodTypeDef,
   TransactionsListRequest
 > = z.object({
+  customerId: z.nullable(z.string()).optional(),
   after: z.string().optional(),
   perPage: z.number().int().default(30),
   billedAt: z.union([
@@ -1187,7 +1179,6 @@ export const TransactionsListRequest$outboundSchema: z.ZodType<
     z.lazy(() => UpdatedAtQueryParam2$outboundSchema),
     z.date().transform(v => v.toISOString()),
   ]).optional(),
-  customerId: z.array(z.string()).optional(),
   id: z.array(z.string()).optional(),
   invoiceNumber: z.array(z.string()).optional(),
   subscriptionId: z.union([
@@ -1200,11 +1191,11 @@ export const TransactionsListRequest$outboundSchema: z.ZodType<
   include: z.array(Include$outboundSchema).optional(),
 }).transform((v) => {
   return remap$(v, {
+    customerId: "customer_id",
     perPage: "per_page",
     billedAt: "billed_at",
     createdAt: "created_at",
     updatedAt: "updated_at",
-    customerId: "customer_id",
     invoiceNumber: "invoice_number",
     subscriptionId: "subscription_id",
     collectionMode: "collection_mode",
@@ -1805,64 +1796,64 @@ export namespace TransactionsListTransactionsResponse200ApplicationJSONResponseB
 }
 
 /** @internal */
-export const TransactionsListTransactionsResponse200CustomData$inboundSchema:
+export const TransactionsListTransactionsResponseCustomData$inboundSchema:
   z.ZodType<
-    TransactionsListTransactionsResponse200CustomData,
+    TransactionsListTransactionsResponseCustomData,
     z.ZodTypeDef,
     unknown
   > = z.object({});
 
 /** @internal */
-export type TransactionsListTransactionsResponse200CustomData$Outbound = {};
+export type TransactionsListTransactionsResponseCustomData$Outbound = {};
 
 /** @internal */
-export const TransactionsListTransactionsResponse200CustomData$outboundSchema:
+export const TransactionsListTransactionsResponseCustomData$outboundSchema:
   z.ZodType<
-    TransactionsListTransactionsResponse200CustomData$Outbound,
+    TransactionsListTransactionsResponseCustomData$Outbound,
     z.ZodTypeDef,
-    TransactionsListTransactionsResponse200CustomData
+    TransactionsListTransactionsResponseCustomData
   > = z.object({});
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
-export namespace TransactionsListTransactionsResponse200CustomData$ {
-  /** @deprecated use `TransactionsListTransactionsResponse200CustomData$inboundSchema` instead. */
+export namespace TransactionsListTransactionsResponseCustomData$ {
+  /** @deprecated use `TransactionsListTransactionsResponseCustomData$inboundSchema` instead. */
   export const inboundSchema =
-    TransactionsListTransactionsResponse200CustomData$inboundSchema;
-  /** @deprecated use `TransactionsListTransactionsResponse200CustomData$outboundSchema` instead. */
+    TransactionsListTransactionsResponseCustomData$inboundSchema;
+  /** @deprecated use `TransactionsListTransactionsResponseCustomData$outboundSchema` instead. */
   export const outboundSchema =
-    TransactionsListTransactionsResponse200CustomData$outboundSchema;
-  /** @deprecated use `TransactionsListTransactionsResponse200CustomData$Outbound` instead. */
+    TransactionsListTransactionsResponseCustomData$outboundSchema;
+  /** @deprecated use `TransactionsListTransactionsResponseCustomData$Outbound` instead. */
   export type Outbound =
-    TransactionsListTransactionsResponse200CustomData$Outbound;
+    TransactionsListTransactionsResponseCustomData$Outbound;
 }
 
-export function transactionsListTransactionsResponse200CustomDataToJSON(
-  transactionsListTransactionsResponse200CustomData:
-    TransactionsListTransactionsResponse200CustomData,
+export function transactionsListTransactionsResponseCustomDataToJSON(
+  transactionsListTransactionsResponseCustomData:
+    TransactionsListTransactionsResponseCustomData,
 ): string {
   return JSON.stringify(
-    TransactionsListTransactionsResponse200CustomData$outboundSchema.parse(
-      transactionsListTransactionsResponse200CustomData,
+    TransactionsListTransactionsResponseCustomData$outboundSchema.parse(
+      transactionsListTransactionsResponseCustomData,
     ),
   );
 }
 
-export function transactionsListTransactionsResponse200CustomDataFromJSON(
+export function transactionsListTransactionsResponseCustomDataFromJSON(
   jsonString: string,
 ): SafeParseResult<
-  TransactionsListTransactionsResponse200CustomData,
+  TransactionsListTransactionsResponseCustomData,
   SDKValidationError
 > {
   return safeParse(
     jsonString,
     (x) =>
-      TransactionsListTransactionsResponse200CustomData$inboundSchema.parse(
+      TransactionsListTransactionsResponseCustomData$inboundSchema.parse(
         JSON.parse(x),
       ),
-    `Failed to parse 'TransactionsListTransactionsResponse200CustomData' from JSON`,
+    `Failed to parse 'TransactionsListTransactionsResponseCustomData' from JSON`,
   );
 }
 
@@ -1882,7 +1873,7 @@ export const TransactionsListPrice$inboundSchema: z.ZodType<
   status:
     TransactionsListTransactionsResponse200ApplicationJSONResponseBodyStatus$inboundSchema,
   custom_data: z.lazy(() =>
-    TransactionsListTransactionsResponse200CustomData$inboundSchema
+    TransactionsListTransactionsResponseCustomData$inboundSchema
   ).optional(),
   id: z.string(),
   created_at: z.string(),
@@ -1910,7 +1901,7 @@ export type TransactionsListPrice$Outbound = {
   unit_price: TransactionsListUnitPrice$Outbound;
   status: string;
   custom_data?:
-    | TransactionsListTransactionsResponse200CustomData$Outbound
+    | TransactionsListTransactionsResponseCustomData$Outbound
     | undefined;
   id: string;
   created_at: string;
@@ -1933,7 +1924,7 @@ export const TransactionsListPrice$outboundSchema: z.ZodType<
   status:
     TransactionsListTransactionsResponse200ApplicationJSONResponseBodyStatus$outboundSchema,
   customData: z.lazy(() =>
-    TransactionsListTransactionsResponse200CustomData$outboundSchema
+    TransactionsListTransactionsResponseCustomData$outboundSchema
   ).optional(),
   id: z.string(),
   createdAt: z.string(),
@@ -2010,68 +2001,6 @@ export namespace TransactionsListTransactionsResponse200ApplicationJSONResponseB
 }
 
 /** @internal */
-export const TransactionsListTransactionsResponseCustomData$inboundSchema:
-  z.ZodType<
-    TransactionsListTransactionsResponseCustomData,
-    z.ZodTypeDef,
-    unknown
-  > = z.object({});
-
-/** @internal */
-export type TransactionsListTransactionsResponseCustomData$Outbound = {};
-
-/** @internal */
-export const TransactionsListTransactionsResponseCustomData$outboundSchema:
-  z.ZodType<
-    TransactionsListTransactionsResponseCustomData$Outbound,
-    z.ZodTypeDef,
-    TransactionsListTransactionsResponseCustomData
-  > = z.object({});
-
-/**
- * @internal
- * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
- */
-export namespace TransactionsListTransactionsResponseCustomData$ {
-  /** @deprecated use `TransactionsListTransactionsResponseCustomData$inboundSchema` instead. */
-  export const inboundSchema =
-    TransactionsListTransactionsResponseCustomData$inboundSchema;
-  /** @deprecated use `TransactionsListTransactionsResponseCustomData$outboundSchema` instead. */
-  export const outboundSchema =
-    TransactionsListTransactionsResponseCustomData$outboundSchema;
-  /** @deprecated use `TransactionsListTransactionsResponseCustomData$Outbound` instead. */
-  export type Outbound =
-    TransactionsListTransactionsResponseCustomData$Outbound;
-}
-
-export function transactionsListTransactionsResponseCustomDataToJSON(
-  transactionsListTransactionsResponseCustomData:
-    TransactionsListTransactionsResponseCustomData,
-): string {
-  return JSON.stringify(
-    TransactionsListTransactionsResponseCustomData$outboundSchema.parse(
-      transactionsListTransactionsResponseCustomData,
-    ),
-  );
-}
-
-export function transactionsListTransactionsResponseCustomDataFromJSON(
-  jsonString: string,
-): SafeParseResult<
-  TransactionsListTransactionsResponseCustomData,
-  SDKValidationError
-> {
-  return safeParse(
-    jsonString,
-    (x) =>
-      TransactionsListTransactionsResponseCustomData$inboundSchema.parse(
-        JSON.parse(x),
-      ),
-    `Failed to parse 'TransactionsListTransactionsResponseCustomData' from JSON`,
-  );
-}
-
-/** @internal */
 export const TransactionsListProduct$inboundSchema: z.ZodType<
   TransactionsListProduct,
   z.ZodTypeDef,
@@ -2085,13 +2014,6 @@ export const TransactionsListProduct$inboundSchema: z.ZodType<
       .optional(),
   createdAt: z.string().optional(),
   updatedAt: z.string(),
-  custom_data: z.lazy(() =>
-    TransactionsListTransactionsResponseCustomData$inboundSchema
-  ),
-}).transform((v) => {
-  return remap$(v, {
-    "custom_data": "customData",
-  });
 });
 
 /** @internal */
@@ -2102,7 +2024,6 @@ export type TransactionsListProduct$Outbound = {
   status?: string | undefined;
   createdAt?: string | undefined;
   updatedAt: string;
-  custom_data: TransactionsListTransactionsResponseCustomData$Outbound;
 };
 
 /** @internal */
@@ -2119,13 +2040,6 @@ export const TransactionsListProduct$outboundSchema: z.ZodType<
       .optional(),
   createdAt: z.string().optional(),
   updatedAt: z.string(),
-  customData: z.lazy(() =>
-    TransactionsListTransactionsResponseCustomData$outboundSchema
-  ),
-}).transform((v) => {
-  return remap$(v, {
-    customData: "custom_data",
-  });
 });
 
 /**

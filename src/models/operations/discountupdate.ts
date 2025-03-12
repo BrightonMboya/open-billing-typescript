@@ -28,6 +28,7 @@ export type DiscountUpdateType = ClosedEnum<typeof DiscountUpdateType>;
 export type DiscountUpdateCustomData = {};
 
 export type DiscountUpdateRequestBody = {
+  id?: string | undefined;
   status?: DiscountUpdateStatus | undefined;
   description?: string | null | undefined;
   enabledForCheckout?: boolean | null | undefined;
@@ -42,6 +43,10 @@ export type DiscountUpdateRequestBody = {
    * Any valid JSON value
    */
   customData?: DiscountUpdateCustomData | undefined;
+  timesUsed?: number | null | undefined;
+  createdAt?: string | undefined;
+  updatedAt?: string | undefined;
+  projectId?: string | null | undefined;
   restrictedTo?: Array<string> | undefined;
 };
 
@@ -185,6 +190,7 @@ export const DiscountUpdateRequestBody$inboundSchema: z.ZodType<
   z.ZodTypeDef,
   unknown
 > = z.object({
+  id: z.string().optional(),
   status: DiscountUpdateStatus$inboundSchema.optional(),
   description: z.nullable(z.string()).optional(),
   enabled_for_checkout: z.nullable(z.boolean()).optional(),
@@ -196,6 +202,10 @@ export const DiscountUpdateRequestBody$inboundSchema: z.ZodType<
   usage_limit: z.nullable(z.number().int()).optional(),
   expires_at: z.nullable(z.string()).optional(),
   custom_data: z.lazy(() => DiscountUpdateCustomData$inboundSchema).optional(),
+  times_used: z.nullable(z.number().int()).optional(),
+  created_at: z.string().optional(),
+  updated_at: z.string().optional(),
+  projectId: z.nullable(z.string()).optional(),
   restricted_to: z.array(z.string()).optional(),
 }).transform((v) => {
   return remap$(v, {
@@ -205,12 +215,16 @@ export const DiscountUpdateRequestBody$inboundSchema: z.ZodType<
     "usage_limit": "usageLimit",
     "expires_at": "expiresAt",
     "custom_data": "customData",
+    "times_used": "timesUsed",
+    "created_at": "createdAt",
+    "updated_at": "updatedAt",
     "restricted_to": "restrictedTo",
   });
 });
 
 /** @internal */
 export type DiscountUpdateRequestBody$Outbound = {
+  id?: string | undefined;
   status?: string | undefined;
   description?: string | null | undefined;
   enabled_for_checkout?: boolean | null | undefined;
@@ -222,6 +236,10 @@ export type DiscountUpdateRequestBody$Outbound = {
   usage_limit?: number | null | undefined;
   expires_at?: string | null | undefined;
   custom_data?: DiscountUpdateCustomData$Outbound | undefined;
+  times_used?: number | null | undefined;
+  created_at?: string | undefined;
+  updated_at?: string | undefined;
+  projectId?: string | null | undefined;
   restricted_to?: Array<string> | undefined;
 };
 
@@ -231,6 +249,7 @@ export const DiscountUpdateRequestBody$outboundSchema: z.ZodType<
   z.ZodTypeDef,
   DiscountUpdateRequestBody
 > = z.object({
+  id: z.string().optional(),
   status: DiscountUpdateStatus$outboundSchema.optional(),
   description: z.nullable(z.string()).optional(),
   enabledForCheckout: z.nullable(z.boolean()).optional(),
@@ -242,6 +261,10 @@ export const DiscountUpdateRequestBody$outboundSchema: z.ZodType<
   usageLimit: z.nullable(z.number().int()).optional(),
   expiresAt: z.nullable(z.string()).optional(),
   customData: z.lazy(() => DiscountUpdateCustomData$outboundSchema).optional(),
+  timesUsed: z.nullable(z.number().int()).optional(),
+  createdAt: z.string().optional(),
+  updatedAt: z.string().optional(),
+  projectId: z.nullable(z.string()).optional(),
   restrictedTo: z.array(z.string()).optional(),
 }).transform((v) => {
   return remap$(v, {
@@ -251,6 +274,9 @@ export const DiscountUpdateRequestBody$outboundSchema: z.ZodType<
     usageLimit: "usage_limit",
     expiresAt: "expires_at",
     customData: "custom_data",
+    timesUsed: "times_used",
+    createdAt: "created_at",
+    updatedAt: "updated_at",
     restrictedTo: "restricted_to",
   });
 });

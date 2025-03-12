@@ -5,7 +5,7 @@
 ```typescript
 import { SubscriptionActivateSubscriptionSubscriptionsStatus } from "open-billing/models/operations";
 
-let value: SubscriptionActivateSubscriptionSubscriptionsStatus = "inactive";
+let value: SubscriptionActivateSubscriptionSubscriptionsStatus = "active";
 ```
 
 ## Values

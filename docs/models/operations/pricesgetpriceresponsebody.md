@@ -7,24 +7,24 @@ import { PricesGetPriceResponseBody } from "open-billing/models/operations";
 
 let value: PricesGetPriceResponseBody = {
   productId: "<id>",
-  type: "custom",
+  type: "standard",
   name: "<value>",
   billingCycle: {
-    interval: "day",
-    frequency: 4205.39,
+    interval: "week",
+    frequency: 446.12,
   },
   trialPeriod: {
-    interval: "month",
-    frequency: 8605.52,
+    interval: "year",
+    frequency: 769.56,
   },
   unitPrice: {
-    amount: 7270.44,
-    currencyCode: "EUR",
+    amount: 5188.35,
+    currencyCode: "GIP",
   },
-  status: "active",
+  status: "archived",
   id: "<id>",
-  createdAt: "1711863908930",
-  updatedAt: "1741593282237",
+  createdAt: "1740504707718",
+  updatedAt: "1741753395464",
 };
 ```
 

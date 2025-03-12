@@ -6,8 +6,8 @@
 import { Meta } from "open-billing/models/operations";
 
 let value: Meta = {
-  total: 756.1,
-  perPage: 4608.03,
+  total: 7133.71,
+  perPage: 4086.77,
   nextCursor: "<value>",
 };
 ```

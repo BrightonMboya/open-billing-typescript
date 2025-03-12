@@ -7,7 +7,7 @@ import { TransactionsGetTransactionsResponse200ApplicationJSONResponseBodyStatus
 
 let value:
   TransactionsGetTransactionsResponse200ApplicationJSONResponseBodyStatus =
-    "archived";
+    "active";
 ```
 
 ## Values

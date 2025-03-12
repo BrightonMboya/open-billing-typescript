@@ -5,7 +5,7 @@
 ```typescript
 import { Interval } from "open-billing/models/operations";
 
-let value: Interval = "month";
+let value: Interval = "day";
 ```
 
 ## Values

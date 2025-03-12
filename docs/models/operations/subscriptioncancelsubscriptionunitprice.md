@@ -6,8 +6,8 @@
 import { SubscriptionCancelSubscriptionUnitPrice } from "open-billing/models/operations";
 
 let value: SubscriptionCancelSubscriptionUnitPrice = {
-  amount: 9762.26,
-  currencyCode: "USD",
+  amount: 6057.12,
+  currencyCode: "BND",
 };
 ```
 

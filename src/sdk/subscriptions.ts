@@ -26,10 +26,12 @@ export class Subscriptions extends ClientSDK {
   }
 
   async list(
+    request: operations.SubscriptionListRequest,
     options?: RequestOptions,
   ): Promise<Array<operations.SubscriptionListResponseBody>> {
     return unwrapAsync(subscriptionsList(
       this,
+      request,
       options,
     ));
   }

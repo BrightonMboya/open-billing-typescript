@@ -6,7 +6,7 @@
 import { TransactionsListTransactionsResponse200ApplicationJSONStatus } from "open-billing/models/operations";
 
 let value: TransactionsListTransactionsResponse200ApplicationJSONStatus =
-  "active";
+  "archived";
 ```
 
 ## Values

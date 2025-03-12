@@ -7,13 +7,13 @@ import { Two } from "open-billing/models/operations";
 
 let value: Two = {
   paymentMethod: "CARD",
-  paymentProvider: "MTN",
-  amount: 5063.43,
-  currencyCode: "HNL",
+  paymentProvider: "STRIPE",
+  amount: 8103.02,
+  currencyCode: "MUR",
   cardLast4: "<value>",
   cardBrand: "<value>",
-  cardExpMonth: 706411,
-  cardExpYear: 24577,
+  cardExpMonth: 75277,
+  cardExpYear: 78246,
   cardHolderName: "<value>",
 };
 ```

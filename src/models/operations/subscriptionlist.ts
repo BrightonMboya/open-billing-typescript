@@ -10,6 +10,10 @@ import { Result as SafeParseResult } from "../../types/fp.js";
 import { RFCDate } from "../../types/rfcdate.js";
 import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
+export type SubscriptionListRequest = {
+  customerId?: string | null | undefined;
+};
+
 export const SubscriptionListInterval = {
   Day: "day",
   Week: "week",
@@ -238,6 +242,68 @@ export type SubscriptionListData = {
 export type SubscriptionListResponseBody = {
   data: SubscriptionListData;
 };
+
+/** @internal */
+export const SubscriptionListRequest$inboundSchema: z.ZodType<
+  SubscriptionListRequest,
+  z.ZodTypeDef,
+  unknown
+> = z.object({
+  customer_Id: z.nullable(z.string()).optional(),
+}).transform((v) => {
+  return remap$(v, {
+    "customer_Id": "customerId",
+  });
+});
+
+/** @internal */
+export type SubscriptionListRequest$Outbound = {
+  customer_Id?: string | null | undefined;
+};
+
+/** @internal */
+export const SubscriptionListRequest$outboundSchema: z.ZodType<
+  SubscriptionListRequest$Outbound,
+  z.ZodTypeDef,
+  SubscriptionListRequest
+> = z.object({
+  customerId: z.nullable(z.string()).optional(),
+}).transform((v) => {
+  return remap$(v, {
+    customerId: "customer_Id",
+  });
+});
+
+/**
+ * @internal
+ * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
+ */
+export namespace SubscriptionListRequest$ {
+  /** @deprecated use `SubscriptionListRequest$inboundSchema` instead. */
+  export const inboundSchema = SubscriptionListRequest$inboundSchema;
+  /** @deprecated use `SubscriptionListRequest$outboundSchema` instead. */
+  export const outboundSchema = SubscriptionListRequest$outboundSchema;
+  /** @deprecated use `SubscriptionListRequest$Outbound` instead. */
+  export type Outbound = SubscriptionListRequest$Outbound;
+}
+
+export function subscriptionListRequestToJSON(
+  subscriptionListRequest: SubscriptionListRequest,
+): string {
+  return JSON.stringify(
+    SubscriptionListRequest$outboundSchema.parse(subscriptionListRequest),
+  );
+}
+
+export function subscriptionListRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<SubscriptionListRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => SubscriptionListRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'SubscriptionListRequest' from JSON`,
+  );
+}
 
 /** @internal */
 export const SubscriptionListInterval$inboundSchema: z.ZodNativeEnum<

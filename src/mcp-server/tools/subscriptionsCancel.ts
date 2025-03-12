@@ -11,7 +11,7 @@ const args = {
 };
 
 export const tool$subscriptionsCancel: ToolDefinition<typeof args> = {
-  name: "subscriptions_cancel",
+  name: "subscriptions-cancel",
   description: ``,
   args,
   tool: async (client, args, ctx) => {

@@ -6,8 +6,8 @@
 import { SubscriptionCreateRequestBody } from "open-billing/models/operations";
 
 let value: SubscriptionCreateRequestBody = {
-  status: "trial",
-  currencyCode: "HTG",
+  status: "cancelled",
+  currencyCode: "PKR",
   customerId: "<id>",
   addressId: "<id>",
   items: [
@@ -18,8 +18,8 @@ let value: SubscriptionCreateRequestBody = {
   ],
   billingDetails: {
     paymentTerms: {
-      paymentInterval: "week",
-      paymentFrequency: 163.28,
+      paymentInterval: "day",
+      paymentFrequency: 6072.49,
     },
     enableCheckout: false,
     additionalInformation: "<value>",

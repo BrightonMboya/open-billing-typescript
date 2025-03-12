@@ -7,17 +7,20 @@ import { TransactionsGetPayments } from "open-billing/models/operations";
 
 let value: TransactionsGetPayments = {
   id: "<id>",
-  status: "PENDING",
+  status: "REFUNDED",
   paymentMethod: "BANK_TRANSFER",
-  provider: "PAYSTACK",
-  createdAt: "1740489754073",
+  provider: "ORANGE",
+  createdAt: "1719325144889",
   providerReference: "<value>",
   providerMetadata: {},
   methodDetails: {
-    paymentMethod: "MOBILE_MONEY",
+    paymentMethod: "CARD",
     details: {
-      network: "<value>",
-      phoneSuffix: "<value>",
+      last4: "<value>",
+      brand: "<value>",
+      expMonth: 1862.11,
+      expYear: 1883.99,
+      cardholderName: "<value>",
     },
   },
 };

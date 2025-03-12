@@ -10,21 +10,21 @@ let value: TransactionsListPrice = {
   type: "custom",
   name: "<value>",
   billingCycle: {
-    interval: "week",
-    frequency: 3772.69,
+    interval: "year",
+    frequency: 9582.8,
   },
   trialPeriod: {
     interval: "year",
-    frequency: 8180.78,
+    frequency: 6077.42,
   },
   unitPrice: {
-    amount: 6143.46,
-    currencyCode: "DJF",
+    amount: 4877.65,
+    currencyCode: "ALL",
   },
-  status: "active",
+  status: "archived",
   id: "<id>",
-  createdAt: "1723717772868",
-  updatedAt: "1741625340153",
+  createdAt: "1741439900077",
+  updatedAt: "1741768302634",
 };
 ```
 
@@ -40,7 +40,7 @@ let value: TransactionsListPrice = {
 | `trialPeriod`                                                                                                                                                                              | [operations.TransactionsListTrialPeriod](../../models/operations/transactionslisttrialperiod.md)                                                                                           | :heavy_check_mark:                                                                                                                                                                         | N/A                                                                                                                                                                                        |
 | `unitPrice`                                                                                                                                                                                | [operations.TransactionsListUnitPrice](../../models/operations/transactionslistunitprice.md)                                                                                               | :heavy_check_mark:                                                                                                                                                                         | N/A                                                                                                                                                                                        |
 | `status`                                                                                                                                                                                   | [operations.TransactionsListTransactionsResponse200ApplicationJSONResponseBodyStatus](../../models/operations/transactionslisttransactionsresponse200applicationjsonresponsebodystatus.md) | :heavy_check_mark:                                                                                                                                                                         | N/A                                                                                                                                                                                        |
-| `customData`                                                                                                                                                                               | [operations.TransactionsListTransactionsResponse200CustomData](../../models/operations/transactionslisttransactionsresponse200customdata.md)                                               | :heavy_minus_sign:                                                                                                                                                                         | Any valid JSON value                                                                                                                                                                       |
+| `customData`                                                                                                                                                                               | [operations.TransactionsListTransactionsResponseCustomData](../../models/operations/transactionslisttransactionsresponsecustomdata.md)                                                     | :heavy_minus_sign:                                                                                                                                                                         | Any valid JSON value                                                                                                                                                                       |
 | `id`                                                                                                                                                                                       | *string*                                                                                                                                                                                   | :heavy_check_mark:                                                                                                                                                                         | N/A                                                                                                                                                                                        |
 | `createdAt`                                                                                                                                                                                | *string*                                                                                                                                                                                   | :heavy_check_mark:                                                                                                                                                                         | N/A                                                                                                                                                                                        |
 | `updatedAt`                                                                                                                                                                                | *string*                                                                                                                                                                                   | :heavy_check_mark:                                                                                                                                                                         | N/A                                                                                                                                                                                        |

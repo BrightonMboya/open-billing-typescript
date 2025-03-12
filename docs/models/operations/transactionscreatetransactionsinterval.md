@@ -5,7 +5,7 @@
 ```typescript
 import { TransactionsCreateTransactionsInterval } from "open-billing/models/operations";
 
-let value: TransactionsCreateTransactionsInterval = "week";
+let value: TransactionsCreateTransactionsInterval = "month";
 ```
 
 ## Values

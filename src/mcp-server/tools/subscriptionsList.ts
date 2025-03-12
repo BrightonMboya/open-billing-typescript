@@ -3,14 +3,21 @@
  */
 
 import { subscriptionsList } from "../../funcs/subscriptionsList.js";
+import * as operations from "../../models/operations/index.js";
 import { formatResult, ToolDefinition } from "../tools.js";
 
-export const tool$subscriptionsList: ToolDefinition = {
-  name: "subscriptions_list",
+const args = {
+  request: operations.SubscriptionListRequest$inboundSchema,
+};
+
+export const tool$subscriptionsList: ToolDefinition<typeof args> = {
+  name: "subscriptions-list",
   description: ``,
-  tool: async (client, ctx) => {
+  args,
+  tool: async (client, args, ctx) => {
     const [result, apiCall] = await subscriptionsList(
       client,
+      args.request,
       { fetchOptions: { signal: ctx.signal } },
     ).$inspect();
 

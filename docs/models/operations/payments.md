@@ -7,20 +7,17 @@ import { Payments } from "open-billing/models/operations";
 
 let value: Payments = {
   id: "<id>",
-  status: "REFUNDED",
-  paymentMethod: "MOBILE_MONEY",
+  status: "FAILED",
+  paymentMethod: "CARD",
   provider: "ORANGE",
-  createdAt: "1730930456237",
+  createdAt: "1735157343316",
   providerReference: "<value>",
   providerMetadata: {},
   methodDetails: {
-    paymentMethod: "CARD",
+    paymentMethod: "MOBILE_MONEY",
     details: {
-      last4: "<value>",
-      brand: "<value>",
-      expMonth: 7748.8,
-      expYear: 9440.33,
-      cardholderName: "<value>",
+      network: "<value>",
+      phoneSuffix: "<value>",
     },
   },
 };

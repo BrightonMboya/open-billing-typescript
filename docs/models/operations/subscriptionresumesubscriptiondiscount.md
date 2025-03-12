@@ -7,11 +7,11 @@ import { SubscriptionResumeSubscriptionDiscount } from "open-billing/models/oper
 
 let value: SubscriptionResumeSubscriptionDiscount = {
   id: "<id>",
-  amount: "256.91",
-  currencyCode: "TZS",
-  type: "percentage",
-  createdAt: "1738467261273",
-  updatedAt: "1741583253728",
+  amount: "185.89",
+  currencyCode: "PYG",
+  type: "flat",
+  createdAt: "1718594008684",
+  updatedAt: "1741781866432",
   restrictedTo: [
     "<value>",
   ],

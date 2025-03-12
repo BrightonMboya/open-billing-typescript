@@ -7,20 +7,17 @@ import { TransactionsUpdatePayments } from "open-billing/models/operations";
 
 let value: TransactionsUpdatePayments = {
   id: "<id>",
-  status: "COMPLETED",
-  paymentMethod: "BANK_TRANSFER",
-  provider: "ORANGE",
-  createdAt: "1739851010134",
+  status: "FAILED",
+  paymentMethod: "CARD",
+  provider: "MTN",
+  createdAt: "1726344012946",
   providerReference: "<value>",
   providerMetadata: {},
   methodDetails: {
-    paymentMethod: "CARD",
+    paymentMethod: "MOBILE_MONEY",
     details: {
-      last4: "<value>",
-      brand: "<value>",
-      expMonth: 8021.48,
-      expYear: 3229.07,
-      cardholderName: "<value>",
+      network: "<value>",
+      phoneSuffix: "<value>",
     },
   },
 };

@@ -7,9 +7,9 @@ import { One } from "open-billing/models/operations";
 
 let value: One = {
   paymentMethod: "MOBILE_MONEY",
-  paymentProvider: "MTN",
-  amount: 2687.09,
-  currencyCode: "STN",
+  paymentProvider: "ORANGE",
+  amount: 6886.84,
+  currencyCode: "RSD",
   mobileNetwork: "<value>",
   phoneSuffix: "<value>",
 };

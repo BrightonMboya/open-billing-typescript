@@ -7,7 +7,7 @@ import { UpdatedAtQueryParam2 } from "open-billing/models/operations";
 
 let value: UpdatedAtQueryParam2 = {
   operator: "GTE",
-  value: new Date("2023-07-23T02:28:15.732Z"),
+  value: new Date("2025-04-25T16:14:24.819Z"),
 };
 ```
 

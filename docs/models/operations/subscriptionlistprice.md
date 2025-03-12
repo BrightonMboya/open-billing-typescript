@@ -7,24 +7,24 @@ import { SubscriptionListPrice } from "open-billing/models/operations";
 
 let value: SubscriptionListPrice = {
   productId: "<id>",
-  type: "standard",
+  type: "custom",
   name: "<value>",
   billingCycle: {
-    interval: "month",
-    frequency: 78.84,
+    interval: "week",
+    frequency: 5010.63,
   },
   trialPeriod: {
     interval: "week",
-    frequency: 5305.37,
+    frequency: 3649.12,
   },
   unitPrice: {
-    amount: 9221.12,
-    currencyCode: "BGN",
+    amount: 2609.04,
+    currencyCode: "LBP",
   },
-  status: "active",
+  status: "archived",
   id: "<id>",
-  createdAt: "1710884365787",
-  updatedAt: "1741596825992",
+  createdAt: "1718994221566",
+  updatedAt: "1741742924939",
 };
 ```
 

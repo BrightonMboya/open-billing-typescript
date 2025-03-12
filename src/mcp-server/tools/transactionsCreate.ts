@@ -11,7 +11,7 @@ const args = {
 };
 
 export const tool$transactionsCreate: ToolDefinition<typeof args> = {
-  name: "transactions_create",
+  name: "transactions-create",
   description: ``,
   args,
   tool: async (client, args, ctx) => {

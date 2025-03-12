@@ -9,24 +9,11 @@ import { ClosedEnum } from "../../types/enums.js";
 import { Result as SafeParseResult } from "../../types/fp.js";
 import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
-export const Type = {
+export const PricesCreateType = {
   Standard: "standard",
   Custom: "custom",
 } as const;
-export type Type = ClosedEnum<typeof Type>;
-
-export const Interval = {
-  Day: "day",
-  Week: "week",
-  Month: "month",
-  Year: "year",
-} as const;
-export type Interval = ClosedEnum<typeof Interval>;
-
-export type BillingCycle = {
-  interval: Interval;
-  frequency: number;
-};
+export type PricesCreateType = ClosedEnum<typeof PricesCreateType>;
 
 export const PricesCreateInterval = {
   Day: "day",
@@ -36,12 +23,27 @@ export const PricesCreateInterval = {
 } as const;
 export type PricesCreateInterval = ClosedEnum<typeof PricesCreateInterval>;
 
-export type TrialPeriod = {
+export type PricesCreateBillingCycle = {
   interval: PricesCreateInterval;
   frequency: number;
 };
 
-export type UnitPrice = {
+export const PricesCreatePricesInterval = {
+  Day: "day",
+  Week: "week",
+  Month: "month",
+  Year: "year",
+} as const;
+export type PricesCreatePricesInterval = ClosedEnum<
+  typeof PricesCreatePricesInterval
+>;
+
+export type PricesCreateTrialPeriod = {
+  interval: PricesCreatePricesInterval;
+  frequency: number;
+};
+
+export type PricesCreateUnitPrice = {
   amount: number;
   currencyCode: string;
 };
@@ -60,11 +62,11 @@ export type PricesCreateCustomData = {};
 export type PricesCreateRequestBody = {
   productId: string;
   description?: string | null | undefined;
-  type: Type;
+  type: PricesCreateType;
   name: string;
-  billingCycle: BillingCycle;
-  trialPeriod: TrialPeriod;
-  unitPrice: UnitPrice;
+  billingCycle: PricesCreateBillingCycle;
+  trialPeriod: PricesCreateTrialPeriod;
+  unitPrice: PricesCreateUnitPrice;
   status: PricesCreateStatus;
   /**
    * Any valid JSON value
@@ -72,26 +74,11 @@ export type PricesCreateRequestBody = {
   customData?: PricesCreateCustomData | undefined;
 };
 
-export const PricesCreateType = {
+export const PricesCreatePricesType = {
   Standard: "standard",
   Custom: "custom",
 } as const;
-export type PricesCreateType = ClosedEnum<typeof PricesCreateType>;
-
-export const PricesCreatePricesInterval = {
-  Day: "day",
-  Week: "week",
-  Month: "month",
-  Year: "year",
-} as const;
-export type PricesCreatePricesInterval = ClosedEnum<
-  typeof PricesCreatePricesInterval
->;
-
-export type PricesCreateBillingCycle = {
-  interval: PricesCreatePricesInterval;
-  frequency: number;
-};
+export type PricesCreatePricesType = ClosedEnum<typeof PricesCreatePricesType>;
 
 export const PricesCreatePricesResponseInterval = {
   Day: "day",
@@ -103,12 +90,27 @@ export type PricesCreatePricesResponseInterval = ClosedEnum<
   typeof PricesCreatePricesResponseInterval
 >;
 
-export type PricesCreateTrialPeriod = {
+export type PricesCreatePricesBillingCycle = {
   interval: PricesCreatePricesResponseInterval;
   frequency: number;
 };
 
-export type PricesCreateUnitPrice = {
+export const PricesCreatePricesResponse200Interval = {
+  Day: "day",
+  Week: "week",
+  Month: "month",
+  Year: "year",
+} as const;
+export type PricesCreatePricesResponse200Interval = ClosedEnum<
+  typeof PricesCreatePricesResponse200Interval
+>;
+
+export type PricesCreatePricesTrialPeriod = {
+  interval: PricesCreatePricesResponse200Interval;
+  frequency: number;
+};
+
+export type PricesCreatePricesUnitPrice = {
   amount: number;
   currencyCode: string;
 };
@@ -129,11 +131,11 @@ export type PricesCreatePricesCustomData = {};
 export type PricesCreateResponseBody = {
   productId: string;
   description?: string | null | undefined;
-  type: PricesCreateType;
+  type: PricesCreatePricesType;
   name: string;
-  billingCycle: PricesCreateBillingCycle;
-  trialPeriod: PricesCreateTrialPeriod;
-  unitPrice: PricesCreateUnitPrice;
+  billingCycle: PricesCreatePricesBillingCycle;
+  trialPeriod: PricesCreatePricesTrialPeriod;
+  unitPrice: PricesCreatePricesUnitPrice;
   status: PricesCreatePricesStatus;
   /**
    * Any valid JSON value
@@ -145,95 +147,24 @@ export type PricesCreateResponseBody = {
 };
 
 /** @internal */
-export const Type$inboundSchema: z.ZodNativeEnum<typeof Type> = z.nativeEnum(
-  Type,
-);
+export const PricesCreateType$inboundSchema: z.ZodNativeEnum<
+  typeof PricesCreateType
+> = z.nativeEnum(PricesCreateType);
 
 /** @internal */
-export const Type$outboundSchema: z.ZodNativeEnum<typeof Type> =
-  Type$inboundSchema;
+export const PricesCreateType$outboundSchema: z.ZodNativeEnum<
+  typeof PricesCreateType
+> = PricesCreateType$inboundSchema;
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
-export namespace Type$ {
-  /** @deprecated use `Type$inboundSchema` instead. */
-  export const inboundSchema = Type$inboundSchema;
-  /** @deprecated use `Type$outboundSchema` instead. */
-  export const outboundSchema = Type$outboundSchema;
-}
-
-/** @internal */
-export const Interval$inboundSchema: z.ZodNativeEnum<typeof Interval> = z
-  .nativeEnum(Interval);
-
-/** @internal */
-export const Interval$outboundSchema: z.ZodNativeEnum<typeof Interval> =
-  Interval$inboundSchema;
-
-/**
- * @internal
- * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
- */
-export namespace Interval$ {
-  /** @deprecated use `Interval$inboundSchema` instead. */
-  export const inboundSchema = Interval$inboundSchema;
-  /** @deprecated use `Interval$outboundSchema` instead. */
-  export const outboundSchema = Interval$outboundSchema;
-}
-
-/** @internal */
-export const BillingCycle$inboundSchema: z.ZodType<
-  BillingCycle,
-  z.ZodTypeDef,
-  unknown
-> = z.object({
-  interval: Interval$inboundSchema,
-  frequency: z.number(),
-});
-
-/** @internal */
-export type BillingCycle$Outbound = {
-  interval: string;
-  frequency: number;
-};
-
-/** @internal */
-export const BillingCycle$outboundSchema: z.ZodType<
-  BillingCycle$Outbound,
-  z.ZodTypeDef,
-  BillingCycle
-> = z.object({
-  interval: Interval$outboundSchema,
-  frequency: z.number(),
-});
-
-/**
- * @internal
- * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
- */
-export namespace BillingCycle$ {
-  /** @deprecated use `BillingCycle$inboundSchema` instead. */
-  export const inboundSchema = BillingCycle$inboundSchema;
-  /** @deprecated use `BillingCycle$outboundSchema` instead. */
-  export const outboundSchema = BillingCycle$outboundSchema;
-  /** @deprecated use `BillingCycle$Outbound` instead. */
-  export type Outbound = BillingCycle$Outbound;
-}
-
-export function billingCycleToJSON(billingCycle: BillingCycle): string {
-  return JSON.stringify(BillingCycle$outboundSchema.parse(billingCycle));
-}
-
-export function billingCycleFromJSON(
-  jsonString: string,
-): SafeParseResult<BillingCycle, SDKValidationError> {
-  return safeParse(
-    jsonString,
-    (x) => BillingCycle$inboundSchema.parse(JSON.parse(x)),
-    `Failed to parse 'BillingCycle' from JSON`,
-  );
+export namespace PricesCreateType$ {
+  /** @deprecated use `PricesCreateType$inboundSchema` instead. */
+  export const inboundSchema = PricesCreateType$inboundSchema;
+  /** @deprecated use `PricesCreateType$outboundSchema` instead. */
+  export const outboundSchema = PricesCreateType$outboundSchema;
 }
 
 /** @internal */
@@ -258,331 +189,12 @@ export namespace PricesCreateInterval$ {
 }
 
 /** @internal */
-export const TrialPeriod$inboundSchema: z.ZodType<
-  TrialPeriod,
-  z.ZodTypeDef,
-  unknown
-> = z.object({
-  interval: PricesCreateInterval$inboundSchema,
-  frequency: z.number(),
-});
-
-/** @internal */
-export type TrialPeriod$Outbound = {
-  interval: string;
-  frequency: number;
-};
-
-/** @internal */
-export const TrialPeriod$outboundSchema: z.ZodType<
-  TrialPeriod$Outbound,
-  z.ZodTypeDef,
-  TrialPeriod
-> = z.object({
-  interval: PricesCreateInterval$outboundSchema,
-  frequency: z.number(),
-});
-
-/**
- * @internal
- * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
- */
-export namespace TrialPeriod$ {
-  /** @deprecated use `TrialPeriod$inboundSchema` instead. */
-  export const inboundSchema = TrialPeriod$inboundSchema;
-  /** @deprecated use `TrialPeriod$outboundSchema` instead. */
-  export const outboundSchema = TrialPeriod$outboundSchema;
-  /** @deprecated use `TrialPeriod$Outbound` instead. */
-  export type Outbound = TrialPeriod$Outbound;
-}
-
-export function trialPeriodToJSON(trialPeriod: TrialPeriod): string {
-  return JSON.stringify(TrialPeriod$outboundSchema.parse(trialPeriod));
-}
-
-export function trialPeriodFromJSON(
-  jsonString: string,
-): SafeParseResult<TrialPeriod, SDKValidationError> {
-  return safeParse(
-    jsonString,
-    (x) => TrialPeriod$inboundSchema.parse(JSON.parse(x)),
-    `Failed to parse 'TrialPeriod' from JSON`,
-  );
-}
-
-/** @internal */
-export const UnitPrice$inboundSchema: z.ZodType<
-  UnitPrice,
-  z.ZodTypeDef,
-  unknown
-> = z.object({
-  amount: z.number(),
-  currency_code: z.string(),
-}).transform((v) => {
-  return remap$(v, {
-    "currency_code": "currencyCode",
-  });
-});
-
-/** @internal */
-export type UnitPrice$Outbound = {
-  amount: number;
-  currency_code: string;
-};
-
-/** @internal */
-export const UnitPrice$outboundSchema: z.ZodType<
-  UnitPrice$Outbound,
-  z.ZodTypeDef,
-  UnitPrice
-> = z.object({
-  amount: z.number(),
-  currencyCode: z.string(),
-}).transform((v) => {
-  return remap$(v, {
-    currencyCode: "currency_code",
-  });
-});
-
-/**
- * @internal
- * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
- */
-export namespace UnitPrice$ {
-  /** @deprecated use `UnitPrice$inboundSchema` instead. */
-  export const inboundSchema = UnitPrice$inboundSchema;
-  /** @deprecated use `UnitPrice$outboundSchema` instead. */
-  export const outboundSchema = UnitPrice$outboundSchema;
-  /** @deprecated use `UnitPrice$Outbound` instead. */
-  export type Outbound = UnitPrice$Outbound;
-}
-
-export function unitPriceToJSON(unitPrice: UnitPrice): string {
-  return JSON.stringify(UnitPrice$outboundSchema.parse(unitPrice));
-}
-
-export function unitPriceFromJSON(
-  jsonString: string,
-): SafeParseResult<UnitPrice, SDKValidationError> {
-  return safeParse(
-    jsonString,
-    (x) => UnitPrice$inboundSchema.parse(JSON.parse(x)),
-    `Failed to parse 'UnitPrice' from JSON`,
-  );
-}
-
-/** @internal */
-export const PricesCreateStatus$inboundSchema: z.ZodNativeEnum<
-  typeof PricesCreateStatus
-> = z.nativeEnum(PricesCreateStatus);
-
-/** @internal */
-export const PricesCreateStatus$outboundSchema: z.ZodNativeEnum<
-  typeof PricesCreateStatus
-> = PricesCreateStatus$inboundSchema;
-
-/**
- * @internal
- * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
- */
-export namespace PricesCreateStatus$ {
-  /** @deprecated use `PricesCreateStatus$inboundSchema` instead. */
-  export const inboundSchema = PricesCreateStatus$inboundSchema;
-  /** @deprecated use `PricesCreateStatus$outboundSchema` instead. */
-  export const outboundSchema = PricesCreateStatus$outboundSchema;
-}
-
-/** @internal */
-export const PricesCreateCustomData$inboundSchema: z.ZodType<
-  PricesCreateCustomData,
-  z.ZodTypeDef,
-  unknown
-> = z.object({});
-
-/** @internal */
-export type PricesCreateCustomData$Outbound = {};
-
-/** @internal */
-export const PricesCreateCustomData$outboundSchema: z.ZodType<
-  PricesCreateCustomData$Outbound,
-  z.ZodTypeDef,
-  PricesCreateCustomData
-> = z.object({});
-
-/**
- * @internal
- * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
- */
-export namespace PricesCreateCustomData$ {
-  /** @deprecated use `PricesCreateCustomData$inboundSchema` instead. */
-  export const inboundSchema = PricesCreateCustomData$inboundSchema;
-  /** @deprecated use `PricesCreateCustomData$outboundSchema` instead. */
-  export const outboundSchema = PricesCreateCustomData$outboundSchema;
-  /** @deprecated use `PricesCreateCustomData$Outbound` instead. */
-  export type Outbound = PricesCreateCustomData$Outbound;
-}
-
-export function pricesCreateCustomDataToJSON(
-  pricesCreateCustomData: PricesCreateCustomData,
-): string {
-  return JSON.stringify(
-    PricesCreateCustomData$outboundSchema.parse(pricesCreateCustomData),
-  );
-}
-
-export function pricesCreateCustomDataFromJSON(
-  jsonString: string,
-): SafeParseResult<PricesCreateCustomData, SDKValidationError> {
-  return safeParse(
-    jsonString,
-    (x) => PricesCreateCustomData$inboundSchema.parse(JSON.parse(x)),
-    `Failed to parse 'PricesCreateCustomData' from JSON`,
-  );
-}
-
-/** @internal */
-export const PricesCreateRequestBody$inboundSchema: z.ZodType<
-  PricesCreateRequestBody,
-  z.ZodTypeDef,
-  unknown
-> = z.object({
-  product_id: z.string(),
-  description: z.nullable(z.string()).optional(),
-  type: Type$inboundSchema,
-  name: z.string(),
-  billing_cycle: z.lazy(() => BillingCycle$inboundSchema),
-  trial_period: z.lazy(() => TrialPeriod$inboundSchema),
-  unit_price: z.lazy(() => UnitPrice$inboundSchema),
-  status: PricesCreateStatus$inboundSchema,
-  custom_data: z.lazy(() => PricesCreateCustomData$inboundSchema).optional(),
-}).transform((v) => {
-  return remap$(v, {
-    "product_id": "productId",
-    "billing_cycle": "billingCycle",
-    "trial_period": "trialPeriod",
-    "unit_price": "unitPrice",
-    "custom_data": "customData",
-  });
-});
-
-/** @internal */
-export type PricesCreateRequestBody$Outbound = {
-  product_id: string;
-  description?: string | null | undefined;
-  type: string;
-  name: string;
-  billing_cycle: BillingCycle$Outbound;
-  trial_period: TrialPeriod$Outbound;
-  unit_price: UnitPrice$Outbound;
-  status: string;
-  custom_data?: PricesCreateCustomData$Outbound | undefined;
-};
-
-/** @internal */
-export const PricesCreateRequestBody$outboundSchema: z.ZodType<
-  PricesCreateRequestBody$Outbound,
-  z.ZodTypeDef,
-  PricesCreateRequestBody
-> = z.object({
-  productId: z.string(),
-  description: z.nullable(z.string()).optional(),
-  type: Type$outboundSchema,
-  name: z.string(),
-  billingCycle: z.lazy(() => BillingCycle$outboundSchema),
-  trialPeriod: z.lazy(() => TrialPeriod$outboundSchema),
-  unitPrice: z.lazy(() => UnitPrice$outboundSchema),
-  status: PricesCreateStatus$outboundSchema,
-  customData: z.lazy(() => PricesCreateCustomData$outboundSchema).optional(),
-}).transform((v) => {
-  return remap$(v, {
-    productId: "product_id",
-    billingCycle: "billing_cycle",
-    trialPeriod: "trial_period",
-    unitPrice: "unit_price",
-    customData: "custom_data",
-  });
-});
-
-/**
- * @internal
- * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
- */
-export namespace PricesCreateRequestBody$ {
-  /** @deprecated use `PricesCreateRequestBody$inboundSchema` instead. */
-  export const inboundSchema = PricesCreateRequestBody$inboundSchema;
-  /** @deprecated use `PricesCreateRequestBody$outboundSchema` instead. */
-  export const outboundSchema = PricesCreateRequestBody$outboundSchema;
-  /** @deprecated use `PricesCreateRequestBody$Outbound` instead. */
-  export type Outbound = PricesCreateRequestBody$Outbound;
-}
-
-export function pricesCreateRequestBodyToJSON(
-  pricesCreateRequestBody: PricesCreateRequestBody,
-): string {
-  return JSON.stringify(
-    PricesCreateRequestBody$outboundSchema.parse(pricesCreateRequestBody),
-  );
-}
-
-export function pricesCreateRequestBodyFromJSON(
-  jsonString: string,
-): SafeParseResult<PricesCreateRequestBody, SDKValidationError> {
-  return safeParse(
-    jsonString,
-    (x) => PricesCreateRequestBody$inboundSchema.parse(JSON.parse(x)),
-    `Failed to parse 'PricesCreateRequestBody' from JSON`,
-  );
-}
-
-/** @internal */
-export const PricesCreateType$inboundSchema: z.ZodNativeEnum<
-  typeof PricesCreateType
-> = z.nativeEnum(PricesCreateType);
-
-/** @internal */
-export const PricesCreateType$outboundSchema: z.ZodNativeEnum<
-  typeof PricesCreateType
-> = PricesCreateType$inboundSchema;
-
-/**
- * @internal
- * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
- */
-export namespace PricesCreateType$ {
-  /** @deprecated use `PricesCreateType$inboundSchema` instead. */
-  export const inboundSchema = PricesCreateType$inboundSchema;
-  /** @deprecated use `PricesCreateType$outboundSchema` instead. */
-  export const outboundSchema = PricesCreateType$outboundSchema;
-}
-
-/** @internal */
-export const PricesCreatePricesInterval$inboundSchema: z.ZodNativeEnum<
-  typeof PricesCreatePricesInterval
-> = z.nativeEnum(PricesCreatePricesInterval);
-
-/** @internal */
-export const PricesCreatePricesInterval$outboundSchema: z.ZodNativeEnum<
-  typeof PricesCreatePricesInterval
-> = PricesCreatePricesInterval$inboundSchema;
-
-/**
- * @internal
- * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
- */
-export namespace PricesCreatePricesInterval$ {
-  /** @deprecated use `PricesCreatePricesInterval$inboundSchema` instead. */
-  export const inboundSchema = PricesCreatePricesInterval$inboundSchema;
-  /** @deprecated use `PricesCreatePricesInterval$outboundSchema` instead. */
-  export const outboundSchema = PricesCreatePricesInterval$outboundSchema;
-}
-
-/** @internal */
 export const PricesCreateBillingCycle$inboundSchema: z.ZodType<
   PricesCreateBillingCycle,
   z.ZodTypeDef,
   unknown
 > = z.object({
-  interval: PricesCreatePricesInterval$inboundSchema,
+  interval: PricesCreateInterval$inboundSchema,
   frequency: z.number(),
 });
 
@@ -598,7 +210,7 @@ export const PricesCreateBillingCycle$outboundSchema: z.ZodType<
   z.ZodTypeDef,
   PricesCreateBillingCycle
 > = z.object({
-  interval: PricesCreatePricesInterval$outboundSchema,
+  interval: PricesCreateInterval$outboundSchema,
   frequency: z.number(),
 });
 
@@ -634,25 +246,24 @@ export function pricesCreateBillingCycleFromJSON(
 }
 
 /** @internal */
-export const PricesCreatePricesResponseInterval$inboundSchema: z.ZodNativeEnum<
-  typeof PricesCreatePricesResponseInterval
-> = z.nativeEnum(PricesCreatePricesResponseInterval);
+export const PricesCreatePricesInterval$inboundSchema: z.ZodNativeEnum<
+  typeof PricesCreatePricesInterval
+> = z.nativeEnum(PricesCreatePricesInterval);
 
 /** @internal */
-export const PricesCreatePricesResponseInterval$outboundSchema: z.ZodNativeEnum<
-  typeof PricesCreatePricesResponseInterval
-> = PricesCreatePricesResponseInterval$inboundSchema;
+export const PricesCreatePricesInterval$outboundSchema: z.ZodNativeEnum<
+  typeof PricesCreatePricesInterval
+> = PricesCreatePricesInterval$inboundSchema;
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
-export namespace PricesCreatePricesResponseInterval$ {
-  /** @deprecated use `PricesCreatePricesResponseInterval$inboundSchema` instead. */
-  export const inboundSchema = PricesCreatePricesResponseInterval$inboundSchema;
-  /** @deprecated use `PricesCreatePricesResponseInterval$outboundSchema` instead. */
-  export const outboundSchema =
-    PricesCreatePricesResponseInterval$outboundSchema;
+export namespace PricesCreatePricesInterval$ {
+  /** @deprecated use `PricesCreatePricesInterval$inboundSchema` instead. */
+  export const inboundSchema = PricesCreatePricesInterval$inboundSchema;
+  /** @deprecated use `PricesCreatePricesInterval$outboundSchema` instead. */
+  export const outboundSchema = PricesCreatePricesInterval$outboundSchema;
 }
 
 /** @internal */
@@ -661,7 +272,7 @@ export const PricesCreateTrialPeriod$inboundSchema: z.ZodType<
   z.ZodTypeDef,
   unknown
 > = z.object({
-  interval: PricesCreatePricesResponseInterval$inboundSchema,
+  interval: PricesCreatePricesInterval$inboundSchema,
   frequency: z.number(),
 });
 
@@ -677,7 +288,7 @@ export const PricesCreateTrialPeriod$outboundSchema: z.ZodType<
   z.ZodTypeDef,
   PricesCreateTrialPeriod
 > = z.object({
-  interval: PricesCreatePricesResponseInterval$outboundSchema,
+  interval: PricesCreatePricesInterval$outboundSchema,
   frequency: z.number(),
 });
 
@@ -778,6 +389,421 @@ export function pricesCreateUnitPriceFromJSON(
 }
 
 /** @internal */
+export const PricesCreateStatus$inboundSchema: z.ZodNativeEnum<
+  typeof PricesCreateStatus
+> = z.nativeEnum(PricesCreateStatus);
+
+/** @internal */
+export const PricesCreateStatus$outboundSchema: z.ZodNativeEnum<
+  typeof PricesCreateStatus
+> = PricesCreateStatus$inboundSchema;
+
+/**
+ * @internal
+ * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
+ */
+export namespace PricesCreateStatus$ {
+  /** @deprecated use `PricesCreateStatus$inboundSchema` instead. */
+  export const inboundSchema = PricesCreateStatus$inboundSchema;
+  /** @deprecated use `PricesCreateStatus$outboundSchema` instead. */
+  export const outboundSchema = PricesCreateStatus$outboundSchema;
+}
+
+/** @internal */
+export const PricesCreateCustomData$inboundSchema: z.ZodType<
+  PricesCreateCustomData,
+  z.ZodTypeDef,
+  unknown
+> = z.object({});
+
+/** @internal */
+export type PricesCreateCustomData$Outbound = {};
+
+/** @internal */
+export const PricesCreateCustomData$outboundSchema: z.ZodType<
+  PricesCreateCustomData$Outbound,
+  z.ZodTypeDef,
+  PricesCreateCustomData
+> = z.object({});
+
+/**
+ * @internal
+ * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
+ */
+export namespace PricesCreateCustomData$ {
+  /** @deprecated use `PricesCreateCustomData$inboundSchema` instead. */
+  export const inboundSchema = PricesCreateCustomData$inboundSchema;
+  /** @deprecated use `PricesCreateCustomData$outboundSchema` instead. */
+  export const outboundSchema = PricesCreateCustomData$outboundSchema;
+  /** @deprecated use `PricesCreateCustomData$Outbound` instead. */
+  export type Outbound = PricesCreateCustomData$Outbound;
+}
+
+export function pricesCreateCustomDataToJSON(
+  pricesCreateCustomData: PricesCreateCustomData,
+): string {
+  return JSON.stringify(
+    PricesCreateCustomData$outboundSchema.parse(pricesCreateCustomData),
+  );
+}
+
+export function pricesCreateCustomDataFromJSON(
+  jsonString: string,
+): SafeParseResult<PricesCreateCustomData, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => PricesCreateCustomData$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'PricesCreateCustomData' from JSON`,
+  );
+}
+
+/** @internal */
+export const PricesCreateRequestBody$inboundSchema: z.ZodType<
+  PricesCreateRequestBody,
+  z.ZodTypeDef,
+  unknown
+> = z.object({
+  product_id: z.string(),
+  description: z.nullable(z.string()).optional(),
+  type: PricesCreateType$inboundSchema,
+  name: z.string(),
+  billing_cycle: z.lazy(() => PricesCreateBillingCycle$inboundSchema),
+  trial_period: z.lazy(() => PricesCreateTrialPeriod$inboundSchema),
+  unit_price: z.lazy(() => PricesCreateUnitPrice$inboundSchema),
+  status: PricesCreateStatus$inboundSchema,
+  custom_data: z.lazy(() => PricesCreateCustomData$inboundSchema).optional(),
+}).transform((v) => {
+  return remap$(v, {
+    "product_id": "productId",
+    "billing_cycle": "billingCycle",
+    "trial_period": "trialPeriod",
+    "unit_price": "unitPrice",
+    "custom_data": "customData",
+  });
+});
+
+/** @internal */
+export type PricesCreateRequestBody$Outbound = {
+  product_id: string;
+  description?: string | null | undefined;
+  type: string;
+  name: string;
+  billing_cycle: PricesCreateBillingCycle$Outbound;
+  trial_period: PricesCreateTrialPeriod$Outbound;
+  unit_price: PricesCreateUnitPrice$Outbound;
+  status: string;
+  custom_data?: PricesCreateCustomData$Outbound | undefined;
+};
+
+/** @internal */
+export const PricesCreateRequestBody$outboundSchema: z.ZodType<
+  PricesCreateRequestBody$Outbound,
+  z.ZodTypeDef,
+  PricesCreateRequestBody
+> = z.object({
+  productId: z.string(),
+  description: z.nullable(z.string()).optional(),
+  type: PricesCreateType$outboundSchema,
+  name: z.string(),
+  billingCycle: z.lazy(() => PricesCreateBillingCycle$outboundSchema),
+  trialPeriod: z.lazy(() => PricesCreateTrialPeriod$outboundSchema),
+  unitPrice: z.lazy(() => PricesCreateUnitPrice$outboundSchema),
+  status: PricesCreateStatus$outboundSchema,
+  customData: z.lazy(() => PricesCreateCustomData$outboundSchema).optional(),
+}).transform((v) => {
+  return remap$(v, {
+    productId: "product_id",
+    billingCycle: "billing_cycle",
+    trialPeriod: "trial_period",
+    unitPrice: "unit_price",
+    customData: "custom_data",
+  });
+});
+
+/**
+ * @internal
+ * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
+ */
+export namespace PricesCreateRequestBody$ {
+  /** @deprecated use `PricesCreateRequestBody$inboundSchema` instead. */
+  export const inboundSchema = PricesCreateRequestBody$inboundSchema;
+  /** @deprecated use `PricesCreateRequestBody$outboundSchema` instead. */
+  export const outboundSchema = PricesCreateRequestBody$outboundSchema;
+  /** @deprecated use `PricesCreateRequestBody$Outbound` instead. */
+  export type Outbound = PricesCreateRequestBody$Outbound;
+}
+
+export function pricesCreateRequestBodyToJSON(
+  pricesCreateRequestBody: PricesCreateRequestBody,
+): string {
+  return JSON.stringify(
+    PricesCreateRequestBody$outboundSchema.parse(pricesCreateRequestBody),
+  );
+}
+
+export function pricesCreateRequestBodyFromJSON(
+  jsonString: string,
+): SafeParseResult<PricesCreateRequestBody, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => PricesCreateRequestBody$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'PricesCreateRequestBody' from JSON`,
+  );
+}
+
+/** @internal */
+export const PricesCreatePricesType$inboundSchema: z.ZodNativeEnum<
+  typeof PricesCreatePricesType
+> = z.nativeEnum(PricesCreatePricesType);
+
+/** @internal */
+export const PricesCreatePricesType$outboundSchema: z.ZodNativeEnum<
+  typeof PricesCreatePricesType
+> = PricesCreatePricesType$inboundSchema;
+
+/**
+ * @internal
+ * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
+ */
+export namespace PricesCreatePricesType$ {
+  /** @deprecated use `PricesCreatePricesType$inboundSchema` instead. */
+  export const inboundSchema = PricesCreatePricesType$inboundSchema;
+  /** @deprecated use `PricesCreatePricesType$outboundSchema` instead. */
+  export const outboundSchema = PricesCreatePricesType$outboundSchema;
+}
+
+/** @internal */
+export const PricesCreatePricesResponseInterval$inboundSchema: z.ZodNativeEnum<
+  typeof PricesCreatePricesResponseInterval
+> = z.nativeEnum(PricesCreatePricesResponseInterval);
+
+/** @internal */
+export const PricesCreatePricesResponseInterval$outboundSchema: z.ZodNativeEnum<
+  typeof PricesCreatePricesResponseInterval
+> = PricesCreatePricesResponseInterval$inboundSchema;
+
+/**
+ * @internal
+ * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
+ */
+export namespace PricesCreatePricesResponseInterval$ {
+  /** @deprecated use `PricesCreatePricesResponseInterval$inboundSchema` instead. */
+  export const inboundSchema = PricesCreatePricesResponseInterval$inboundSchema;
+  /** @deprecated use `PricesCreatePricesResponseInterval$outboundSchema` instead. */
+  export const outboundSchema =
+    PricesCreatePricesResponseInterval$outboundSchema;
+}
+
+/** @internal */
+export const PricesCreatePricesBillingCycle$inboundSchema: z.ZodType<
+  PricesCreatePricesBillingCycle,
+  z.ZodTypeDef,
+  unknown
+> = z.object({
+  interval: PricesCreatePricesResponseInterval$inboundSchema,
+  frequency: z.number(),
+});
+
+/** @internal */
+export type PricesCreatePricesBillingCycle$Outbound = {
+  interval: string;
+  frequency: number;
+};
+
+/** @internal */
+export const PricesCreatePricesBillingCycle$outboundSchema: z.ZodType<
+  PricesCreatePricesBillingCycle$Outbound,
+  z.ZodTypeDef,
+  PricesCreatePricesBillingCycle
+> = z.object({
+  interval: PricesCreatePricesResponseInterval$outboundSchema,
+  frequency: z.number(),
+});
+
+/**
+ * @internal
+ * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
+ */
+export namespace PricesCreatePricesBillingCycle$ {
+  /** @deprecated use `PricesCreatePricesBillingCycle$inboundSchema` instead. */
+  export const inboundSchema = PricesCreatePricesBillingCycle$inboundSchema;
+  /** @deprecated use `PricesCreatePricesBillingCycle$outboundSchema` instead. */
+  export const outboundSchema = PricesCreatePricesBillingCycle$outboundSchema;
+  /** @deprecated use `PricesCreatePricesBillingCycle$Outbound` instead. */
+  export type Outbound = PricesCreatePricesBillingCycle$Outbound;
+}
+
+export function pricesCreatePricesBillingCycleToJSON(
+  pricesCreatePricesBillingCycle: PricesCreatePricesBillingCycle,
+): string {
+  return JSON.stringify(
+    PricesCreatePricesBillingCycle$outboundSchema.parse(
+      pricesCreatePricesBillingCycle,
+    ),
+  );
+}
+
+export function pricesCreatePricesBillingCycleFromJSON(
+  jsonString: string,
+): SafeParseResult<PricesCreatePricesBillingCycle, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => PricesCreatePricesBillingCycle$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'PricesCreatePricesBillingCycle' from JSON`,
+  );
+}
+
+/** @internal */
+export const PricesCreatePricesResponse200Interval$inboundSchema:
+  z.ZodNativeEnum<typeof PricesCreatePricesResponse200Interval> = z.nativeEnum(
+    PricesCreatePricesResponse200Interval,
+  );
+
+/** @internal */
+export const PricesCreatePricesResponse200Interval$outboundSchema:
+  z.ZodNativeEnum<typeof PricesCreatePricesResponse200Interval> =
+    PricesCreatePricesResponse200Interval$inboundSchema;
+
+/**
+ * @internal
+ * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
+ */
+export namespace PricesCreatePricesResponse200Interval$ {
+  /** @deprecated use `PricesCreatePricesResponse200Interval$inboundSchema` instead. */
+  export const inboundSchema =
+    PricesCreatePricesResponse200Interval$inboundSchema;
+  /** @deprecated use `PricesCreatePricesResponse200Interval$outboundSchema` instead. */
+  export const outboundSchema =
+    PricesCreatePricesResponse200Interval$outboundSchema;
+}
+
+/** @internal */
+export const PricesCreatePricesTrialPeriod$inboundSchema: z.ZodType<
+  PricesCreatePricesTrialPeriod,
+  z.ZodTypeDef,
+  unknown
+> = z.object({
+  interval: PricesCreatePricesResponse200Interval$inboundSchema,
+  frequency: z.number(),
+});
+
+/** @internal */
+export type PricesCreatePricesTrialPeriod$Outbound = {
+  interval: string;
+  frequency: number;
+};
+
+/** @internal */
+export const PricesCreatePricesTrialPeriod$outboundSchema: z.ZodType<
+  PricesCreatePricesTrialPeriod$Outbound,
+  z.ZodTypeDef,
+  PricesCreatePricesTrialPeriod
+> = z.object({
+  interval: PricesCreatePricesResponse200Interval$outboundSchema,
+  frequency: z.number(),
+});
+
+/**
+ * @internal
+ * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
+ */
+export namespace PricesCreatePricesTrialPeriod$ {
+  /** @deprecated use `PricesCreatePricesTrialPeriod$inboundSchema` instead. */
+  export const inboundSchema = PricesCreatePricesTrialPeriod$inboundSchema;
+  /** @deprecated use `PricesCreatePricesTrialPeriod$outboundSchema` instead. */
+  export const outboundSchema = PricesCreatePricesTrialPeriod$outboundSchema;
+  /** @deprecated use `PricesCreatePricesTrialPeriod$Outbound` instead. */
+  export type Outbound = PricesCreatePricesTrialPeriod$Outbound;
+}
+
+export function pricesCreatePricesTrialPeriodToJSON(
+  pricesCreatePricesTrialPeriod: PricesCreatePricesTrialPeriod,
+): string {
+  return JSON.stringify(
+    PricesCreatePricesTrialPeriod$outboundSchema.parse(
+      pricesCreatePricesTrialPeriod,
+    ),
+  );
+}
+
+export function pricesCreatePricesTrialPeriodFromJSON(
+  jsonString: string,
+): SafeParseResult<PricesCreatePricesTrialPeriod, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => PricesCreatePricesTrialPeriod$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'PricesCreatePricesTrialPeriod' from JSON`,
+  );
+}
+
+/** @internal */
+export const PricesCreatePricesUnitPrice$inboundSchema: z.ZodType<
+  PricesCreatePricesUnitPrice,
+  z.ZodTypeDef,
+  unknown
+> = z.object({
+  amount: z.number(),
+  currency_code: z.string(),
+}).transform((v) => {
+  return remap$(v, {
+    "currency_code": "currencyCode",
+  });
+});
+
+/** @internal */
+export type PricesCreatePricesUnitPrice$Outbound = {
+  amount: number;
+  currency_code: string;
+};
+
+/** @internal */
+export const PricesCreatePricesUnitPrice$outboundSchema: z.ZodType<
+  PricesCreatePricesUnitPrice$Outbound,
+  z.ZodTypeDef,
+  PricesCreatePricesUnitPrice
+> = z.object({
+  amount: z.number(),
+  currencyCode: z.string(),
+}).transform((v) => {
+  return remap$(v, {
+    currencyCode: "currency_code",
+  });
+});
+
+/**
+ * @internal
+ * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
+ */
+export namespace PricesCreatePricesUnitPrice$ {
+  /** @deprecated use `PricesCreatePricesUnitPrice$inboundSchema` instead. */
+  export const inboundSchema = PricesCreatePricesUnitPrice$inboundSchema;
+  /** @deprecated use `PricesCreatePricesUnitPrice$outboundSchema` instead. */
+  export const outboundSchema = PricesCreatePricesUnitPrice$outboundSchema;
+  /** @deprecated use `PricesCreatePricesUnitPrice$Outbound` instead. */
+  export type Outbound = PricesCreatePricesUnitPrice$Outbound;
+}
+
+export function pricesCreatePricesUnitPriceToJSON(
+  pricesCreatePricesUnitPrice: PricesCreatePricesUnitPrice,
+): string {
+  return JSON.stringify(
+    PricesCreatePricesUnitPrice$outboundSchema.parse(
+      pricesCreatePricesUnitPrice,
+    ),
+  );
+}
+
+export function pricesCreatePricesUnitPriceFromJSON(
+  jsonString: string,
+): SafeParseResult<PricesCreatePricesUnitPrice, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => PricesCreatePricesUnitPrice$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'PricesCreatePricesUnitPrice' from JSON`,
+  );
+}
+
+/** @internal */
 export const PricesCreatePricesStatus$inboundSchema: z.ZodNativeEnum<
   typeof PricesCreatePricesStatus
 > = z.nativeEnum(PricesCreatePricesStatus);
@@ -856,11 +882,11 @@ export const PricesCreateResponseBody$inboundSchema: z.ZodType<
 > = z.object({
   product_id: z.string(),
   description: z.nullable(z.string()).optional(),
-  type: PricesCreateType$inboundSchema,
+  type: PricesCreatePricesType$inboundSchema,
   name: z.string(),
-  billing_cycle: z.lazy(() => PricesCreateBillingCycle$inboundSchema),
-  trial_period: z.lazy(() => PricesCreateTrialPeriod$inboundSchema),
-  unit_price: z.lazy(() => PricesCreateUnitPrice$inboundSchema),
+  billing_cycle: z.lazy(() => PricesCreatePricesBillingCycle$inboundSchema),
+  trial_period: z.lazy(() => PricesCreatePricesTrialPeriod$inboundSchema),
+  unit_price: z.lazy(() => PricesCreatePricesUnitPrice$inboundSchema),
   status: PricesCreatePricesStatus$inboundSchema,
   custom_data: z.lazy(() => PricesCreatePricesCustomData$inboundSchema)
     .optional(),
@@ -885,9 +911,9 @@ export type PricesCreateResponseBody$Outbound = {
   description?: string | null | undefined;
   type: string;
   name: string;
-  billing_cycle: PricesCreateBillingCycle$Outbound;
-  trial_period: PricesCreateTrialPeriod$Outbound;
-  unit_price: PricesCreateUnitPrice$Outbound;
+  billing_cycle: PricesCreatePricesBillingCycle$Outbound;
+  trial_period: PricesCreatePricesTrialPeriod$Outbound;
+  unit_price: PricesCreatePricesUnitPrice$Outbound;
   status: string;
   custom_data?: PricesCreatePricesCustomData$Outbound | undefined;
   id: string;
@@ -903,11 +929,11 @@ export const PricesCreateResponseBody$outboundSchema: z.ZodType<
 > = z.object({
   productId: z.string(),
   description: z.nullable(z.string()).optional(),
-  type: PricesCreateType$outboundSchema,
+  type: PricesCreatePricesType$outboundSchema,
   name: z.string(),
-  billingCycle: z.lazy(() => PricesCreateBillingCycle$outboundSchema),
-  trialPeriod: z.lazy(() => PricesCreateTrialPeriod$outboundSchema),
-  unitPrice: z.lazy(() => PricesCreateUnitPrice$outboundSchema),
+  billingCycle: z.lazy(() => PricesCreatePricesBillingCycle$outboundSchema),
+  trialPeriod: z.lazy(() => PricesCreatePricesTrialPeriod$outboundSchema),
+  unitPrice: z.lazy(() => PricesCreatePricesUnitPrice$outboundSchema),
   status: PricesCreatePricesStatus$outboundSchema,
   customData: z.lazy(() => PricesCreatePricesCustomData$outboundSchema)
     .optional(),

@@ -28,6 +28,7 @@ export type DiscountCreateType = ClosedEnum<typeof DiscountCreateType>;
 export type DiscountCreateCustomData = {};
 
 export type DiscountCreateRequestBody = {
+  id: string;
   status?: DiscountCreateStatus | undefined;
   description?: string | null | undefined;
   enabledForCheckout?: boolean | null | undefined;
@@ -42,6 +43,10 @@ export type DiscountCreateRequestBody = {
    * Any valid JSON value
    */
   customData?: DiscountCreateCustomData | undefined;
+  timesUsed?: number | null | undefined;
+  createdAt: string;
+  updatedAt: string;
+  projectId?: string | null | undefined;
   priceIds?: Array<string> | undefined;
 };
 
@@ -180,6 +185,7 @@ export const DiscountCreateRequestBody$inboundSchema: z.ZodType<
   z.ZodTypeDef,
   unknown
 > = z.object({
+  id: z.string(),
   status: DiscountCreateStatus$inboundSchema.optional(),
   description: z.nullable(z.string()).optional(),
   enabled_for_checkout: z.nullable(z.boolean()).optional(),
@@ -191,6 +197,10 @@ export const DiscountCreateRequestBody$inboundSchema: z.ZodType<
   usage_limit: z.nullable(z.number().int()).optional(),
   expires_at: z.nullable(z.string()).optional(),
   custom_data: z.lazy(() => DiscountCreateCustomData$inboundSchema).optional(),
+  times_used: z.nullable(z.number().int()).optional(),
+  created_at: z.string(),
+  updated_at: z.string(),
+  projectId: z.nullable(z.string()).optional(),
   price_ids: z.array(z.string()).optional(),
 }).transform((v) => {
   return remap$(v, {
@@ -200,12 +210,16 @@ export const DiscountCreateRequestBody$inboundSchema: z.ZodType<
     "usage_limit": "usageLimit",
     "expires_at": "expiresAt",
     "custom_data": "customData",
+    "times_used": "timesUsed",
+    "created_at": "createdAt",
+    "updated_at": "updatedAt",
     "price_ids": "priceIds",
   });
 });
 
 /** @internal */
 export type DiscountCreateRequestBody$Outbound = {
+  id: string;
   status?: string | undefined;
   description?: string | null | undefined;
   enabled_for_checkout?: boolean | null | undefined;
@@ -217,6 +231,10 @@ export type DiscountCreateRequestBody$Outbound = {
   usage_limit?: number | null | undefined;
   expires_at?: string | null | undefined;
   custom_data?: DiscountCreateCustomData$Outbound | undefined;
+  times_used?: number | null | undefined;
+  created_at: string;
+  updated_at: string;
+  projectId?: string | null | undefined;
   price_ids?: Array<string> | undefined;
 };
 
@@ -226,6 +244,7 @@ export const DiscountCreateRequestBody$outboundSchema: z.ZodType<
   z.ZodTypeDef,
   DiscountCreateRequestBody
 > = z.object({
+  id: z.string(),
   status: DiscountCreateStatus$outboundSchema.optional(),
   description: z.nullable(z.string()).optional(),
   enabledForCheckout: z.nullable(z.boolean()).optional(),
@@ -237,6 +256,10 @@ export const DiscountCreateRequestBody$outboundSchema: z.ZodType<
   usageLimit: z.nullable(z.number().int()).optional(),
   expiresAt: z.nullable(z.string()).optional(),
   customData: z.lazy(() => DiscountCreateCustomData$outboundSchema).optional(),
+  timesUsed: z.nullable(z.number().int()).optional(),
+  createdAt: z.string(),
+  updatedAt: z.string(),
+  projectId: z.nullable(z.string()).optional(),
   priceIds: z.array(z.string()).optional(),
 }).transform((v) => {
   return remap$(v, {
@@ -246,6 +269,9 @@ export const DiscountCreateRequestBody$outboundSchema: z.ZodType<
     usageLimit: "usage_limit",
     expiresAt: "expires_at",
     customData: "custom_data",
+    timesUsed: "times_used",
+    createdAt: "created_at",
+    updatedAt: "updated_at",
     priceIds: "price_ids",
   });
 });

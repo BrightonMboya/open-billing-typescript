@@ -6,8 +6,8 @@
 import { PricesGetPriceTrialPeriod } from "open-billing/models/operations";
 
 let value: PricesGetPriceTrialPeriod = {
-  interval: "day",
-  frequency: 7705.81,
+  interval: "week",
+  frequency: 3738.13,
 };
 ```
 

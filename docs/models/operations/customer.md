@@ -8,12 +8,12 @@ import { Customer } from "open-billing/models/operations";
 let value: Customer = {
   id: "<id>",
   name: "<value>",
-  status: "active",
+  status: "archived",
   description:
-    "under besides pointless now fooey among entwine capsize unfinished",
-  email: "Jenifer_Hyatt28@hotmail.com",
-  createdAt: "1738749110539",
-  updatedAt: "1741628486972",
+    "likewise separately content to as needily near relative unrealistic whereas",
+  email: "Clifford71@yahoo.com",
+  createdAt: "1714870684018",
+  updatedAt: "1741777034918",
 };
 ```
 

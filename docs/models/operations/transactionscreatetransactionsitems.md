@@ -9,42 +9,41 @@ let value: TransactionsCreateTransactionsItems = {
   price: [
     {
       productId: "<id>",
-      type: "custom",
+      type: "standard",
       name: "<value>",
       billingCycle: {
-        interval: "month",
-        frequency: 7935.68,
+        interval: "year",
+        frequency: 8847.65,
       },
       trialPeriod: {
-        interval: "week",
-        frequency: 8007.99,
+        interval: "month",
+        frequency: 4896.85,
       },
       unitPrice: {
-        amount: 5488.46,
-        currencyCode: "KWD",
+        amount: 1316.87,
+        currencyCode: "IRR",
       },
       status: "archived",
       id: "<id>",
-      createdAt: "1710791193035",
-      updatedAt: "1741576065702",
+      createdAt: "1719232168915",
+      updatedAt: "1741706603890",
     },
   ],
-  quantity: 2921.77,
+  quantity: 9078.99,
   product: {
     id: "<id>",
     name: "<value>",
     description:
-      "whether boo poor deliberately pleasing afore pick obediently kissingly blue",
-    updatedAt: "1741573986020",
-    customData: {},
+      "firm table restfully intent arrogantly inquisitively corporation meh",
+    updatedAt: "1741777937556",
   },
 };
 ```
 
 ## Fields
 
-| Field                                                    | Type                                                     | Required                                                 | Description                                              |
-| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
-| `price`                                                  | [operations.Price](../../models/operations/price.md)[]   | :heavy_check_mark:                                       | N/A                                                      |
-| `quantity`                                               | *number*                                                 | :heavy_check_mark:                                       | N/A                                                      |
-| `product`                                                | [operations.Product](../../models/operations/product.md) | :heavy_check_mark:                                       | N/A                                                      |
+| Field                                                                                        | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `price`                                                                                      | [operations.TransactionsCreatePrice](../../models/operations/transactionscreateprice.md)[]   | :heavy_check_mark:                                                                           | N/A                                                                                          |
+| `quantity`                                                                                   | *number*                                                                                     | :heavy_check_mark:                                                                           | N/A                                                                                          |
+| `product`                                                                                    | [operations.TransactionsCreateProduct](../../models/operations/transactionscreateproduct.md) | :heavy_check_mark:                                                                           | N/A                                                                                          |

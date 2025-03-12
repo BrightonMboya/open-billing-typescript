@@ -5,7 +5,7 @@
 ```typescript
 import { SubscriptionActivateSubscriptionType } from "open-billing/models/operations";
 
-let value: SubscriptionActivateSubscriptionType = "flat_per_seat";
+let value: SubscriptionActivateSubscriptionType = "percentage";
 ```
 
 ## Values

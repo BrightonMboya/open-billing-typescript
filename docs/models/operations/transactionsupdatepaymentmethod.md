@@ -5,7 +5,7 @@
 ```typescript
 import { TransactionsUpdatePaymentMethod } from "open-billing/models/operations";
 
-let value: TransactionsUpdatePaymentMethod = "BANK_TRANSFER";
+let value: TransactionsUpdatePaymentMethod = "MOBILE_MONEY";
 ```
 
 ## Values

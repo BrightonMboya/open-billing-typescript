@@ -6,7 +6,7 @@
 import { SubscriptionResumeSubscriptionSubscriptionsResponse200Status } from "open-billing/models/operations";
 
 let value: SubscriptionResumeSubscriptionSubscriptionsResponse200Status =
-  "active";
+  "archived";
 ```
 
 ## Values

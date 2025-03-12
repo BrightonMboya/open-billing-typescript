@@ -5,7 +5,7 @@
 ```typescript
 import { Include } from "open-billing/models/operations";
 
-let value: Include = "customer";
+let value: Include = "discount";
 ```
 
 ## Values

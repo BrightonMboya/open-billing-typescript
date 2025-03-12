@@ -5,7 +5,7 @@
 ```typescript
 import { TransactionsCreateProvider } from "open-billing/models/operations";
 
-let value: TransactionsCreateProvider = "TIGO";
+let value: TransactionsCreateProvider = "FLUTTERWAVE";
 ```
 
 ## Values

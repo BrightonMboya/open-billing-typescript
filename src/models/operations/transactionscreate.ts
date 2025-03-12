@@ -248,10 +248,9 @@ export type TransactionsCreateTransactionsResponse200ApplicationJSONResponseBody
 /**
  * Any valid JSON value
  */
-export type TransactionsCreateTransactionsResponse200ApplicationJSONCustomData =
-  {};
+export type TransactionsCreateTransactionsResponse200CustomData = {};
 
-export type Price = {
+export type TransactionsCreatePrice = {
   productId: string;
   description?: string | null | undefined;
   type: TransactionsCreateTransactionsType;
@@ -264,9 +263,7 @@ export type Price = {
   /**
    * Any valid JSON value
    */
-  customData?:
-    | TransactionsCreateTransactionsResponse200ApplicationJSONCustomData
-    | undefined;
+  customData?: TransactionsCreateTransactionsResponse200CustomData | undefined;
   id: string;
   createdAt: string;
   updatedAt: string;
@@ -282,12 +279,7 @@ export type TransactionsCreateTransactionsResponse200ApplicationJSONResponseBody
     typeof TransactionsCreateTransactionsResponse200ApplicationJSONResponseBodyItemsProductStatus
   >;
 
-/**
- * Any valid JSON value
- */
-export type TransactionsCreateTransactionsResponse200CustomData = {};
-
-export type Product = {
+export type TransactionsCreateProduct = {
   id: string;
   name: string;
   description: string;
@@ -296,16 +288,12 @@ export type Product = {
     | undefined;
   createdAt?: string | undefined;
   updatedAt: string;
-  /**
-   * Any valid JSON value
-   */
-  customData: TransactionsCreateTransactionsResponse200CustomData;
 };
 
 export type TransactionsCreateTransactionsItems = {
-  price: Array<Price>;
+  price: Array<TransactionsCreatePrice>;
   quantity: number;
-  product: Product;
+  product: TransactionsCreateProduct;
 };
 
 export const TransactionsCreateTransactionsResponseStatus = {
@@ -1911,205 +1899,6 @@ export namespace TransactionsCreateTransactionsResponse200ApplicationJSONRespons
 }
 
 /** @internal */
-export const TransactionsCreateTransactionsResponse200ApplicationJSONCustomData$inboundSchema:
-  z.ZodType<
-    TransactionsCreateTransactionsResponse200ApplicationJSONCustomData,
-    z.ZodTypeDef,
-    unknown
-  > = z.object({});
-
-/** @internal */
-export type TransactionsCreateTransactionsResponse200ApplicationJSONCustomData$Outbound =
-  {};
-
-/** @internal */
-export const TransactionsCreateTransactionsResponse200ApplicationJSONCustomData$outboundSchema:
-  z.ZodType<
-    TransactionsCreateTransactionsResponse200ApplicationJSONCustomData$Outbound,
-    z.ZodTypeDef,
-    TransactionsCreateTransactionsResponse200ApplicationJSONCustomData
-  > = z.object({});
-
-/**
- * @internal
- * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
- */
-export namespace TransactionsCreateTransactionsResponse200ApplicationJSONCustomData$ {
-  /** @deprecated use `TransactionsCreateTransactionsResponse200ApplicationJSONCustomData$inboundSchema` instead. */
-  export const inboundSchema =
-    TransactionsCreateTransactionsResponse200ApplicationJSONCustomData$inboundSchema;
-  /** @deprecated use `TransactionsCreateTransactionsResponse200ApplicationJSONCustomData$outboundSchema` instead. */
-  export const outboundSchema =
-    TransactionsCreateTransactionsResponse200ApplicationJSONCustomData$outboundSchema;
-  /** @deprecated use `TransactionsCreateTransactionsResponse200ApplicationJSONCustomData$Outbound` instead. */
-  export type Outbound =
-    TransactionsCreateTransactionsResponse200ApplicationJSONCustomData$Outbound;
-}
-
-export function transactionsCreateTransactionsResponse200ApplicationJSONCustomDataToJSON(
-  transactionsCreateTransactionsResponse200ApplicationJSONCustomData:
-    TransactionsCreateTransactionsResponse200ApplicationJSONCustomData,
-): string {
-  return JSON.stringify(
-    TransactionsCreateTransactionsResponse200ApplicationJSONCustomData$outboundSchema
-      .parse(
-        transactionsCreateTransactionsResponse200ApplicationJSONCustomData,
-      ),
-  );
-}
-
-export function transactionsCreateTransactionsResponse200ApplicationJSONCustomDataFromJSON(
-  jsonString: string,
-): SafeParseResult<
-  TransactionsCreateTransactionsResponse200ApplicationJSONCustomData,
-  SDKValidationError
-> {
-  return safeParse(
-    jsonString,
-    (x) =>
-      TransactionsCreateTransactionsResponse200ApplicationJSONCustomData$inboundSchema
-        .parse(JSON.parse(x)),
-    `Failed to parse 'TransactionsCreateTransactionsResponse200ApplicationJSONCustomData' from JSON`,
-  );
-}
-
-/** @internal */
-export const Price$inboundSchema: z.ZodType<Price, z.ZodTypeDef, unknown> = z
-  .object({
-    product_id: z.string(),
-    description: z.nullable(z.string()).optional(),
-    type: TransactionsCreateTransactionsType$inboundSchema,
-    name: z.string(),
-    billing_cycle: z.lazy(() => TransactionsCreateBillingCycle$inboundSchema),
-    trial_period: z.lazy(() => TransactionsCreateTrialPeriod$inboundSchema),
-    unit_price: z.lazy(() => TransactionsCreateUnitPrice$inboundSchema),
-    status:
-      TransactionsCreateTransactionsResponse200ApplicationJSONResponseBodyItemsStatus$inboundSchema,
-    custom_data: z.lazy(() =>
-      TransactionsCreateTransactionsResponse200ApplicationJSONCustomData$inboundSchema
-    ).optional(),
-    id: z.string(),
-    created_at: z.string(),
-    updated_at: z.string(),
-  }).transform((v) => {
-    return remap$(v, {
-      "product_id": "productId",
-      "billing_cycle": "billingCycle",
-      "trial_period": "trialPeriod",
-      "unit_price": "unitPrice",
-      "custom_data": "customData",
-      "created_at": "createdAt",
-      "updated_at": "updatedAt",
-    });
-  });
-
-/** @internal */
-export type Price$Outbound = {
-  product_id: string;
-  description?: string | null | undefined;
-  type: string;
-  name: string;
-  billing_cycle: TransactionsCreateBillingCycle$Outbound;
-  trial_period: TransactionsCreateTrialPeriod$Outbound;
-  unit_price: TransactionsCreateUnitPrice$Outbound;
-  status: string;
-  custom_data?:
-    | TransactionsCreateTransactionsResponse200ApplicationJSONCustomData$Outbound
-    | undefined;
-  id: string;
-  created_at: string;
-  updated_at: string;
-};
-
-/** @internal */
-export const Price$outboundSchema: z.ZodType<
-  Price$Outbound,
-  z.ZodTypeDef,
-  Price
-> = z.object({
-  productId: z.string(),
-  description: z.nullable(z.string()).optional(),
-  type: TransactionsCreateTransactionsType$outboundSchema,
-  name: z.string(),
-  billingCycle: z.lazy(() => TransactionsCreateBillingCycle$outboundSchema),
-  trialPeriod: z.lazy(() => TransactionsCreateTrialPeriod$outboundSchema),
-  unitPrice: z.lazy(() => TransactionsCreateUnitPrice$outboundSchema),
-  status:
-    TransactionsCreateTransactionsResponse200ApplicationJSONResponseBodyItemsStatus$outboundSchema,
-  customData: z.lazy(() =>
-    TransactionsCreateTransactionsResponse200ApplicationJSONCustomData$outboundSchema
-  ).optional(),
-  id: z.string(),
-  createdAt: z.string(),
-  updatedAt: z.string(),
-}).transform((v) => {
-  return remap$(v, {
-    productId: "product_id",
-    billingCycle: "billing_cycle",
-    trialPeriod: "trial_period",
-    unitPrice: "unit_price",
-    customData: "custom_data",
-    createdAt: "created_at",
-    updatedAt: "updated_at",
-  });
-});
-
-/**
- * @internal
- * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
- */
-export namespace Price$ {
-  /** @deprecated use `Price$inboundSchema` instead. */
-  export const inboundSchema = Price$inboundSchema;
-  /** @deprecated use `Price$outboundSchema` instead. */
-  export const outboundSchema = Price$outboundSchema;
-  /** @deprecated use `Price$Outbound` instead. */
-  export type Outbound = Price$Outbound;
-}
-
-export function priceToJSON(price: Price): string {
-  return JSON.stringify(Price$outboundSchema.parse(price));
-}
-
-export function priceFromJSON(
-  jsonString: string,
-): SafeParseResult<Price, SDKValidationError> {
-  return safeParse(
-    jsonString,
-    (x) => Price$inboundSchema.parse(JSON.parse(x)),
-    `Failed to parse 'Price' from JSON`,
-  );
-}
-
-/** @internal */
-export const TransactionsCreateTransactionsResponse200ApplicationJSONResponseBodyItemsProductStatus$inboundSchema:
-  z.ZodNativeEnum<
-    typeof TransactionsCreateTransactionsResponse200ApplicationJSONResponseBodyItemsProductStatus
-  > = z.nativeEnum(
-    TransactionsCreateTransactionsResponse200ApplicationJSONResponseBodyItemsProductStatus,
-  );
-
-/** @internal */
-export const TransactionsCreateTransactionsResponse200ApplicationJSONResponseBodyItemsProductStatus$outboundSchema:
-  z.ZodNativeEnum<
-    typeof TransactionsCreateTransactionsResponse200ApplicationJSONResponseBodyItemsProductStatus
-  > =
-    TransactionsCreateTransactionsResponse200ApplicationJSONResponseBodyItemsProductStatus$inboundSchema;
-
-/**
- * @internal
- * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
- */
-export namespace TransactionsCreateTransactionsResponse200ApplicationJSONResponseBodyItemsProductStatus$ {
-  /** @deprecated use `TransactionsCreateTransactionsResponse200ApplicationJSONResponseBodyItemsProductStatus$inboundSchema` instead. */
-  export const inboundSchema =
-    TransactionsCreateTransactionsResponse200ApplicationJSONResponseBodyItemsProductStatus$inboundSchema;
-  /** @deprecated use `TransactionsCreateTransactionsResponse200ApplicationJSONResponseBodyItemsProductStatus$outboundSchema` instead. */
-  export const outboundSchema =
-    TransactionsCreateTransactionsResponse200ApplicationJSONResponseBodyItemsProductStatus$outboundSchema;
-}
-
-/** @internal */
 export const TransactionsCreateTransactionsResponse200CustomData$inboundSchema:
   z.ZodType<
     TransactionsCreateTransactionsResponse200CustomData,
@@ -2172,41 +1961,179 @@ export function transactionsCreateTransactionsResponse200CustomDataFromJSON(
 }
 
 /** @internal */
-export const Product$inboundSchema: z.ZodType<Product, z.ZodTypeDef, unknown> =
-  z.object({
-    id: z.string(),
-    name: z.string(),
-    description: z.string(),
-    status:
-      TransactionsCreateTransactionsResponse200ApplicationJSONResponseBodyItemsProductStatus$inboundSchema
-        .optional(),
-    createdAt: z.string().optional(),
-    updatedAt: z.string(),
-    custom_data: z.lazy(() =>
-      TransactionsCreateTransactionsResponse200CustomData$inboundSchema
-    ),
-  }).transform((v) => {
-    return remap$(v, {
-      "custom_data": "customData",
-    });
+export const TransactionsCreatePrice$inboundSchema: z.ZodType<
+  TransactionsCreatePrice,
+  z.ZodTypeDef,
+  unknown
+> = z.object({
+  product_id: z.string(),
+  description: z.nullable(z.string()).optional(),
+  type: TransactionsCreateTransactionsType$inboundSchema,
+  name: z.string(),
+  billing_cycle: z.lazy(() => TransactionsCreateBillingCycle$inboundSchema),
+  trial_period: z.lazy(() => TransactionsCreateTrialPeriod$inboundSchema),
+  unit_price: z.lazy(() => TransactionsCreateUnitPrice$inboundSchema),
+  status:
+    TransactionsCreateTransactionsResponse200ApplicationJSONResponseBodyItemsStatus$inboundSchema,
+  custom_data: z.lazy(() =>
+    TransactionsCreateTransactionsResponse200CustomData$inboundSchema
+  ).optional(),
+  id: z.string(),
+  created_at: z.string(),
+  updated_at: z.string(),
+}).transform((v) => {
+  return remap$(v, {
+    "product_id": "productId",
+    "billing_cycle": "billingCycle",
+    "trial_period": "trialPeriod",
+    "unit_price": "unitPrice",
+    "custom_data": "customData",
+    "created_at": "createdAt",
+    "updated_at": "updatedAt",
   });
+});
 
 /** @internal */
-export type Product$Outbound = {
+export type TransactionsCreatePrice$Outbound = {
+  product_id: string;
+  description?: string | null | undefined;
+  type: string;
+  name: string;
+  billing_cycle: TransactionsCreateBillingCycle$Outbound;
+  trial_period: TransactionsCreateTrialPeriod$Outbound;
+  unit_price: TransactionsCreateUnitPrice$Outbound;
+  status: string;
+  custom_data?:
+    | TransactionsCreateTransactionsResponse200CustomData$Outbound
+    | undefined;
+  id: string;
+  created_at: string;
+  updated_at: string;
+};
+
+/** @internal */
+export const TransactionsCreatePrice$outboundSchema: z.ZodType<
+  TransactionsCreatePrice$Outbound,
+  z.ZodTypeDef,
+  TransactionsCreatePrice
+> = z.object({
+  productId: z.string(),
+  description: z.nullable(z.string()).optional(),
+  type: TransactionsCreateTransactionsType$outboundSchema,
+  name: z.string(),
+  billingCycle: z.lazy(() => TransactionsCreateBillingCycle$outboundSchema),
+  trialPeriod: z.lazy(() => TransactionsCreateTrialPeriod$outboundSchema),
+  unitPrice: z.lazy(() => TransactionsCreateUnitPrice$outboundSchema),
+  status:
+    TransactionsCreateTransactionsResponse200ApplicationJSONResponseBodyItemsStatus$outboundSchema,
+  customData: z.lazy(() =>
+    TransactionsCreateTransactionsResponse200CustomData$outboundSchema
+  ).optional(),
+  id: z.string(),
+  createdAt: z.string(),
+  updatedAt: z.string(),
+}).transform((v) => {
+  return remap$(v, {
+    productId: "product_id",
+    billingCycle: "billing_cycle",
+    trialPeriod: "trial_period",
+    unitPrice: "unit_price",
+    customData: "custom_data",
+    createdAt: "created_at",
+    updatedAt: "updated_at",
+  });
+});
+
+/**
+ * @internal
+ * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
+ */
+export namespace TransactionsCreatePrice$ {
+  /** @deprecated use `TransactionsCreatePrice$inboundSchema` instead. */
+  export const inboundSchema = TransactionsCreatePrice$inboundSchema;
+  /** @deprecated use `TransactionsCreatePrice$outboundSchema` instead. */
+  export const outboundSchema = TransactionsCreatePrice$outboundSchema;
+  /** @deprecated use `TransactionsCreatePrice$Outbound` instead. */
+  export type Outbound = TransactionsCreatePrice$Outbound;
+}
+
+export function transactionsCreatePriceToJSON(
+  transactionsCreatePrice: TransactionsCreatePrice,
+): string {
+  return JSON.stringify(
+    TransactionsCreatePrice$outboundSchema.parse(transactionsCreatePrice),
+  );
+}
+
+export function transactionsCreatePriceFromJSON(
+  jsonString: string,
+): SafeParseResult<TransactionsCreatePrice, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => TransactionsCreatePrice$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'TransactionsCreatePrice' from JSON`,
+  );
+}
+
+/** @internal */
+export const TransactionsCreateTransactionsResponse200ApplicationJSONResponseBodyItemsProductStatus$inboundSchema:
+  z.ZodNativeEnum<
+    typeof TransactionsCreateTransactionsResponse200ApplicationJSONResponseBodyItemsProductStatus
+  > = z.nativeEnum(
+    TransactionsCreateTransactionsResponse200ApplicationJSONResponseBodyItemsProductStatus,
+  );
+
+/** @internal */
+export const TransactionsCreateTransactionsResponse200ApplicationJSONResponseBodyItemsProductStatus$outboundSchema:
+  z.ZodNativeEnum<
+    typeof TransactionsCreateTransactionsResponse200ApplicationJSONResponseBodyItemsProductStatus
+  > =
+    TransactionsCreateTransactionsResponse200ApplicationJSONResponseBodyItemsProductStatus$inboundSchema;
+
+/**
+ * @internal
+ * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
+ */
+export namespace TransactionsCreateTransactionsResponse200ApplicationJSONResponseBodyItemsProductStatus$ {
+  /** @deprecated use `TransactionsCreateTransactionsResponse200ApplicationJSONResponseBodyItemsProductStatus$inboundSchema` instead. */
+  export const inboundSchema =
+    TransactionsCreateTransactionsResponse200ApplicationJSONResponseBodyItemsProductStatus$inboundSchema;
+  /** @deprecated use `TransactionsCreateTransactionsResponse200ApplicationJSONResponseBodyItemsProductStatus$outboundSchema` instead. */
+  export const outboundSchema =
+    TransactionsCreateTransactionsResponse200ApplicationJSONResponseBodyItemsProductStatus$outboundSchema;
+}
+
+/** @internal */
+export const TransactionsCreateProduct$inboundSchema: z.ZodType<
+  TransactionsCreateProduct,
+  z.ZodTypeDef,
+  unknown
+> = z.object({
+  id: z.string(),
+  name: z.string(),
+  description: z.string(),
+  status:
+    TransactionsCreateTransactionsResponse200ApplicationJSONResponseBodyItemsProductStatus$inboundSchema
+      .optional(),
+  createdAt: z.string().optional(),
+  updatedAt: z.string(),
+});
+
+/** @internal */
+export type TransactionsCreateProduct$Outbound = {
   id: string;
   name: string;
   description: string;
   status?: string | undefined;
   createdAt?: string | undefined;
   updatedAt: string;
-  custom_data: TransactionsCreateTransactionsResponse200CustomData$Outbound;
 };
 
 /** @internal */
-export const Product$outboundSchema: z.ZodType<
-  Product$Outbound,
+export const TransactionsCreateProduct$outboundSchema: z.ZodType<
+  TransactionsCreateProduct$Outbound,
   z.ZodTypeDef,
-  Product
+  TransactionsCreateProduct
 > = z.object({
   id: z.string(),
   name: z.string(),
@@ -2216,39 +2143,36 @@ export const Product$outboundSchema: z.ZodType<
       .optional(),
   createdAt: z.string().optional(),
   updatedAt: z.string(),
-  customData: z.lazy(() =>
-    TransactionsCreateTransactionsResponse200CustomData$outboundSchema
-  ),
-}).transform((v) => {
-  return remap$(v, {
-    customData: "custom_data",
-  });
 });
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
-export namespace Product$ {
-  /** @deprecated use `Product$inboundSchema` instead. */
-  export const inboundSchema = Product$inboundSchema;
-  /** @deprecated use `Product$outboundSchema` instead. */
-  export const outboundSchema = Product$outboundSchema;
-  /** @deprecated use `Product$Outbound` instead. */
-  export type Outbound = Product$Outbound;
+export namespace TransactionsCreateProduct$ {
+  /** @deprecated use `TransactionsCreateProduct$inboundSchema` instead. */
+  export const inboundSchema = TransactionsCreateProduct$inboundSchema;
+  /** @deprecated use `TransactionsCreateProduct$outboundSchema` instead. */
+  export const outboundSchema = TransactionsCreateProduct$outboundSchema;
+  /** @deprecated use `TransactionsCreateProduct$Outbound` instead. */
+  export type Outbound = TransactionsCreateProduct$Outbound;
 }
 
-export function productToJSON(product: Product): string {
-  return JSON.stringify(Product$outboundSchema.parse(product));
+export function transactionsCreateProductToJSON(
+  transactionsCreateProduct: TransactionsCreateProduct,
+): string {
+  return JSON.stringify(
+    TransactionsCreateProduct$outboundSchema.parse(transactionsCreateProduct),
+  );
 }
 
-export function productFromJSON(
+export function transactionsCreateProductFromJSON(
   jsonString: string,
-): SafeParseResult<Product, SDKValidationError> {
+): SafeParseResult<TransactionsCreateProduct, SDKValidationError> {
   return safeParse(
     jsonString,
-    (x) => Product$inboundSchema.parse(JSON.parse(x)),
-    `Failed to parse 'Product' from JSON`,
+    (x) => TransactionsCreateProduct$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'TransactionsCreateProduct' from JSON`,
   );
 }
 
@@ -2258,16 +2182,16 @@ export const TransactionsCreateTransactionsItems$inboundSchema: z.ZodType<
   z.ZodTypeDef,
   unknown
 > = z.object({
-  price: z.array(z.lazy(() => Price$inboundSchema)),
+  price: z.array(z.lazy(() => TransactionsCreatePrice$inboundSchema)),
   quantity: z.number(),
-  product: z.lazy(() => Product$inboundSchema),
+  product: z.lazy(() => TransactionsCreateProduct$inboundSchema),
 });
 
 /** @internal */
 export type TransactionsCreateTransactionsItems$Outbound = {
-  price: Array<Price$Outbound>;
+  price: Array<TransactionsCreatePrice$Outbound>;
   quantity: number;
-  product: Product$Outbound;
+  product: TransactionsCreateProduct$Outbound;
 };
 
 /** @internal */
@@ -2276,9 +2200,9 @@ export const TransactionsCreateTransactionsItems$outboundSchema: z.ZodType<
   z.ZodTypeDef,
   TransactionsCreateTransactionsItems
 > = z.object({
-  price: z.array(z.lazy(() => Price$outboundSchema)),
+  price: z.array(z.lazy(() => TransactionsCreatePrice$outboundSchema)),
   quantity: z.number(),
-  product: z.lazy(() => Product$outboundSchema),
+  product: z.lazy(() => TransactionsCreateProduct$outboundSchema),
 });
 
 /**

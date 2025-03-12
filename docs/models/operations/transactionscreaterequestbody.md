@@ -9,24 +9,21 @@ let value: TransactionsCreateRequestBody = {
   items: [
     {
       priceId: "<id>",
-      quantity: 9234.56,
+      quantity: 7562.87,
     },
   ],
   status: "billed",
   customerId: "<id>",
   addressId: "<id>",
   productId: "<id>",
-  currencyCode: "INR",
+  currencyCode: "LYD",
   paymentDetails: {
-    paymentMethod: "CARD",
-    paymentProvider: "FLUTTERWAVE",
-    amount: 9838.54,
-    currencyCode: "QAR",
-    cardLast4: "<value>",
-    cardBrand: "<value>",
-    cardExpMonth: 389548,
-    cardExpYear: 263767,
-    cardHolderName: "<value>",
+    paymentMethod: "MOBILE_MONEY",
+    paymentProvider: "MTN",
+    amount: 7018.41,
+    currencyCode: "ANG",
+    mobileNetwork: "<value>",
+    phoneSuffix: "<value>",
   },
 };
 ```

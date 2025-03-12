@@ -23,8 +23,8 @@ const value: operations.TransactionsGetMethodDetails2 = {
   details: {
     last4: "<value>",
     brand: "<value>",
-    expMonth: 7140.54,
-    expYear: 5165.56,
+    expMonth: 2641.25,
+    expYear: 4724.29,
     cardholderName: "<value>",
   },
 };

@@ -11,7 +11,7 @@ let value: SubscriptionActivateSubscriptionScheduledChange = {
   action: "pause",
   effectiveAt: "<value>",
   resumesAt: "<value>",
-  status: "completed",
+  status: "scheduled",
 };
 ```
 

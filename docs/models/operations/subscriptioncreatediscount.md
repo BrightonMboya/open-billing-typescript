@@ -7,11 +7,11 @@ import { SubscriptionCreateDiscount } from "open-billing/models/operations";
 
 let value: SubscriptionCreateDiscount = {
   id: "<id>",
-  amount: "232.62",
-  currencyCode: "HNL",
-  type: "flat_per_seat",
-  createdAt: "1741196081337",
-  updatedAt: "1741650942847",
+  amount: "497.78",
+  currencyCode: "MVR",
+  type: "flat",
+  createdAt: "1715578404040",
+  updatedAt: "1741771885927",
   restrictedTo: [
     "<value>",
   ],

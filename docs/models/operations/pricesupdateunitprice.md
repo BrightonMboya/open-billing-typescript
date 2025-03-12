@@ -6,8 +6,8 @@
 import { PricesUpdateUnitPrice } from "open-billing/models/operations";
 
 let value: PricesUpdateUnitPrice = {
-  amount: 7885.46,
-  currencyCode: "AWG",
+  amount: 3926.76,
+  currencyCode: "XPF",
 };
 ```
 

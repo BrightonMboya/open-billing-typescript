@@ -9,11 +9,11 @@ import { DiscountCreateResponseBody } from "open-billing/models/operations";
 
 let value: DiscountCreateResponseBody = {
   id: "<id>",
-  amount: "904.05",
-  currencyCode: "PYG",
-  type: "flat_per_seat",
-  createdAt: "1720452614765",
-  updatedAt: "1741632609428",
+  amount: "952.15",
+  currencyCode: "GHS",
+  type: "flat",
+  createdAt: "1738198522005",
+  updatedAt: "1741736186972",
   restrictedTo: [
     "<value>",
   ],

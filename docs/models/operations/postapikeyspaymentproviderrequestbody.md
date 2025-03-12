@@ -6,7 +6,7 @@
 import { PostApiKeysPaymentProviderRequestBody } from "open-billing/models/operations";
 
 let value: PostApiKeysPaymentProviderRequestBody = {
-  provider: "PAYSTACK_API_KEY",
+  provider: "SELCOM_API_KEY",
   apiKey: "<value>",
 };
 ```

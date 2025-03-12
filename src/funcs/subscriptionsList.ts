@@ -4,8 +4,10 @@
 
 import * as z from "zod";
 import { OpenBillingCore } from "../core.js";
+import { encodeFormQuery } from "../lib/encodings.js";
 import * as M from "../lib/matchers.js";
 import { compactMap } from "../lib/primitives.js";
+import { safeParse } from "../lib/schemas.js";
 import { RequestOptions } from "../lib/sdks.js";
 import { extractSecurity, resolveGlobalSecurity } from "../lib/security.js";
 import { pathToFunc } from "../lib/url.js";
@@ -24,6 +26,7 @@ import { Result } from "../types/fp.js";
 
 export function subscriptionsList(
   client: OpenBillingCore,
+  request: operations.SubscriptionListRequest,
   options?: RequestOptions,
 ): APIPromise<
   Result<
@@ -39,12 +42,14 @@ export function subscriptionsList(
 > {
   return new APIPromise($do(
     client,
+    request,
     options,
   ));
 }
 
 async function $do(
   client: OpenBillingCore,
+  request: operations.SubscriptionListRequest,
   options?: RequestOptions,
 ): Promise<
   [
@@ -61,7 +66,22 @@ async function $do(
     APICall,
   ]
 > {
+  const parsed = safeParse(
+    request,
+    (value) => operations.SubscriptionListRequest$outboundSchema.parse(value),
+    "Input validation failed",
+  );
+  if (!parsed.ok) {
+    return [parsed, { status: "invalid" }];
+  }
+  const payload = parsed.value;
+  const body = null;
+
   const path = pathToFunc("/subscription")();
+
+  const query = encodeFormQuery({
+    "customer_Id": payload.customer_Id,
+  });
 
   const headers = new Headers(compactMap({
     Accept: "application/json",
@@ -90,6 +110,8 @@ async function $do(
     baseURL: options?.serverURL,
     path: path,
     headers: headers,
+    query: query,
+    body: body,
     timeoutMs: options?.timeoutMs || client._options.timeoutMs || -1,
   }, options);
   if (!requestRes.ok) {

@@ -201,6 +201,20 @@ run();
 <details open>
 <summary>Available methods</summary>
 
+### [customers](docs/sdks/customers/README.md)
+
+* [list](docs/sdks/customers/README.md#list)
+* [create](docs/sdks/customers/README.md#create)
+* [get](docs/sdks/customers/README.md#get)
+* [update](docs/sdks/customers/README.md#update)
+
+#### [customers.addresses](docs/sdks/addresses/README.md)
+
+* [list](docs/sdks/addresses/README.md#list)
+* [create](docs/sdks/addresses/README.md#create)
+* [get](docs/sdks/addresses/README.md#get)
+* [update](docs/sdks/addresses/README.md#update)
+
 ### [developerTools](docs/sdks/developertools/README.md)
 
 * [create](docs/sdks/developertools/README.md#create)
@@ -224,7 +238,7 @@ run();
 ### [products](docs/sdks/products/README.md)
 
 * [list](docs/sdks/products/README.md#list)
-* [create](docs/sdks/products/README.md#create)
+* [createWithPrices](docs/sdks/products/README.md#createwithprices)
 * [get](docs/sdks/products/README.md#get)
 * [update](docs/sdks/products/README.md#update)
 
@@ -263,6 +277,14 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 
 <summary>Available standalone functions</summary>
 
+- [`customersAddressesCreate`](docs/sdks/addresses/README.md#create)
+- [`customersAddressesGet`](docs/sdks/addresses/README.md#get)
+- [`customersAddressesList`](docs/sdks/addresses/README.md#list)
+- [`customersAddressesUpdate`](docs/sdks/addresses/README.md#update)
+- [`customersCreate`](docs/sdks/customers/README.md#create)
+- [`customersGet`](docs/sdks/customers/README.md#get)
+- [`customersList`](docs/sdks/customers/README.md#list)
+- [`customersUpdate`](docs/sdks/customers/README.md#update)
 - [`developerToolsCreate`](docs/sdks/developertools/README.md#create)
 - [`developerToolsCreatePaymentProviderKey`](docs/sdks/developertools/README.md#createpaymentproviderkey)
 - [`discountsCreate`](docs/sdks/discounts/README.md#create)
@@ -273,7 +295,7 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 - [`pricesGet`](docs/sdks/prices/README.md#get)
 - [`pricesList`](docs/sdks/prices/README.md#list)
 - [`pricesUpdate`](docs/sdks/prices/README.md#update)
-- [`productsCreate`](docs/sdks/products/README.md#create)
+- [`productsCreateWithPrices`](docs/sdks/products/README.md#createwithprices)
 - [`productsGet`](docs/sdks/products/README.md#get)
 - [`productsList`](docs/sdks/products/README.md#list)
 - [`productsUpdate`](docs/sdks/products/README.md#update)

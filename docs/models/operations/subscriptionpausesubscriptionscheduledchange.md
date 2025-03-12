@@ -8,10 +8,10 @@ import { SubscriptionPauseSubscriptionScheduledChange } from "open-billing/model
 let value: SubscriptionPauseSubscriptionScheduledChange = {
   id: "<id>",
   subscriptionId: "<id>",
-  action: "pause",
+  action: "cancel",
   effectiveAt: "<value>",
   resumesAt: "<value>",
-  status: "scheduled",
+  status: "completed",
 };
 ```
 

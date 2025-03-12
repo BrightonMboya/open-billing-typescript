@@ -7,11 +7,11 @@ import { DiscountGetDiscountResponseBody } from "open-billing/models/operations"
 
 let value: DiscountGetDiscountResponseBody = {
   id: "<id>",
-  amount: "160.54",
-  currencyCode: "SSP",
-  type: "flat_per_seat",
-  createdAt: "1724565490120",
-  updatedAt: "1741618284963",
+  amount: "661.12",
+  currencyCode: "KGS",
+  type: "flat",
+  createdAt: "1732211679979",
+  updatedAt: "1741718993951",
   restrictedTo: [
     "<value>",
   ],

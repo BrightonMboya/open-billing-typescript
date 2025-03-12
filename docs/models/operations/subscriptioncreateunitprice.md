@@ -6,8 +6,8 @@
 import { SubscriptionCreateUnitPrice } from "open-billing/models/operations";
 
 let value: SubscriptionCreateUnitPrice = {
-  amount: 2531.91,
-  currencyCode: "BSD",
+  amount: 7214.07,
+  currencyCode: "NZD",
 };
 ```
 

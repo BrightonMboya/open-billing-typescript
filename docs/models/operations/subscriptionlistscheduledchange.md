@@ -8,7 +8,7 @@ import { SubscriptionListScheduledChange } from "open-billing/models/operations"
 let value: SubscriptionListScheduledChange = {
   id: "<id>",
   subscriptionId: "<id>",
-  action: "resume",
+  action: "pause",
   effectiveAt: "<value>",
   resumesAt: "<value>",
   status: "completed",

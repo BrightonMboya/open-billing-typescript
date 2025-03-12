@@ -5,7 +5,7 @@
 ```typescript
 import { PricesCreatePricesInterval } from "open-billing/models/operations";
 
-let value: PricesCreatePricesInterval = "day";
+let value: PricesCreatePricesInterval = "year";
 ```
 
 ## Values

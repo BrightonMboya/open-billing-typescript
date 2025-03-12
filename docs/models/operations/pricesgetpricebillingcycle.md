@@ -6,8 +6,8 @@
 import { PricesGetPriceBillingCycle } from "open-billing/models/operations";
 
 let value: PricesGetPriceBillingCycle = {
-  interval: "day",
-  frequency: 534.27,
+  interval: "month",
+  frequency: 7786.96,
 };
 ```
 

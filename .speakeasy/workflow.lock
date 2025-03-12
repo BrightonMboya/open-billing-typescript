@@ -1,28 +1,27 @@
-speakeasyVersion: 1.514.1
+speakeasyVersion: 1.517.0
 sources:
     Open Billing:
         sourceNamespace: open-billing
-        sourceRevisionDigest: sha256:fe888881e6ade40082815d5a215fcca49c1c17d8a04c6d761232eaa95009785a
-        sourceBlobDigest: sha256:0e8bb566ca2c9592341c0b30f1e332ed9611891d044acd02b817c2fc3ee10965
+        sourceRevisionDigest: sha256:55cd0bc14fa229f4cd96a5621bb8f75e212f011d91783d4b315e657e51756cc0
+        sourceBlobDigest: sha256:d99b0b34deaf86ae1c9047432291c38673f18ad21353b1261107ee21ff122c24
         tags:
             - latest
-            - speakeasy-sdk-regen-1741612052
             - 1.0.0
 targets:
     open-billing:
         source: Open Billing
         sourceNamespace: open-billing
-        sourceRevisionDigest: sha256:fe888881e6ade40082815d5a215fcca49c1c17d8a04c6d761232eaa95009785a
-        sourceBlobDigest: sha256:0e8bb566ca2c9592341c0b30f1e332ed9611891d044acd02b817c2fc3ee10965
+        sourceRevisionDigest: sha256:55cd0bc14fa229f4cd96a5621bb8f75e212f011d91783d4b315e657e51756cc0
+        sourceBlobDigest: sha256:d99b0b34deaf86ae1c9047432291c38673f18ad21353b1261107ee21ff122c24
         codeSamplesNamespace: open-billing-typescript-code-samples
-        codeSamplesRevisionDigest: sha256:37e80abfe634b5e97d9a2ac39ba1d071e158d332489b2e202f5a3023de350e4a
+        codeSamplesRevisionDigest: sha256:c5763946273abd88d700780fcd8d060eddab7165159eca8c562562a067fd7c59
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
     sources:
         Open Billing:
             inputs:
-                - location: https://api.openbilling.org/doc
+                - location: https://api.tony.openbilling.org/doc
             overlays:
                 - location: .speakeasy/speakeasy-modifications-overlay.yaml
             registry:

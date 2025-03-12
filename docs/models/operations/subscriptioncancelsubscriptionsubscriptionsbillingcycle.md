@@ -7,7 +7,7 @@ import { SubscriptionCancelSubscriptionSubscriptionsBillingCycle } from "open-bi
 
 let value: SubscriptionCancelSubscriptionSubscriptionsBillingCycle = {
   interval: "year",
-  frequency: 3518.93,
+  frequency: 2153.98,
 };
 ```
 

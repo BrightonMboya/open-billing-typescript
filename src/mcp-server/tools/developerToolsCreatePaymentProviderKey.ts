@@ -14,7 +14,7 @@ const args = {
 export const tool$developerToolsCreatePaymentProviderKey: ToolDefinition<
   typeof args
 > = {
-  name: "developer-tools_create-payment-provider-key",
+  name: "developer-tools-create-payment-provider-key",
   description: ``,
   args,
   tool: async (client, args, ctx) => {

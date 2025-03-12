@@ -5,7 +5,7 @@
 ```typescript
 import { PricesListStatus } from "open-billing/models/operations";
 
-let value: PricesListStatus = "active";
+let value: PricesListStatus = "archived";
 ```
 
 ## Values

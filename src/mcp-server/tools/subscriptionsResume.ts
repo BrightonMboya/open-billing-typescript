@@ -11,7 +11,7 @@ const args = {
 };
 
 export const tool$subscriptionsResume: ToolDefinition<typeof args> = {
-  name: "subscriptions_resume",
+  name: "subscriptions-resume",
   description: ``,
   args,
   tool: async (client, args, ctx) => {

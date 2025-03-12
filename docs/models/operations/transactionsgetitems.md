@@ -9,33 +9,32 @@ let value: TransactionsGetItems = {
   price: [
     {
       productId: "<id>",
-      type: "custom",
+      type: "standard",
       name: "<value>",
       billingCycle: {
-        interval: "year",
-        frequency: 5756.34,
+        interval: "month",
+        frequency: 1127.88,
       },
       trialPeriod: {
-        interval: "month",
-        frequency: 678.55,
+        interval: "year",
+        frequency: 8453.74,
       },
       unitPrice: {
-        amount: 9522.16,
-        currencyCode: "MDL",
+        amount: 5345.09,
+        currencyCode: "JPY",
       },
-      status: "archived",
+      status: "active",
       id: "<id>",
-      createdAt: "1711703604983",
-      updatedAt: "1741603592281",
+      createdAt: "1726066207749",
+      updatedAt: "1741773600413",
     },
   ],
-  quantity: 2569.75,
+  quantity: 2750.06,
   product: {
     id: "<id>",
     name: "<value>",
-    description: "delight inasmuch lovingly strictly boiling",
-    updatedAt: "1741595151538",
-    customData: {},
+    description: "bracelet gosh geez knotty so indeed sour",
+    updatedAt: "1741708262222",
   },
 };
 ```

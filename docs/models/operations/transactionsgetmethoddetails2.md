@@ -10,8 +10,8 @@ let value: TransactionsGetMethodDetails2 = {
   details: {
     last4: "<value>",
     brand: "<value>",
-    expMonth: 5291.74,
-    expYear: 5428.07,
+    expMonth: 3816.39,
+    expYear: 9473.09,
     cardholderName: "<value>",
   },
 };

@@ -11,7 +11,7 @@ const args = {
 };
 
 export const tool$discountsUpdate: ToolDefinition<typeof args> = {
-  name: "discounts_update",
+  name: "discounts-update",
   description: ``,
   args,
   tool: async (client, args, ctx) => {
